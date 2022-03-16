@@ -12,10 +12,11 @@ This theme was designed with the re621 userscript in mind. I cannot guaruntee th
 
 # Previews
 ![homepage](https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/firefox_EVWtg4CWN4.jpg?raw=true)
-<img src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/firefox_G17rKqUWJD.jpg?raw=true" width="49%"> 
-<img align="right" src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/6e7sYtRmYo.png?raw=true" width="49%"> 
-<img src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/firefox_Ke0DqlO9jQ-sfw.png?raw=true" width="49%"> 
-<img align="right" src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/firefox_sdwKbCtxyq-sfw.png?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/firefox_G17rKqUWJD.jpg?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/6e7sYtRmYo.png?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/firefox_Ke0DqlO9jQ-sfw.png?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/firefox_sdwKbCtxyq-sfw.png?raw=true" width="49%"> 
+
 
 # (very) Brief list of main featuressssss
 
