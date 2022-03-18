@@ -10,11 +10,13 @@ A comprehensive restyle of e621, made to be easier on the eyes while being compa
 
 # Notes
 
-This theme was designed with the re621 userscript in mind. I cannot guaruntee that this theme will work as intended if you aren't using re621.
-<br>To install re621 look <a href="https://e621.net/forum_topics/25872">here~</a> (like frfr install it, it's pretty sick n stufffff)
-
+<li>This theme was designed with the re621 userscript in mind. I cannot guaruntee that this theme will work as intended if you aren't using re621.
+<br>To install re621 look <a href="https://e621.net/forum_topics/25872">here~</a> (like frfr install it, it's pretty sick n stufffff)</li>
+<li>
+   
 **This theme is 100% NOT fully complete,** however it is in a state where it's basically 99% of the way there.
 <br> There's probably gonna be a small hiccup here and there with an element that isn't getting styled or something. see below on how you can help with those~
+</li>
 
 # Previews
 ![homepage](https://github.com/mandorinn/Calm-e621-e926/blob/main/previews/firefox_A2pm3It77v.jpg?raw=true)
