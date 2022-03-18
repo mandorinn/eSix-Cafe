@@ -1,17 +1,18 @@
-@-moz-document url-prefix("https://e621.net/"), url-prefix("https://e926.net/") {
-div#page {
-    background-color: var(--bg-300);
-    backdrop-filter:blur(0px)!important;
-    background-image: none;
+/* ==UserStyle==
+@name           Calm E621
+@namespace      e621.com
+@version        0.9.0
+@description    Muted blue e621
+@author         mandorinn
+==/UserStyle== */
 
-}
-}
 
 @-moz-document url-prefix("https://e621.net/"), url-prefix("https://e926.net/") {
 :root {
     --thin-scrollbar: var(--true);
     --main-page-background: url(https://static1.e621.net/data/09/f8/09f84e1224df7b3502456589dd75c0c3.jpg)!important;
     --artist-credit: "Background by Tom Fischbach";
+    --main-font: Yu Gothic UI;
     
     --bg-300: #364758;
     --bg-400: #2c3946;
@@ -20,15 +21,15 @@ div#page {
     --bg-visiting-transition: 100ms;
     --bg-editing-transition: 100ms;
     --bg-visiting-hover:rgba(255,255,255,1);
-    --bg-editing: pink;
-    --bg-editing-hover: violet;
+    --bg-editing: #a0d2d4;
+    --bg-editing-hover: #a6fffc;
     --base-text: #c3ccd4;
     --header-link: #c3ccd4;
     --header-link-transition: 100ms;
     --header-link-editing-transition:100ms;
     --header-link-visiting: #232e38;
-    --header-link-editing: purple;
-    --header-link-editing-hover: lightpink;
+    --header-link-editing: #2c3946;
+    --header-link-editing-hover: #232e38;
     --nav-hover-top-color:#c3ccd4;
     --nav-hover-bottom-color: #c3ccd4;
     --bg-image: #232e38;
@@ -102,10 +103,19 @@ div#page {
 }
 
 body {
-    font-family: Yu Gothic UI;
+    font-family: var(--main-font);
     color: var(--base-text)
         
 }
+
+
+div#page {
+    background-color: var(--bg-300);
+    backdrop-filter:blur(0px)!important;
+    background-image: none;
+}
+
+
 
 div#modal-container {
     z-index: 9998;
@@ -1110,6 +1120,7 @@ div[data-status="deleted"] a::after{
     content: "Deleted";
     background-color: var(--deleted-bg);
     width: 100%;
+    height: 100%;
     aspect-ratio: 1/1;
     font-size: 1.5rem;
     position:absolute;
@@ -1195,7 +1206,7 @@ div#c-comments div#a-index .post-container picture {
 .comment-post .post-container div[data-status="deleted"] a,.comment-post .post-container div[data-status="deleted"] a:hover,
 .comment-post .post-container div.blacklisted a, .comment-post .post-container div.blacklisted a:hover {
     border: 4px solid var(--bg-300);
-    border-radius: 4px
+    border-radius: 4px;
         
 }
 .comment-post .comments article {
@@ -1662,6 +1673,10 @@ button, input, select, textarea {
 }
 
 @-moz-document url("https://e621.net/"), url("https://e926.net/"), url("https://e926.net"), url("https://e621.net") {
+html {
+    overflow:hidden;
+}
+
 body {
     background-image: var(--main-page-background)!important;
     background-position:center;
@@ -1816,17 +1831,5 @@ ul li:hover * {
     div#c-posts div#a-index aside#sidebar, div#c-posts div#a-show aside#sidebar, div#c-favorites div#a-index aside#sidebar {
         width: 14.15rem;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 }
