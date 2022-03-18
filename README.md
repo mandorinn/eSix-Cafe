@@ -35,7 +35,7 @@ A comprehensive restyle of e621, made to be easier on the eyes while being compa
 
 # (very) Brief list of main featuressssss
 
-  <li>Customizable Deleted and Blacklisted placeholders</li>
+  <li>Customizable Deleted and Blacklisted placeholders (via da :root section~)</li>
   <li>Profile page overhaul</li>
   <li>Large, space taking (Learn more) links changed to a simple question mark SVG<br>(see: search bar in the 'posts' preview~)</li>
   <li>Re621 preview favorite icon changed to a heart</li>
