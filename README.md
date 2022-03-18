@@ -1,11 +1,17 @@
-# Calm-e621-e926
-
+<h1 align="center">Calm-e621-e926</h1>
+<p align="center"  
+   
 A comprehensive restyle of e621, made to be easier on the eyes while being compatible with the userscript "re621"~
+
+</p> <p align="center"   
+   
+<a align="center bottom" href="https://github.com/mandorinn/Calm-e621-e926/raw/main/calme6.user.css"><img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat"></img></a>
+</p>
 
 # Notes
 
 This theme was designed with the re621 userscript in mind. I cannot guaruntee that this theme will work as intended if you aren't using re621.
-<br>To install re621 look here: https://e621.net/forum_topics/25872 (like frfr install it, it's pretty sick n stufffff)
+<br>To install re621 look <a href="https://e621.net/forum_topics/25872">here~</a> (like frfr install it, it's pretty sick n stufffff)
 
 **This theme is 100% NOT fully complete,** however it is in a state where it's basically 99% of the way there.
 <br> There's probably gonna be a small hiccup here and there with an element that isn't getting styled or something. see below on how you can help with those~
