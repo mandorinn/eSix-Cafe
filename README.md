@@ -18,6 +18,13 @@ A comprehensive restyle of e621, made to be easier on the eyes while being compa
 <br> There's probably gonna be a small hiccup here and there with an element that isn't getting styled or something. see below on how you can help with those~
 </li>
 
+<li
+   
+***This started out as a fun little pet project***
+<br> Code is very messy and unorganized as a resultttttt <sup>it works on my machine thooooo </sup>
+
+</li>
+
 # Previews
 ![homepage](https://github.com/mandorinn/Calm-e621-e926/blob/main/previews/firefox_A2pm3It77v.jpg?raw=true)
 <img align="center" src="https://github.com/mandorinn/Muted-e621-e926/blob/main/previews/firefox_G17rKqUWJD.jpg?raw=true" width="49%"> 
