@@ -1,15 +1,16 @@
-@-moz-document regexp('https://e621.net(/.*)?') {
 /* ==UserStyle==
-@name           testeeeee
+@name           eSix Café
 @namespace      e621.net
 @version        1.0.0
-@description    A muted, easy on the eyes style for e621.
+@description    A muted and easy on the eyes style for e621.
 @author         mandorinn
 @preprocessor stylus
 ==/UserStyle== */
 
-	
-:root, [data-th-main="hexagon"] * {
+@-moz-document domain("e621.net"), domain("e926.net") {
+	/* e621.net */
+
+    :root {
     --thin-scrollbar: var(--true);
     --main-page-background: url(https://static1.e621.net/data/09/f8/09f84e1224df7b3502456589dd75c0c3.jpg)!important;
     --artist-credit: "Background by Tom Fischbach";
@@ -24,9 +25,9 @@
     --bg-editing: #a0d2d4;
     --bg-editing-hover: #a6fffc;
     --base-text: #c3ccd4;
-	--base-text-hover: #d3ddd3;
+    --base-text-hover: #d3ddd3;
     --header-link: #c3ccd4;
-	--header-link-hover: #d3ddd3;
+    --header-link-hover: #d3ddd3;
     --header-link-transition: 100ms;
     --header-link-editing-transition:100ms;
     --header-link-visiting: #232e38;
@@ -45,8 +46,8 @@
     --mode-add-fav:#36583a;
     --mode-remove-fav:#583636;
     --mode-blacklist:#171c22;
-	--mode-download: #553658;
-	--mode-fullscreen: #365857;
+    --mode-download: #553658;
+    --mode-fullscreen: #365857;
     --tag-cat-1:#7cb2bd;
     --tag-cat-1-hover:#96d8e5;
     --tag-cat-2:#bd987e;
@@ -74,20 +75,20 @@
     --button-text-hover-secondary: #fff;
     --true: thin;
     scrollbar-width: var(--thin-scrollbar);
-	scrollbar-color: #3c3c3c #222;
+    scrollbar-color: #3c3c3c #222;
 }
 [data-th-main="pony"] * {
-	--bg-300: #6b5372;
-	--bg-400: #55425a;
-	--bg: #4b3a50;
-	--bg-visiting: #ffe4e9;
+    --bg-300: #6b5372;
+    --bg-400: #55425a;
+    --bg: #4b3a50;
+    --bg-visiting: #ffe4e9;
     --bg-visiting-hover:#f6eaec;
     --bg-editing: #d4a0ab;
     --bg-editing-hover: #ffa6c2;
     --base-text: #d4c3cc;
-	--base-text-hover: #d3ddd3;
+    --base-text-hover: #d3ddd3;
     --header-link: #d4c3cb;
-	--header-link-hover: #d3ddd3;
+    --header-link-hover: #d3ddd3;
     --header-link-visiting: #38232b;
     --header-link-editing: #462c34;
     --header-link-editing-hover: #38232b;
@@ -104,8 +105,8 @@
     --mode-add-fav:#36583a;
     --mode-remove-fav:#583636;
     --mode-blacklist:#171c22;
-	--mode-download: #553658;
-	--mode-fullscreen: #365857;
+    --mode-download: #553658;
+    --mode-fullscreen: #365857;
     --tag-cat-1:#bd7caa;
     --tag-cat-1-hover:#e596c7;
     --tag-cat-2:#bd987e;
@@ -133,17 +134,17 @@
     --button-text-hover-secondary: #fff;
 }
 [data-th-main="bloodlust"] * {
-	--bg-300: #3d3d3d;
-	--bg-400: #252525;
-	--bg: #171717;
-	--bg-visiting: #f3f3f3;
+    --bg-300: #3d3d3d;
+    --bg-400: #252525;
+    --bg: #171717;
+    --bg-visiting: #f3f3f3;
     --bg-visiting-hover:#f0f0f0;
     --bg-editing: #be4343;
     --bg-editing-hover: #c62929;
     --base-text: #e1e1e1;
-	--base-text-hover: #e3e3e3;
+    --base-text-hover: #e3e3e3;
     --header-link: #dedede;
-	--header-link-hover: #e3e3e3;
+    --header-link-hover: #e3e3e3;
     --header-link-visiting: #382323;
     --header-link-editing: #462c2c;
     --header-link-editing-hover: #382323;
@@ -160,8 +161,8 @@
     --mode-add-fav:#36583a;
     --mode-remove-fav:#583636;
     --mode-blacklist:#000;
-	--mode-download: #553658;
-	--mode-fullscreen: #365857;
+    --mode-download: #553658;
+    --mode-fullscreen: #365857;
     --tag-cat-1:#bd5656;
     --tag-cat-1-hover:#e05e5e;
     --tag-cat-2:#be7f53;
@@ -197,9 +198,9 @@
     --bg-editing: #a0d2d4;
     --bg-editing-hover: #a6fffc;
     --base-text: #c3ccd4;
-	--base-text-hover: #d3ddd3;
+    --base-text-hover: #d3ddd3;
     --header-link: #c3ccd4;
-	--header-link-hover: #d3ddd3;
+    --header-link-hover: #d3ddd3;
     --header-link-transition: 100ms;
     --header-link-editing-transition:100ms;
     --header-link-visiting: #232e38;
@@ -218,8 +219,8 @@
     --mode-add-fav:#36583a;
     --mode-remove-fav:#583636;
     --mode-blacklist:#171c22;
-	--mode-download: #553658;
-	--mode-fullscreen: #365857;
+    --mode-download: #553658;
+    --mode-fullscreen: #365857;
     --tag-cat-1:#7cb2bd;
     --tag-cat-1-hover:#96d8e5;
     --tag-cat-2:#bd987e;
@@ -248,18 +249,18 @@
     --true: thin;
     scrollbar-width: var(--thin-scrollbar);
 }
-	[data-th-main="hotdog"] * { 
-	--bg-300: #3c3836;
-	--bg-400: #323232;
-	--bg: #282828;
-	--bg-visiting: #f0cfc0;
+    [data-th-main="hotdog"] * { 
+    --bg-300: #3c3836;
+    --bg-400: #323232;
+    --bg: #282828;
+    --bg-visiting: #f0cfc0;
     --bg-visiting-hover:#ffdccd;
     --bg-editing: #a1a0d4;
     --bg-editing-hover: #a6beff;
     --base-text: #d6bbae;
-	--base-text-hover: #f0cfc0;
+    --base-text-hover: #f0cfc0;
     --header-link: #d6bbae;
-	--header-link-hover: #f0cfc0;
+    --header-link-hover: #f0cfc0;
     --header-link-visiting: #474341;
     --header-link-editing: #474341;
     --header-link-editing-hover: #615c59;
@@ -276,8 +277,8 @@
     --mode-add-fav:#36583a;
     --mode-remove-fav:#583636;
     --mode-blacklist:#171c22;
-	--mode-download: #553658;
-	--mode-fullscreen: #365857;
+    --mode-download: #553658;
+    --mode-fullscreen: #365857;
     --tag-cat-1:#bdb1ac;
     --tag-cat-1-hover:#d6bbae;
     --tag-cat-2:#bd987e;
@@ -306,7 +307,7 @@
 }
 /* Body things */
 	body {
-	background-color: var(--bg)!important;
+	background-color: var(--bg-300);
 	background-image: none!important;
 	color: var(--base-text)!important;
 	font-family: var(--main-font);
@@ -803,8 +804,7 @@
     margin: .5rem 1rem;
     font-size: 1.1rem;
 	}
-	
-}
+
 
 /* Posts page stuff */ 
 	search-content > post post-info{
@@ -1421,113 +1421,7 @@
 	table.striped tbody tr td, table.table tbody tr td {
     background-color: var(--bg)!important;
 	}
-
-	
-
-@-moz-document url-prefix("https://e621.net/users/"), url-prefix("https://e926.net/users/") {
-	div#c-users div#a-show .bottom-section{
-    padding: 1rem;
-    max-width: 55vw;
-	}
-	div#c-users div#a-show .profile-container {
-    display:flex;
-    background-color: var(--bg)!important;
-    border-radius: 1rem;
-	}
-.post-thumbnail {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-	}
-	.post-thumbnail a img {
-    object-fit: cover;
-    height: 100%;
-    border-radius: 50%;
-    aspect-ratio: 1/1!important;
-    outline: 5px solid var(--bg-300)!important;
-	}
-	div#c-users div#a-show .profile-container .stats-section {
-    background-color: transparent;
-    overflow:hidden;
-    padding: 1rem;
-    display:flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    width: fit-content;
-	}
-	div#c-users div#a-show .profile-container .stats-section .profile-stats {
-    width: fit-content;
-    position: relative;
-    margin-inline: auto;
-    margin-top: 1rem;
-    }
-	div#c-users div#a-show .profile-container .stats-section .profile-stats h1 .user-member {
-    margin-inline: auto;
-    display:block;
-    width: fit-content;
-    position:relative;
-    margin-bottom: 1rem;
-	}
-	div#c-users div#a-show .profile-stats {
-    background-color: var(--bg-400)!important;
-    border-left: .25rem solid var(--elements-highlight)!important;
-    padding: .5rem;
-    border-radius: 8px;
-    overflow:hidden;
-    word-wrap: break-word;
-	}
-	.user-statistics {
-    font-size: .7rem;
-	}
-	div#c-users div#a-show .user-statistics .column {
-    grid-template-columns: max-content minmax(1px,1fr);
-	}
-	div#page[enhancements="true"] div#c-users div#a-show div.box.user-favorites, div#page[enhancements="true"] div#c-users div#a-show div.box.user-uploads {
-    border-radius: .5rem;
-    overflow:hidden;
-	}
-	.box-section {
-    background-color: var(--bg-400)!important;
-    border-radius: .5rem;
-    border-left: .25rem solid var(--elements-highlight)!important;
-	}
-	picture.picture-container {
-    width: 154px;
-	}
-	article.post-preview.captioned {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 154px;
-	}
-	article.post-preview.captioned .desc {
-    width: 100%;
-	}
-	article.post-preview img {
-    object-fit: cover;
-    width: 154px;
-	}
-	.has-cropped-true {
-    object-fit:cover;
-    width: 154px;
-	}
-	div[data-status="deleted"] a {
-    outline: 5px solid var(--bg-300)!important;
-	}
-	div[data-status="deleted"] a:hover {
-    outline: 5px solid var(--bg-300)!important;
-	}
-	div.blacklisted a {
-    outline: 5px solid var(--bg-300)!important;
-    aspect-ratio: 1/1;
-	}
-	div.blacklisted a:hover {
-    outline: 5px solid var(--bg-300)!important;
-    color: var(--deleted-text)!important;
-	}
-}	
-/* Tag Changes */
+	/* Tag Changes */
 	#p-revert-listing {
     max-width: 90vw;
     margin-inline: auto;
@@ -1683,7 +1577,115 @@
 	input[type="file"]button {
     color: pink;
     }
+}
+
+@-moz-document url-prefix("https://e621.net/users/"), url-prefix("https://e926.net/users/") {
+	/* Users page */
+	div#c-users div#a-show .bottom-section{
+    padding: 1rem;
+    max-width: 55vw;
+	}
+	div#c-users div#a-show .profile-container {
+    display:flex;
+    background-color: var(--bg)!important;
+    border-radius: 1rem;
+	}
+.post-thumbnail {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+	}
+	.post-thumbnail a img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1/1!important;
+    outline: 5px solid var(--bg-300)!important;
+	}
+	div#c-users div#a-show .profile-container .stats-section {
+    background-color: transparent;
+    overflow:hidden;
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    width: fit-content;
+	}
+	div#c-users div#a-show .profile-container .stats-section .profile-stats {
+    width: fit-content;
+    position: relative;
+    margin-inline: auto;
+    margin-top: 1rem;
+    }
+	div#c-users div#a-show .profile-container .stats-section .profile-stats h1 .user-member {
+    margin-inline: auto;
+    display:block;
+    width: fit-content;
+    position:relative;
+    margin-bottom: 1rem;
+	}
+	div#c-users div#a-show .profile-stats {
+    background-color: var(--bg-400)!important;
+    border-left: .25rem solid var(--elements-highlight)!important;
+    padding: .5rem;
+    border-radius: 8px;
+    overflow:hidden;
+    word-wrap: break-word;
+	}
+	.user-statistics {
+    font-size: .7rem;
+	}
+	div#c-users div#a-show .user-statistics .column {
+    grid-template-columns: max-content minmax(1px,1fr);
+	}
+	div#page[enhancements="true"] div#c-users div#a-show div.box.user-favorites, div#page[enhancements="true"] div#c-users div#a-show div.box.user-uploads {
+    border-radius: .5rem;
+    overflow:hidden;
+	}
+	.box-section {
+    background-color: var(--bg-400)!important;
+    border-radius: .5rem;
+    border-left: .25rem solid var(--elements-highlight)!important;
+	}
+	picture.picture-container {
+    width: 154px;
+	}
+	article.post-preview.captioned {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 154px;
+	}
+	article.post-preview.captioned .desc {
+    width: 100%;
+	}
+	article.post-preview img {
+    object-fit: cover;
+    width: 154px;
+	}
+	.has-cropped-true {
+    object-fit:cover;
+    width: 154px;
+	}
+	div[data-status="deleted"] a {
+    outline: 5px solid var(--bg-300)!important;
+	}
+	div[data-status="deleted"] a:hover {
+    outline: 5px solid var(--bg-300)!important;
+	}
+	div.blacklisted a {
+    outline: 5px solid var(--bg-300)!important;
+    aspect-ratio: 1/1;
+	}
+	div.blacklisted a:hover {
+    outline: 5px solid var(--bg-300)!important;
+    color: var(--deleted-text)!important;
+	}
+}	
+
 @-moz-document url("https://e621.net/"), url("https://e926.net/"), url("https://e926.net"), url("https://e621.net") {
+	/* Home page */
 	html {
 	overflow: hidden;
 	}
@@ -1776,3 +1778,12 @@
     margin-left: .05rem;
 	}
     }
+    
+	
+	
+	
+	
+	
+	
+	
+	
