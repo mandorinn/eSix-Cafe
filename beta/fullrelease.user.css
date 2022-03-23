@@ -1,3 +1,4 @@
+@-moz-document domain("e621.net"), domain("e926.net") {
 /* ==UserStyle==
 @name           Calm e621
 @namespace      e621.net
@@ -6,9 +7,9 @@
 @author         mandorinn
 @preprocessor stylus
 ==/UserStyle== */
+}
 
-@-moz-document domain("e621.net"), domain(e926.net) {
-	
+@-moz-document domain("e621.net"), domain("e926.net") {
 :root, [data-th-main="hexagon"] * {
     --thin-scrollbar: var(--true);
     --main-page-background: url(https://static1.e621.net/data/09/f8/09f84e1224df7b3502456589dd75c0c3.jpg)!important;
@@ -803,7 +804,6 @@
     margin: .5rem 1rem;
     font-size: 1.1rem;
 	}
-	
 }
 
 /* Posts page stuff */ 
@@ -1422,10 +1422,8 @@
     background-color: var(--bg)!important;
 	}
 
-	
-
 @-moz-document url-prefix("https://e621.net/users/"), url-prefix("https://e926.net/users/") {
-	div#c-users div#a-show .bottom-section{
+div#c-users div#a-show .bottom-section{
     padding: 1rem;
     max-width: 55vw;
 	}
@@ -1526,7 +1524,8 @@
     outline: 5px solid var(--bg-300)!important;
     color: var(--deleted-text)!important;
 	}
-}	
+}
+
 /* Tag Changes */
 	#p-revert-listing {
     max-width: 90vw;
@@ -1683,8 +1682,9 @@
 	input[type="file"]button {
     color: pink;
     }
+
 @-moz-document url("https://e621.net/"), url("https://e926.net/"), url("https://e926.net"), url("https://e621.net") {
-	html {
+html {
 	overflow: hidden;
 	}
 	body {
@@ -1775,4 +1775,4 @@
     margin-top: .2rem;
     margin-left: .05rem;
 	}
-    }
+}
