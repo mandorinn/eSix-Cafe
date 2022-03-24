@@ -1215,15 +1215,14 @@
 	height:100%;
 	}
 	.styled-dtext div.expandable > div.expandable-header > .section-arrow::after {
-	font-family: "Font Awesome 5 Free";
-	content: "\f0d2";
+	content: "►";
 	position: relative;
 	height: 1ch;
 	transition: 100ms;
 	}
 	.styled-dtext div.expandable.expanded > div.expandable-header > .section-arrow::after{
 	transform: rotate(90deg)!important;
-	content: "\f0d2";
+	content: "►";
 	transform-origin: bottom;
 	}
 	/* Comments */
