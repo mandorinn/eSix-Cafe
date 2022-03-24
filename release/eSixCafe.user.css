@@ -1473,6 +1473,19 @@
 	table.striped tbody tr td, table.table tbody tr td {
     background-color: var(--bg)!important;
 	}
+	/* User feedback table */ 
+	div#c-user-feedbacks #a-index .striped > tbody > tr > td {
+	background: transparent!important;
+	}
+	div#c-moderator-dashboards div#col2 .feedback-category-negative, div#c-user-feedbacks .feedback-category-negative {
+	background: var(--flagged)!important;
+	}
+	div#c-moderator-dashboards div#col2 .feedback-category-negative, div#c-user-feedbacks .feedback-category-neutral {
+	background: var(--bg-400)!important;
+	}
+	div#c-moderator-dashboards div#col2 .feedback-category-negative, div#c-user-feedbacks .feedback-category-positive {
+	background: var(--favorite-button)!important;
+	}
 	/* Tag Changes */
 	#p-revert-listing {
     max-width: 90vw;
