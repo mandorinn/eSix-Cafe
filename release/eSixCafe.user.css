@@ -26,6 +26,8 @@
 	--bg-editing-hover: #a6fffc;
 	--base-text: #c3ccd4;
 	--base-text-hover: #d3ddd3;
+	--base-link: #7bb1bd;
+	--base-link-hover: #a5eefe;
 	--header-link: #c3ccd4;
 	--header-link-hover: #d3ddd3;
 	--header-link-transition: 100ms;
@@ -89,6 +91,8 @@
     --bg-editing-hover: #ffa6c2;
     --base-text: #d4c3cc;
     --base-text-hover: #d3ddd3;
+	--base-link: #a67bbd;
+	--base-link-hover: #e9a5fe;
     --header-link: #d4c3cb;
     --header-link-hover: #d3ddd3;
     --header-link-visiting: #38232b;
@@ -147,6 +151,8 @@
     --bg-editing-hover: #c62929;
     --base-text: #e1e1e1;
     --base-text-hover: #e3e3e3;
+	--base-link: #bd7b7b;
+	--base-link-hover: #fea5a5;
     --header-link: #dedede;
     --header-link-hover: #e3e3e3;
     --header-link-visiting: #382323;
@@ -205,6 +211,8 @@
     --bg-editing-hover: #a6fffc;
     --base-text: #c3ccd4;
     --base-text-hover: #d3ddd3;
+	--base-link: #bdbd7b;
+	--base-link-hover: #fafea5;
     --header-link: #c3ccd4;
     --header-link-hover: #d3ddd3;
     --header-link-transition: 100ms;
@@ -267,6 +275,8 @@
     --bg-editing-hover: #a6beff;
     --base-text: #d6bbae;
     --base-text-hover: #f0cfc0;
+	--base-link: #f7e7df;
+	--base-link-hover: #fffaf8;
     --header-link: #d6bbae;
     --header-link-hover: #f0cfc0;
     --header-link-visiting: #474341;
@@ -338,10 +348,10 @@
     background-color: var(--bg)!important
 	}
 	a {
-	color: var(--base-text)!important;
+	color: var(--base-link)!important;
 	background: none!important;
 		&:hover {
-		color: var(--base-text-hover)!important;
+		color: var(--base-link-hover)!important;
 		background: none!important;
 		}
 	}
