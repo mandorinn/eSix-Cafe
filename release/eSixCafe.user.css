@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      e621.net
-@version        1.0.1
+@version        1.0.2
 @description    A muted and easy on the eyes style for e621.
 @author         mandorinn
 @preprocessor stylus
@@ -915,7 +915,9 @@
     margin: .5rem 1rem;
     font-size: 1.1rem;
 	}
-
+	div#page > div#april-fools.site-notice {
+	border: 0 !important;
+	}
 
 /* Posts page stuff */ 
 	search-content > post post-info{
