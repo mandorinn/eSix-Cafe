@@ -30,6 +30,8 @@
 	--base-link-hover: #a5eefe;
 	--header-link: #c3ccd4;
 	--header-link-hover: #d3ddd3;
+	--content-link:#BD7BA2;
+	--content-link-hover:#e493c3;
 	--header-link-transition: 100ms;
 	--header-link-editing-transition:100ms;
 	--header-link-visiting: #232e38;
@@ -66,6 +68,16 @@
 	--tag-cat-6-hover:#f6a2a2;
 	--tag-cat-7:#d8e1e9;
 	--tag-cat-7-hover:#eef7ff;
+	--user-member: var(--base-link);
+	--user-member-hover: var(--base-link-hover);
+	--user-privileged: #93c190;
+	--user-privileged-hover: #b0e7ad;
+	--user-admin:#cc946d;
+	--user-admin-hover: #eeae82;
+	--user-former-staff: #6cd5aa;
+	--user-former-staff-hover: #7ff7c6;
+	--user-janitor: #7dafd8;
+	--user-janitor-hover: #8fc8f7;
 	--favorite-button: #538163;
 	--favorite-button-hover: #6dab83;
 	--remove-favorite: #936060;
@@ -95,6 +107,8 @@
 	--base-link-hover: #e9a5fe;
     --header-link: #d4c3cb;
     --header-link-hover: #d3ddd3;
+	--content-link:#da72b0;
+	--content-link-hover:#ffa3da;
     --header-link-visiting: #38232b;
     --header-link-editing: #462c34;
     --header-link-editing-hover: #38232b;
@@ -129,6 +143,16 @@
     --tag-cat-6-hover:#f6a2a2;
     --tag-cat-7:#d8e1e9;
     --tag-cat-7-hover:#eef7ff;
+	--user-member: var(--base-link);
+	--user-member-hover: var(--base-link-hover);
+	--user-privileged: #93c190;
+	--user-privileged-hover: #b0e7ad;
+	--user-admin:#cc946d;
+	--user-admin-hover: #eeae82;
+	--user-former-staff: #6cd5aa;
+	--user-former-staff-hover: #7ff7c6;
+	--user-janitor: #7dafd8;
+	--user-janitor-hover: #8fc8f7;
     --favorite-button: #538163;
     --favorite-button-hover: #6dab83;
     --remove-favorite: #936060;
@@ -155,6 +179,8 @@
 	--base-link-hover: #fea5a5;
     --header-link: #dedede;
     --header-link-hover: #e3e3e3;
+	--content-link:#bd7b7b;
+	--content-link-hover:#e49393;
     --header-link-visiting: #382323;
     --header-link-editing: #462c2c;
     --header-link-editing-hover: #382323;
@@ -189,6 +215,16 @@
     --tag-cat-6-hover:#f657c3;
     --tag-cat-7:#dee1e4;
     --tag-cat-7-hover:#eef4f8;
+	--user-member: var(--base-link);
+	--user-member-hover: var(--base-link-hover);
+	--user-privileged: #93c190;
+	--user-privileged-hover: #b0e7ad;
+	--user-admin:#cc946d;
+	--user-admin-hover: #eeae82;
+	--user-former-staff: #6cd5aa;
+	--user-former-staff-hover: #7ff7c6;
+	--user-janitor: #7dafd8;
+	--user-janitor-hover: #8fc8f7;
     --favorite-button: #348b53;
     --favorite-button-hover: #52d781;
     --remove-favorite: #a93030;
@@ -215,8 +251,8 @@
 	--base-link-hover: #fafea5;
     --header-link: #c3ccd4;
     --header-link-hover: #d3ddd3;
-    --header-link-transition: 100ms;
-    --header-link-editing-transition:100ms;
+	--content-link:#bdbd7b;
+	--content-link-hover:#fafea5;
     --header-link-visiting: #232e38;
     --header-link-editing: #2c3946;
     --header-link-editing-hover: #232e38;
@@ -251,6 +287,16 @@
     --tag-cat-6-hover:#f6a2a2;
     --tag-cat-7:#d8e1e9;
     --tag-cat-7-hover:#eef7ff;
+	--user-member: var(--base-link);
+	--user-member-hover: var(--base-link-hover);
+	--user-privileged: #93c190;
+	--user-privileged-hover: #b0e7ad;
+	--user-admin:#cc946d;
+	--user-admin-hover: #eeae82;
+	--user-former-staff: #6cd5aa;
+	--user-former-staff-hover: #7ff7c6;
+	--user-janitor: #7dafd8;
+	--user-janitor-hover: #8fc8f7;
     --favorite-button: #538163;
     --favorite-button-hover: #6dab83;
     --remove-favorite: #936060;
@@ -279,6 +325,8 @@
 	--base-link-hover: #fffaf8;
     --header-link: #d6bbae;
     --header-link-hover: #f0cfc0;
+	--content-link: #75a6b8;
+	--content-link-hover: #8ac3da;
     --header-link-visiting: #474341;
     --header-link-editing: #474341;
     --header-link-editing-hover: #615c59;
@@ -313,6 +361,16 @@
     --tag-cat-6-hover:#f6a2a2;
     --tag-cat-7:#d8e1e9;
     --tag-cat-7-hover:#eef7ff;
+	--user-member: var(--base-link);
+	--user-member-hover: var(--base-link-hover);
+	--user-privileged: #93c190;
+	--user-privileged-hover: #b0e7ad;
+	--user-admin:#cc946d;
+	--user-admin-hover: #eeae82;
+	--user-former-staff: #6cd5aa;
+	--user-former-staff-hover: #7ff7c6;
+	--user-janitor: #7dafd8;
+	--user-janitor-hover: #8fc8f7;
     --favorite-button: #538163;
     --favorite-button-hover: #6dab83;
     --remove-favorite: #936060;
@@ -452,6 +510,9 @@
 	}
 	nav .bg-foreground a {
     color:var(--header-link-visiting)!important;
+		&:hover {
+		color: var(--header-link-visiting)!important
+		}
 	}
 	nav li a:visited {
     color: var(--header-link);
@@ -460,6 +521,9 @@
     color: var(--header-link)!important;
     position:relative;
     height: 100%;
+		&:hover {
+		color: var(--header-link-hover)!important
+	}
     }
 	.simple_form {
     background-color: var(--bg)!important;
@@ -615,6 +679,16 @@
 	#sidebar .category-7 a:hover {
     color:var(--tag-cat-7-hover)!important
 	}
+	.source-links .source-link a {
+	color: var(--content-link)!important;
+	transition: 100ms;
+	 	&:hover {
+		color: var(--content-link-hover)!important;
+		background-color: var(--bg)!important;
+		padding: 0 .5rem;
+		border-radius: 4px;
+	 }
+	}
 	/* Sidebar searchbox */
 	
 	div#page aside#sidebar section#search-box form, div#page aside#sidebar section#re621-insearch form, div#page aside#sidebar section#mode-box form {
@@ -682,10 +756,6 @@
 	#search-box button {
     display:none;
 	}
-	
-	
-	
-	
 	/* Notices */
 	div#c-posts div.notice.notice-flagged, div#c-posts div.notice.notice-deleted {
     background-color: var(--flagged)!important;
@@ -1038,7 +1108,7 @@
 	#re-enable-all-blacklists *, #sidebar #blacklist-box #re-enable-all-blacklists {
     color: var(--favorite-button)!important;
 	}
-	.blacklisted, {
+	.blacklisted {
 		.picture-container {
 		position: relative;
 		display: flex;
@@ -1107,6 +1177,13 @@
 	}
 	article.post-preview .desc a::before{
 	display: none;		
+	}
+	/* Link colors */
+	#description a, .about-section a, .comment-post-grid .styled-dtext .dtext-link {
+	color: var(--content-link)!important;
+		&:hover {
+		color: var(--content-link-hover)!important
+		}
 	}
 	/* Popular page */
 	#a-popular {
@@ -1335,6 +1412,48 @@
 		}
 		img {
 		border-radius: 4px;
+		}
+	}
+	.spoiler {
+	border-left: .25rem solid #393939
+	background: #1a1a1a!important;
+	color: #1a1a1a!important;
+	border-radius: 4px;
+	transition: 100ms;
+	padding: 0 .25rem;
+		&:hover {
+		color: var(--base-text)!important;
+		}
+	}
+	/* Name rank colors */
+	.user-member {
+	color: var(--user-member)!important;
+		&:hover {
+		color: var(--user-member-hover)!important;
+		}
+	}
+	.user-privileged{
+	color: var(--user-privileged)!important;
+		&:hover {
+		color: var(--user-privileged-hover)!important;
+		}
+	}
+	.user-admin {
+	color: var(--user-admin)!important;
+		&:hover {
+		color: var(--user-admin-hover)!important;
+		}
+	}
+	.user-former {
+	color: var(--user-former-staff)!important;
+		&:hover {
+		color: var(--user-former-staff-hover);
+		}
+	}
+	.user-janitor {
+	color: var(--user-janitor)!important;
+		&:hover {
+		color: var(--user-janitor-hover)!important;
 		}
 	}
 	/* Forums */
@@ -1626,6 +1745,16 @@
 	div.dtext-formatter[data-editing="true"] div.dtext-formatter-charcount {
 		color: var(--base-text)!important
 	}
+/* Dtext help page */ 
+	
+	#c-help > #a-show > #content > div[style="margin-bottom: 1em;"] > .dtext-container > .styled-dtext > blockquote > .striped > tbody {
+		tr {
+		background-color: var(--bg-300)!important;
+			td {
+			background-color: var(--bg-400)!important
+			}
+		}
+	}
 /* Upload page */
 	.box-section {
 	background-color: var(--bg)!important;
@@ -1792,19 +1921,46 @@
     object-fit:cover;
     width: 154px;
 	}
-	div[data-status="deleted"] a {
-    outline: 5px solid var(--bg-300)!important;
+	.profile-avatar .blacklisted {
+		a {
+		position: relative;
+		display: flex;
+		align-items: center!important;
+		justify-content: center!important;
+			&::before {
+			content: "Blacklisted";
+			background-color: var(--blacklisted-bg);
+			color: var(--blacklisted-text);
+			position: absolute;
+			display: flex;
+			align-items: center!important;
+			justify-content: center!important;
+			font-size: 1.3rem;
+			width: 100%;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			}
+		}
 	}
-	div[data-status="deleted"] a:hover {
-    outline: 5px solid var(--bg-300)!important;
-	}
-	div.blacklisted a {
-    outline: 5px solid var(--bg-300)!important;
-    aspect-ratio: 1/1;
-	}
-	div.blacklisted a:hover {
-    outline: 5px solid var(--bg-300)!important;
-    color: var(--deleted-text)!important;
+	.styled-dtext .blacklisted {
+		a {
+		position: relative;
+		display: flex;
+		align-items: center!important;
+		justify-content: center!important;
+			&::before {
+			content: "Blacklisted";
+			background-color: var(--blacklisted-bg);
+			color: var(--blacklisted-text);
+			position: absolute;
+			display: flex;
+			align-items: center!important;
+			justify-content: center!important;
+			font-size: 1.3rem;
+			width: 100%;
+			aspect-ratio: 1/1;
+			}
+		}
 	}
 }	
 
