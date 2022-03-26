@@ -26,6 +26,7 @@
 	--bg-editing-hover: #a6fffc;
 	--base-text: #c3ccd4;
 	--base-text-hover: #d3ddd3;
+	--base-text-faded: #c3ccd47a;
 	--base-link: #7bb1bd;
 	--base-link-hover: #a5eefe;
 	--header-link: #c3ccd4;
@@ -68,8 +69,8 @@
 	--tag-cat-6-hover:#f6a2a2;
 	--tag-cat-7:#d8e1e9;
 	--tag-cat-7-hover:#eef7ff;
-	--user-member: var(--base-link);
-	--user-member-hover: var(--base-link-hover);
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
 	--user-admin:#cc946d;
@@ -103,6 +104,7 @@
     --bg-editing-hover: #ffa6c2;
     --base-text: #d4c3cc;
     --base-text-hover: #d3ddd3;
+	--base-text-faded: #d4c3cc7a;
 	--base-link: #a67bbd;
 	--base-link-hover: #e9a5fe;
     --header-link: #d4c3cb;
@@ -143,8 +145,8 @@
     --tag-cat-6-hover:#f6a2a2;
     --tag-cat-7:#d8e1e9;
     --tag-cat-7-hover:#eef7ff;
-	--user-member: var(--base-link);
-	--user-member-hover: var(--base-link-hover);
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
 	--user-admin:#cc946d;
@@ -166,7 +168,7 @@
     --button-text-hover-secondary: #fff;
 	}
 	body[data-th-main="bloodlust"] {
-    --bg-300: #3d3d3d;
+    --bg-300: #2b2b2b;
     --bg-400: #252525;
     --bg: #171717;
     --bg-visiting: #f3f3f3;
@@ -175,6 +177,7 @@
     --bg-editing-hover: #c62929;
     --base-text: #e1e1e1;
     --base-text-hover: #e3e3e3;
+	--base-text-faded: #e1e1e17a;
 	--base-link: #bd7b7b;
 	--base-link-hover: #fea5a5;
     --header-link: #dedede;
@@ -215,8 +218,8 @@
     --tag-cat-6-hover:#f657c3;
     --tag-cat-7:#dee1e4;
     --tag-cat-7-hover:#eef4f8;
-	--user-member: var(--base-link);
-	--user-member-hover: var(--base-link-hover);
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
 	--user-admin:#cc946d;
@@ -247,6 +250,7 @@
     --bg-editing-hover: #a6fffc;
     --base-text: #c3ccd4;
     --base-text-hover: #d3ddd3;
+	--base-text-faded: #c3ccd47a;
 	--base-link: #bdbd7b;
 	--base-link-hover: #fafea5;
     --header-link: #c3ccd4;
@@ -287,8 +291,8 @@
     --tag-cat-6-hover:#f6a2a2;
     --tag-cat-7:#d8e1e9;
     --tag-cat-7-hover:#eef7ff;
-	--user-member: var(--base-link);
-	--user-member-hover: var(--base-link-hover);
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
 	--user-admin:#cc946d;
@@ -321,6 +325,7 @@
     --bg-editing-hover: #a6beff;
     --base-text: #d6bbae;
     --base-text-hover: #f0cfc0;
+	--base-text-faded: #d6bbae7a;
 	--base-link: #f7e7df;
 	--base-link-hover: #fffaf8;
     --header-link: #d6bbae;
@@ -361,8 +366,8 @@
     --tag-cat-6-hover:#f6a2a2;
     --tag-cat-7:#d8e1e9;
     --tag-cat-7-hover:#eef7ff;
-	--user-member: var(--base-link);
-	--user-member-hover: var(--base-link-hover);
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
 	--user-admin:#cc946d;
@@ -1322,6 +1327,18 @@
 		width: 90%;
 			.name-rank {
 			width: 100%;
+			color: var(--base-text-faded);
+			font-size: .75rem;
+			text-align: center;
+				h4 {
+				width: fit-content;
+				margin-inline: auto;
+				}
+				a {
+				font-size: 1rem;
+				margin-inline: auto;
+				width: fit-content;
+				}
 			}
 		}
 		.avatar, .blacklisted {
@@ -1401,6 +1418,9 @@
 		margin-bottom: .5rem;
 		bottom: 0;
 		font-size: .75rem;
+			a {
+			color: var(--base-text-faded)!important
+			}
 		}
 	}
 	.comment-post-grid .content {
@@ -1417,15 +1437,26 @@
 		}
 	}
 	.spoiler {
-	border-left: .25rem solid #393939
+	border-left: .25rem solid #393939;
 	background: #1a1a1a!important;
 	color: #1a1a1a!important;
 	border-radius: 4px;
 	transition: 100ms;
 	padding: 0 .25rem;
+	width: fit-content;
 		&:hover {
 		color: var(--base-text)!important;
 		}
+	}
+	#description a, .about-section a, .comment-post-grid .styled-dtext .spoiler .dtext-link {
+	color: #1a1a1a!important;
+	transition: 100ms;
+	}
+	#description a, .about-section a, .comment-post-grid .styled-dtext .spoiler:hover .dtext-link {
+	color: var(--content-link-hover)!important;
+	}
+	.user-warning em {
+	color: var(--flagged);
 	}
 	/* Name rank colors */
 	.user-member {
@@ -1458,6 +1489,9 @@
 		color: var(--user-janitor-hover)!important;
 		}
 	}
+	a.user-blocked, a.user-banned {
+	color: var(--flagged)!important;
+	}
 	/* Forums */
 	div.list-of-forum-posts {
 		.comment-post-grid{
@@ -1481,6 +1515,18 @@
 		width: 90%;
 			.name-rank {
 			width: 100%;
+			color: var(--base-text-faded);
+			font-size: .75rem;
+			text-align: center;
+				h4 {
+				width: fit-content;
+				margin-inline: auto;
+				}
+				a {
+				font-size: 1rem;
+				margin-inline: auto;
+				width: fit-content;
+				}
 			}
 		}
 		.avatar, .blacklisted {
@@ -1560,6 +1606,9 @@
 		margin-bottom: .5rem;
 		bottom: 0;
 		font-size: .75rem;
+			a {
+			color: var(--base-text-faded)!important
+			}
 		}
 	}
 	.inline-code {
