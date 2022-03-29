@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      e621.net
-@version        1.0.3
+@version        1.0.4
 @description    A muted and easy on the eyes style for e621.
 @author         mandorinn
 @preprocessor stylus
@@ -533,7 +533,7 @@
     }
 	.simple_form {
     background-color: var(--bg)!important;
-    border-radius: 8px;
+    border-radius: 2px 8px 8px 2px;
     border-left: .25rem solid var(--elements-highlight)!important;
 	}
 	form input, .input > input, .input > select{
@@ -1778,7 +1778,7 @@
 	div#c-comments div#a-index .comment-post {
     background-color: var(--bg-400)!important;
     border-left: .25rem solid var(--elements-highlight);
-    border-radius: 8px;
+    border-radius: 2px 8px 8px 2px;
     overflow:hidden;
     padding: .5rem;
     }
@@ -1891,7 +1891,7 @@
 	width: 14.15rem;
 	}
 	div.comments-for-post div.list-of-comments article.comment .avatar, div#c-blips article.blip .avatar, div.comments-for-post div.list-of-comments article.comment .blacklisted, div#c-blips article.blip .blacklisted {
-	display: none;
+	display:none;
 	}
 	div.comments-for-post div.list-of-comments article.comment .author-info, div#c-blips article.blip .author-info {
 	width: 95%;
@@ -1949,7 +1949,7 @@
     background-color: var(--bg-400)!important;
     border-left: .25rem solid var(--elements-highlight)!important;
     padding: .5rem;
-    border-radius: 8px;
+    border-radius: 2px 8px 8px 2px;
     overflow:hidden;
     word-wrap: break-word;
 	}
@@ -1965,7 +1965,7 @@
 	}
 	.box-section {
     background-color: var(--bg-400)!important;
-    border-radius: .5rem;
+    border-radius: 2px 8px 8px 2px;
     border-left: .25rem solid var(--elements-highlight)!important;
 	}
 	picture.picture-container {
