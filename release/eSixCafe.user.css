@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
-@namespace      e621.net
-@version        1.0.4
+@namespace      mandorinn
+@version        1.1.0
 @description    A muted and easy on the eyes style for e621.
 @author         mandorinn
 @preprocessor stylus
@@ -79,6 +79,8 @@
 	--user-former-staff-hover: #7ff7c6;
 	--user-janitor: #7dafd8;
 	--user-janitor-hover: #8fc8f7;
+	--user-banned: #d46969;
+	--user-banned-hover: #ef7676;
 	--favorite-button: #538163;
 	--favorite-button-hover: #6dab83;
 	--remove-favorite: #936060;
@@ -95,7 +97,7 @@
 	scrollbar-color: #3c3c3c #222;
 	}
 	body[data-th-main="pony"] {
-    --bg-300: #6b5372;
+    --bg-300: #604a67;
     --bg-400: #55425a;
     --bg: #4b3a50;
     --bg-visiting: #ffe4e9;
@@ -105,12 +107,12 @@
     --base-text: #d4c3cc;
     --base-text-hover: #d3ddd3;
 	--base-text-faded: #d4c3cc7a;
-	--base-link: #a67bbd;
+	--base-link: #b485cd;
 	--base-link-hover: #e9a5fe;
     --header-link: #d4c3cb;
     --header-link-hover: #d3ddd3;
-	--content-link:#da72b0;
-	--content-link-hover:#ffa3da;
+	--content-link:#7bbda5;
+	--content-link-hover:#8dd9bd;
     --header-link-visiting: #38232b;
     --header-link-editing: #462c34;
     --header-link-editing-hover: #38232b;
@@ -131,8 +133,8 @@
     --mode-blacklist:#171c22;
     --mode-download: #553658;
     --mode-fullscreen: #365857;
-    --tag-cat-1:#bd7caa;
-    --tag-cat-1-hover:#e596c7;
+    --tag-cat-1:#c590b6;
+    --tag-cat-1-hover:#e6a8cf;
     --tag-cat-2:#bd987e;
     --tag-cat-2-hover:#f2c3a2;
     --tag-cat-3:#7abebe;
@@ -155,6 +157,8 @@
 	--user-former-staff-hover: #7ff7c6;
 	--user-janitor: #7dafd8;
 	--user-janitor-hover: #8fc8f7;
+	--user-banned: #d46969;
+	--user-banned-hover: #ef7676;
     --favorite-button: #538163;
     --favorite-button-hover: #6dab83;
     --remove-favorite: #936060;
@@ -168,9 +172,9 @@
     --button-text-hover-secondary: #fff;
 	}
 	body[data-th-main="bloodlust"] {
-    --bg-300: #2b2b2b;
-    --bg-400: #252525;
-    --bg: #171717;
+    --bg-300: #36393e;
+    --bg-400: #282b30;
+    --bg: #1e2124;
     --bg-visiting: #f3f3f3;
     --bg-visiting-hover:#f0f0f0;
     --bg-editing: #be4343;
@@ -178,8 +182,8 @@
     --base-text: #e1e1e1;
     --base-text-hover: #e3e3e3;
 	--base-text-faded: #e1e1e17a;
-	--base-link: #bd7b7b;
-	--base-link-hover: #fea5a5;
+	--base-link: #c39cc5;
+	--base-link-hover: #ffc9fe;
     --header-link: #dedede;
     --header-link-hover: #e3e3e3;
 	--content-link:#bd7b7b;
@@ -197,15 +201,15 @@
     /*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
     --actions-fav-true:#b4be7a;
     --flagged: #6e4848;
-    --elements-highlight: #bd7b7b;
+    --elements-highlight: #ff79c6;
     --mode-edit:#534738;
     --mode-add-fav:#36583a;
     --mode-remove-fav:#583636;
     --mode-blacklist:#000;
     --mode-download: #553658;
     --mode-fullscreen: #365857;
-    --tag-cat-1:#bd5656;
-    --tag-cat-1-hover:#e05e5e;
+    --tag-cat-1:#c17777;
+    --tag-cat-1-hover:#d79090;
     --tag-cat-2:#be7f53;
     --tag-cat-2-hover:#f8a66d;
     --tag-cat-3:#51c2c2;
@@ -228,10 +232,12 @@
 	--user-former-staff-hover: #7ff7c6;
 	--user-janitor: #7dafd8;
 	--user-janitor-hover: #8fc8f7;
-    --favorite-button: #348b53;
-    --favorite-button-hover: #52d781;
-    --remove-favorite: #a93030;
-    --remove-favorite-hover: #e64848;
+	--user-banned: #d46969;
+	--user-banned-hover: #ef7676;
+    --favorite-button: #47895f;
+    --favorite-button-hover: #71d594;
+    --remove-favorite: #a95454;
+    --remove-favorite-hover: #e07373;
     --warn-button: #a07658;
     --warn-button-hover: #e5aa80;
     --button-color: #232e38;
@@ -248,14 +254,14 @@
     --bg-visiting-hover: #fff;
     --bg-editing: #a0d2d4;
     --bg-editing-hover: #a6fffc;
-    --base-text: #c3ccd4;
+    --base-text: #c3d4c6;
     --base-text-hover: #d3ddd3;
 	--base-text-faded: #c3ccd47a;
 	--base-link: #bdbd7b;
 	--base-link-hover: #fafea5;
     --header-link: #c3ccd4;
     --header-link-hover: #d3ddd3;
-	--content-link:#bdbd7b;
+	--content-link:#dcdc8f;
 	--content-link-hover:#fafea5;
     --header-link-visiting: #232e38;
     --header-link-editing: #2c3946;
@@ -277,8 +283,8 @@
     --mode-blacklist:#171c22;
     --mode-download: #553658;
     --mode-fullscreen: #365857;
-    --tag-cat-1:#7cb2bd;
-    --tag-cat-1-hover:#96d8e5;
+    --tag-cat-1:#7cbdab;
+    --tag-cat-1-hover:#96e5cc;
     --tag-cat-2:#bd987e;
     --tag-cat-2-hover:#f2c3a2;
     --tag-cat-3:#be7aa1;
@@ -301,6 +307,8 @@
 	--user-former-staff-hover: #7ff7c6;
 	--user-janitor: #7dafd8;
 	--user-janitor-hover: #8fc8f7;
+	--user-banned: #d46969;
+	--user-banned-hover: #ef7676;
     --favorite-button: #538163;
     --favorite-button-hover: #6dab83;
     --remove-favorite: #936060;
@@ -376,6 +384,8 @@
 	--user-former-staff-hover: #7ff7c6;
 	--user-janitor: #7dafd8;
 	--user-janitor-hover: #8fc8f7;
+	--user-banned: #d46969;
+	--user-banned-hover: #ef7676;
     --favorite-button: #538163;
     --favorite-button-hover: #6dab83;
     --remove-favorite: #936060;
@@ -464,6 +474,9 @@
 	border-left: 2px solid var(--bg-300);
    	border-right: 2px solid var(--bg-300);
 	}
+	.update-notification[data-loading="true"]::after {
+	bottom: 1rem;
+	}
 	header#top nav#nav menu.main.custom li {
     padding: 6px 0;
 	}
@@ -472,6 +485,7 @@
     max-width:100vw;
     border-radius: 100%!important;
     text-align: center;
+	color: var(--header-link)
 	* {
 		box-sizing: initial;
 		background-image: none
@@ -589,8 +603,23 @@
 	}
 	/* Re621 menus */
 	div#modal-container div.re621-ui-dialog.modal-reserve-height div.ui-dialog-content {
-    max-height: 50vh !important;
+    overflow:hidden;
+	min-height: fit-content!important;
+		input {
+		background-color: var(--bg)!important
+		}
+		h3 {
+		color: var(--base-text);
+		}
     }
+	tabbed.config-tabs ul.ui-tabs-nav {
+	height:100%;
+	overflow:hidden;
+	position:relative;
+	}
+	tabbed.config-tabs ul.ui-tabs-nav li:last-child {
+	margin-top: auto;	
+	}
 	div#modal-container div.re621-ui-dialog {
     background-image: none;
     color: var(--base-text);
@@ -1201,7 +1230,10 @@
 		}
 	}
 	a[href^="/tickets/new?disp_id"] {
-	color: var(--flagged)!important
+	color: var(--user-banned)!important
+	}
+	a[href^="/tickets/new?disp_id"]:hover {
+	color: var(--user-banned-hover)!important;
 	}
 	/* Popular page */
 	#a-popular {
@@ -1341,9 +1373,11 @@
 			color: var(--base-text-faded);
 			font-size: .75rem;
 			text-align: center;
+			user-select: none;
 				h4 {
 				width: fit-content;
 				margin-inline: auto;
+				user-select: text;
 				}
 				a {
 				font-size: 1rem;
@@ -1429,6 +1463,7 @@
 		margin-bottom: .5rem;
 		bottom: 0;
 		font-size: .75rem;
+		user-select: none;
 			a {
 			color: var(--base-text-faded)!important
 			}
@@ -1491,7 +1526,7 @@
 	.user-former {
 	color: var(--user-former-staff)!important;
 		&:hover {
-		color: var(--user-former-staff-hover);
+		color: var(--user-former-staff-hover)!important;
 		}
 	}
 	.user-janitor {
@@ -1501,7 +1536,10 @@
 		}
 	}
 	a.user-blocked, a.user-banned {
-	color: var(--flagged)!important;
+	color: var(--user-banned)!important;
+		&:hover {
+		color: var(--user-banned-hover)!important
+		}
 	}
 	/* Forums */
 	div.list-of-forum-posts {
@@ -1529,9 +1567,11 @@
 			color: var(--base-text-faded);
 			font-size: .75rem;
 			text-align: center;
+			user-select: none;
 				h4 {
 				width: fit-content;
 				margin-inline: auto;
+				user-select: text;
 				}
 				a {
 				font-size: 1rem;
@@ -1617,6 +1657,7 @@
 		margin-bottom: .5rem;
 		bottom: 0;
 		font-size: .75rem;
+		user-select: none;
 			a {
 			color: var(--base-text-faded)!important
 			}
@@ -1774,6 +1815,9 @@
 	border: 2px solid var(--bg-400);
 	color: var(--base-text);
 	}
+	div#c-pools div#a-show #blacklist-box {
+		display: flex;
+	}
 /* Comments page */
 	div#c-comments div#a-index .comment-post {
     background-color: var(--bg-400)!important;
@@ -1838,6 +1882,87 @@
 	input[type="file"]button {
 	color: pink;
 	}
+	button.active {
+	background-color: var(--bg-300)!important;
+	}
+	button.rating-e.active {
+	background-color: var(--remove-favorite)!important;	
+	}
+	button.rating-q.active {
+	background-color: var(--warn-button)!important;
+	}
+	button.rating-s.active {
+	background-color: var(--favorite-button)!important;
+	}
+	/* Confirm you're not a robot page */
+	.message {
+	position:absolute;
+	left:40%;
+	top:10%;
+	display:grid;
+	place-items: center;
+	width: 20%;
+	min-width: fit-content;
+	max-height: 30%;
+	min-height: fit-content;
+	padding: 1rem;
+	margin-inline: auto;
+	background-color: var(--bg);
+	border-radius: 8px;
+	overflow:hidden;
+		&::before {
+		content: '';
+		height:100%;
+		aspect-ratio: 1/1;
+		position:absolute;
+		bottom: -40%;
+		left: -25%;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%2300000055' class='bi bi-gear-fill' viewBox='0 0 16 16'%3E%3Cpath d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		z-index: 1;
+		animation: rotate-gear 15s linear infinite;
+		}
+		&::after{
+		content: '';
+		height:100%;
+		aspect-ratio: 1/1;
+		position:absolute;
+		top: -40%;
+		right: -25%;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%2300000055' class='bi bi-gear-fill' viewBox='0 0 16 16'%3E%3Cpath d='M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		z-index: 1;
+		animation: rotate-gear 20s linear infinite;
+		}
+		h1, p, form {
+		z-index: 10;
+		}
+		.e6-challenge {
+		cursor: pointer;
+			input {
+			background-color: var(--bg-300)!important;
+			border-radius: 8px;
+			transition: 100ms;
+			padding: .5rem;
+				&:hover {
+				background-color: var(--bg-400)!important;
+			}
+		}
+		@keyframes rotate-gear  {
+ 		from {
+    	transform: rotate(0deg);
+  		}
+
+  		to {
+    	transform: rotate(360deg);
+  		}
+}
+
+		}
+		
+	}
 	@media screen and (max-width: 800px)  {
 	body.resp #maintoggle {
 	display:none;
@@ -1856,10 +1981,14 @@
 	border-radius: 0 0 0 8px;
  	border-bottom: 2px solid var(--bg-300);
 	border-left: 2px solid var(--bg-300);
-	margin-right:0;
-	margin-left: .5rem;
-	bottom: -2rem;
+	margin-left: auto;
+	bottom: -1.55rem;
+	right: -8px;
+	border-right: none!important;
  	z-index: 9970;
+	display:flex;
+	align-items: center;
+	overflow:hidden;
 	}
 	body.resp .comment-post-grid .author-info .avatar .post-thumbnail img {
  	height: 100px;
@@ -1894,14 +2023,35 @@
 	display:none;
 	}
 	div.comments-for-post div.list-of-comments article.comment .author-info, div#c-blips article.blip .author-info {
-	width: 95%;
-	padding: 0 .5rem;
+	width: 100%;
+	padding: 0rem;
+		.post-time {
+			margin-right:.5rem;
+			user-select: none;
+		}
+	}
+	aside#sidebar {
+	width: 7rem!important;
+	font-size: .8rem!important;
+	}
+	body[data-sticky="true"] aside#sidebar div#re621-search, body[data-sticky="true"] aside#sidebar section#downloader-box, body[data-sticky="true"] aside#sidebar section#fav-downloader-box {
+  	position: -webkit-sticky;
+  	position: sticky;
+  	max-height: 50vh;
+	width:7.5rem;
+  	border-bottom: 5px solid var(--bg);
+	overflow: scroll;
+	scrollbar-width:thin;
 	}
 	}
 	}
 
 @-moz-document url-prefix("https://e621.net/users/"), url-prefix("https://e926.net/users/") {
 	/* Users page */
+	div#c-users div#a-show .profile-stats {
+		background-color: var(--bg-400)!important;}
+
+	div#page[enhancements="true"] { 
 	div#c-users div#a-show .bottom-section{
     padding: 1rem;
     max-width: 55vw;
@@ -2030,6 +2180,7 @@
 			}
 		}
 	}
+}
 }	
 
 @-moz-document url("https://e621.net/"), url("https://e926.net/"), url("https://e926.net"), url("https://e621.net") {
