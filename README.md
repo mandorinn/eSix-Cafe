@@ -10,7 +10,7 @@ A comprehensive restyle of e621, made to be easier on the eyes while being compa
 
 # Notes
 
-<li>This theme was designed with the re621 userscript in mind. I cannot guaruntee that this theme will work as intended if you aren't using re621.
+<li>This theme was designed with the re621 userscript in mind. Should work mostly fine without, tho it is recommended.
 <br>To install re621 look <a href="https://e621.net/forum_topics/25872">here~</a> (like frfr install it, it's pretty sick n stufffff)</li>
 <li>
    
@@ -39,19 +39,19 @@ A comprehensive restyle of e621, made to be easier on the eyes while being compa
   
   # Previews
 ![homepage](https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/homepage.jpg?raw=true)
-<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/posts%20page.jpg?raw=true" width="49%"> 
-<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/comments.png?raw=true" width="49%"> 
-<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/profile%20page.png?raw=true" width="49%"> 
-<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/popular%20page.png?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/posts-page.jpg?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/comments.png?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/profile-page.png?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/popular-page.png?raw=true" width="49%"> 
 
 
 
 # Individual theme previews!
 <p align="center">
-<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/pony.png?raw=true" width="49%"> 
-<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/bloodlust.png?raw=true" width="49%"> 
-<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/serpent.png?raw=true" width="49%"> 
-<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/hot%20coffee.png?raw=true" width="49%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/pony.png?raw=true" width="49%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/bloodlust.png?raw=true" width="49%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/serpent.png?raw=true" width="49%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/hot-coffee.png?raw=true" width="49%"> 
  
 </p>
    
