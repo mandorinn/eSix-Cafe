@@ -1,8 +1,8 @@
-/* ==UserStyle==
+4/* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.1.4
-@description    A muted and easy on the eyes style for e621.
+@version        1.1.5
+@description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn
 @preprocessor stylus
 ==/UserStyle== */
@@ -678,40 +678,40 @@
 	#sidebar .general-tag-list a:hover {
     color:var(--tag-cat-1-hover)!important
 	}
-	#sidebar .category-1 a {
+	.category-1 a {
     color:var(--tag-cat-2)!important
 	}
-	#sidebar .category-1 a:hover {
+	.category-1 a:hover {
     color:var(--tag-cat-2-hover)!important
 	}
-	#sidebar .category-3 a {
+	.category-3 a {
     color:var(--tag-cat-3)!important
 	}
-	#sidebar .category-3 a:hover {
+	.category-3 a:hover {
     color:var(--tag-cat-3-hover)!important
 	}
-	#sidebar .category-4 a {
+	.category-4 a {
     color:var(--tag-cat-4)!important
 	}
-	#sidebar .category-4 a:hover {
+	.category-4 a:hover {
     color:var(--tag-cat-4-hover)!important
 	}
-	#sidebar .category-5 a {
+	 .category-5 a {
     color:var(--tag-cat-5)!important
 	}
-	#sidebar .category-5 a:hover {
+	.category-5 a:hover {
     color:var(--tag-cat-5-hover)!important
 	}
-	#sidebar .category-6 a {
+	.category-6 a {
     color:var(--tag-cat-6)!important
 	}
-	#sidebar .category-6 a:hover {
+	.category-6 a:hover {
     color:var(--tag-cat-6-hover)!important
 	}
-	#sidebar .category-7 a {
+	.category-7 a {
     color:var(--tag-cat-7)!important
 	}
-	#sidebar .category-7 a:hover {
+	.category-7 a:hover {
     color:var(--tag-cat-7-hover)!important
 	}
 	.source-links .source-link a {
@@ -1570,6 +1570,7 @@
 	align-items: center;
 		.sticky {
 		margin-left:.25rem;
+		margin-right:.25rem;
 		display:flex;
 		align-items: center;
 		justify-content: center;
@@ -1585,12 +1586,13 @@
 		}
 		.new {
 		margin-left:.25rem;
+		margin-right: .15rem!important;
 		display:flex;
 		align-items: center;
 		justify-content: center;
 		position:relative;
 		font-size:0!important;
-		width:30px;
+		width:20px;
 		}
 		.new::after {
 		content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='%23ffffff'%3E%3Cg%3E%3Crect fill='none' height='24' width='24'/%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Ccircle cx='19' cy='3' r='3'/%3E%3Cpath d='M6 8V6h9.03c-1.21-1.6-1.08-3.21-0.92-4H4.01c-1.1 0-2 0.89-2 2L2 22l4-4h14c1.1 0 2-0.9 2-2V6.97 C21.16 7.61 20.13 8 19 8H6z M14 14H6v-2h8V14z M18 11H6V9h12V11z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -1598,8 +1600,23 @@
 		bottom: -.75rem;
 		mix-blend-mode: soft-light;
 		}
+		.locked-topic {
+		margin-left:.5rem!important;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		position:relative;
+		font-size:0!important;
+		width:10px;
+		}
+		.locked-topic::after {
+		content:url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 2 15.0 15.0' width='30.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8 7L10.8 5.5C10.8 4.1 9.4 3 8 3C6.6 3 5.2 4.1 5.2 5.5L5.2 7C4.6 7 4 7.6 4 8.2L4 11.7C4 12.4 4.6 13 5.2 13L10.7 13C11.4 13 12 12.4 12 11.8L12 8.3C12 7.6 11.4 7 10.8 7ZM9.5 7L6.5 7L6.5 5.5C6.5 4.7 7.2 4.2 8 4.2C8.8 4.2 9.5 4.7 9.5 5.5L9.5 7Z' fill='%23ffffff'/%3E%3C/svg%3E");
+		position:absolute;
+		bottom: -.75rem;
+		mix-blend-mode: soft-light;
+		}
 		.forum-post-link {
-		margin-right: .25rem!important;
+		margin-right: 0rem!important;
 		margin-left: .25rem!important;
 		color: var(--content-link)!important;
 		}
@@ -1626,6 +1643,11 @@
 		opacity: .7;
 		}
 	}
+	table.striped tr.forum-topic-row > td:nth-child(n + 2) {
+	time {
+	color: var(--base-text-faded)
+	}
+	} 
 	div.list-of-forum-posts {
 		.comment-post-grid{
 		background-color: var(--bg)!important;
@@ -1941,6 +1963,30 @@
 	}	
 	div.dtext-formatter[data-editing="true"] div.dtext-formatter-charcount {
 		color: var(--base-text)!important
+	}
+/* Help Pages */ 
+	#c-help {
+		#sidebar {
+		position:fixed;
+		left: 0;
+		top: 4rem;
+		padding: .5rem .5rem;
+			h1 {
+			width: 75%;
+			text-align: center;
+			border-bottom: 1px solid var(--bg-400);
+			margin-inline: auto;
+			margin-bottom: .5rem;
+			padding-bottom: .25rem;
+			}
+			div[style="width:240px"] {
+			width: fit-content!important;
+			}
+			ul {
+			display: flex;
+			flex-direction: column;
+			}
+		}		
 	}
 /* Dtext help page */ 
 	
