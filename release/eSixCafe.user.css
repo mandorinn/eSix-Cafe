@@ -1,7 +1,7 @@
 4/* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.1.5
+@version        1.1.6
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn
 @preprocessor stylus
@@ -1625,7 +1625,6 @@
 		}
 		
 		.last-page {
-		margin-right: 20%;
 		margin-left: .5rem;
 		position:relative;
 		display:flex;
@@ -2238,7 +2237,7 @@
     object-fit: cover;
     height: 100%;
     border-radius: 50%;
-    aspect-ratio: 1/1!important;
+    aspect-ratio: 1/1;
     outline: 5px solid var(--bg-300)!important;
 	}
 	div#c-users div#a-show .profile-container .stats-section {
@@ -2335,6 +2334,29 @@
 			}
 		}
 	}
+	.post-thumbnail[data-status="deleted"] {
+				a {
+				position:relative;
+				display: flex;
+				align-items: center!important;
+				justify-content: center!important;
+				border-radius: 50%;
+				overflow:hidden;
+				border: 5px solid var(--bg-300)!important;
+				}
+				a::before {
+				content: "Deleted";
+				background-color: var(--deleted-bg);
+				color: var(--deleted-text);
+				position: absolute;
+				display: flex;
+				height: 100%;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				}
+			}
 	.styled-dtext .blacklisted {
 		a {
 		position: relative;
@@ -2355,7 +2377,37 @@
 			}
 		}
 	}
-}
+	.about-section {
+		.post-thumbnail {
+		margin-inline: 0;
+		}
+		.post-thumbnail a img {
+		outline: none!important;
+		border-radius: 4px;
+		aspect-ratio: unset;
+		margin: .25rem 0;
+		}
+		.post-thumbnail[data-status="deleted"] {
+		a {
+		border-radius: 4px;
+		overflow: hidden;
+		width:100%;
+		border: none!important;
+		}
+		a::before {
+		border-radius: 4px;
+		}
+		}
+		a {
+		border-radius: 4px;
+		overflow: hidden;
+		width:100%;
+		}
+		a::before {
+		border-radius: 4px;
+		}
+	}
+	}
 }	
 
 @-moz-document url("https://e621.net/"), url("https://e926.net/"), url("https://e926.net"), url("https://e621.net") {
