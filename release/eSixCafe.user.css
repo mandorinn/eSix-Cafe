@@ -1,7 +1,7 @@
-4/* ==UserStyle==
+/* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.1.6
+@version        1.1.7
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn
 @preprocessor stylus
@@ -362,8 +362,8 @@
     --mode-fullscreen: #365857;
     --tag-cat-1:#bdb1ac;
     --tag-cat-1-hover:#d6bbae;
-    --tag-cat-2:#bd987e;
-    --tag-cat-2-hover:#f2c3a2;
+    --tag-cat-2:#bb8864;
+    --tag-cat-2-hover:#e7a87d;
     --tag-cat-3:#7abebe;
     --tag-cat-3-hover:#9ff7ee;
     --tag-cat-4:#7bbe92;
@@ -602,8 +602,13 @@
     outline: solid 2px var(--base-text);
 	}
 	/* Re621 menus */
+	.ui-widget.ui-widget-content {
+  	border: 2px solid var(--bg-300) !important;
+  	border-radius: 2px 8px 8px 8px;
+  	overflow: hidden!important;
+	height:fit-content;
+	}
 	div#modal-container div.re621-ui-dialog.modal-reserve-height div.ui-dialog-content {
-    overflow:hidden;
 	min-height: fit-content!important;
 		input {
 		background-color: var(--bg)!important
@@ -614,11 +619,10 @@
     }
 	tabbed.config-tabs ul.ui-tabs-nav {
 	height:100%;
-	overflow:hidden;
 	position:relative;
 	}
 	tabbed.config-tabs ul.ui-tabs-nav li:last-child {
-	margin-top: auto;	
+	margin-bottom: auto;	
 	}
 	div#modal-container div.re621-ui-dialog {
     background-image: none;
@@ -657,8 +661,12 @@
     border-radius: 2px 8px 8px 8px;
     overflow:hidden;
 	}
-	ul li:hover * {
+	ul.ui-autocomplete li:hover * {
     border: none;
+	background-color: var(--bg)!important;
+	}
+	.ui-autocomplete .autocomplete-arrow {
+	color: var(--base-text-faded)!important;
 	}
 	.ui-widget-content {
     background-color: var(--bg-400)!important;
@@ -1379,10 +1387,17 @@
 	background-color: var(--bg)!important;
 	transition: 200ms;
 	}
+	.score-positive a {
+	color: var(--favorite-button)!important
+	}
+	.score-negative a {
+	color: var(--remove-favorite)!important;
+	}
 	div.comments-for-post div.list-of-comments article.comment, div#c-blips article.blip {
 	border-radius: 8px;
 	overflow:hidden;
 		.author-info {
+		position:relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -1390,6 +1405,7 @@
 		border-right: 2px solid var(--bg-300)!important;
 		height: 100%;
 		width: 90%;
+		position:relative;
 			.name-rank {
 			width: 100%;
 			color: var(--base-text-faded);
@@ -1505,6 +1521,29 @@
 		border-radius: 4px;
 		}
 	}
+	.post-thumbnail[data-status="deleted"] {
+	margin: .25rem;
+				a {
+				position:relative;
+				display: flex;
+				align-items: center!important;
+				justify-content: center!important;
+				border-radius: 4px;
+				overflow:hidden;
+				}
+				a::before {
+				content: "Deleted";
+				background-color: var(--deleted-bg);
+				color: var(--deleted-text);
+				position: absolute;
+				display: flex;
+				height: 100%;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				}
+			}
 	.spoiler {
 	border-left: .25rem solid #393939;
 	background: #1a1a1a!important;
@@ -1562,6 +1601,22 @@
 	color: var(--user-banned)!important;
 		&:hover {
 		color: var(--user-banned-hover)!important
+		}
+	}
+	.comments article {
+	position:relative;
+	}
+	/* Super Secret Helper badges */ 
+	article[data-creator-id="601225"] .author-info{
+		position:relative;
+		&::after {
+		content: url("data:image/svg+xml,%3Csvg height='16' viewBox='0 0 31.27 29.53' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M22.8 1 S34.8 9.19 30.24 20.69 S16.61 29 20 25.64 S16 20 11.27 15.64 L22.79 1' fill='%23ffffff'/%3E%3Cpath d='M22.07 12.26 C19.54 15.48 15.97 17.09 13.21 16.51 L3.58 28.78 A2 2 0 0 1 0.77 29.12 A2 2 0 0 1 0.42 26.3 L10 14.05 C8.73 11.51 9.43 7.62 12 4.37 C15.19 0.33 20 -1.18 22.79 1 S25.24 8.22 22.07 12.26 Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E");
+		position: absolute;
+		display:inline-block;
+		top:.25rem;
+		right:.25rem;
+		mix-blend-mode: soft-light;
+		opacity:.6;
 		}
 	}
 	/* Forums */
@@ -2264,6 +2319,7 @@
     overflow:hidden;
     word-wrap: break-word;
 		h1 {
+		position:relative;
 		width: 100%;
 		margin-inline: auto;
 		margin-bottom: .5rem;
@@ -2272,6 +2328,18 @@
 		place-content: center;
 		border-bottom: 1px solid var(--bg-300);
 		}
+		/* Secret helpers badge on the user page */
+		a[href="/users/601225"] {
+		&::after {
+		content: url("data:image/svg+xml,%3Csvg height='20' viewBox='0 0 31.27 29.53' width='25' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M22.8 1 S34.8 9.19 30.24 20.69 S16.61 29 20 25.64 S16 20 11.27 15.64 L22.79 1' fill='%23ffffff'/%3E%3Cpath d='M22.07 12.26 C19.54 15.48 15.97 17.09 13.21 16.51 L3.58 28.78 A2 2 0 0 1 0.77 29.12 A2 2 0 0 1 0.42 26.3 L10 14.05 C8.73 11.51 9.43 7.62 12 4.37 C15.19 0.33 20 -1.18 22.79 1 S25.24 8.22 22.07 12.26 Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E");
+		position: absolute;
+		right: 0;
+		top: -.5rem;
+		mix-blend-mode: soft-light;
+		opacity: .6;
+		pointer-events: none;
+		}
+	}
 	}
 	.user-statistics {
     font-size: .7rem;
@@ -2495,12 +2563,16 @@
     border-radius: 2px 8px 8px 8px;
     overflow:hidden;
 	}
-	ul li:hover * {
+	ul.ui-autocomplete li:hover * {
     border: none;
+	background-color: var(--bg)!important;
+	}
+	.ui-autocomplete .autocomplete-arrow {
+	color: var(--base-text-faded)!important;
 	}
 	.ui-widget-content {
     background-color: var(--bg-300);
     margin-top: .2rem;
     margin-left: .05rem;
 	}
-    }
+}
