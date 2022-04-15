@@ -1,9 +1,9 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.1.7
+@version        1.1.8
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
-@author         mandorinn
+@author         mandorinn (www.mandorinn.dev)
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
 @preprocessor stylus
 ==/UserStyle== */
@@ -687,40 +687,40 @@
 	#sidebar .general-tag-list a:hover {
     color:var(--tag-cat-1-hover)!important
 	}
-	.category-1 a {
+	.category-1 a, a.tag-type-1 {
     color:var(--tag-cat-2)!important
 	}
-	.category-1 a:hover {
+	.category-1 a:hover, a.tag-type-1:hover {
     color:var(--tag-cat-2-hover)!important
 	}
-	.category-3 a {
+	.category-3 a, a.tag-type-3 {
     color:var(--tag-cat-3)!important
 	}
-	.category-3 a:hover {
+	.category-3 a:hover, a.tag-type-3:hover {
     color:var(--tag-cat-3-hover)!important
 	}
-	.category-4 a {
+	.category-4 a, a.tag-type-4 {
     color:var(--tag-cat-4)!important
 	}
-	.category-4 a:hover {
+	.category-4 a:hover, a.tag-type-4:hover {
     color:var(--tag-cat-4-hover)!important
 	}
-	 .category-5 a {
+	.category-5 a, a.tag-type-5 {
     color:var(--tag-cat-5)!important
 	}
-	.category-5 a:hover {
+	.category-5 a:hover, a.tag-type-5:hover {
     color:var(--tag-cat-5-hover)!important
 	}
-	.category-6 a {
+	.category-6 a, a.tag-type-6 {
     color:var(--tag-cat-6)!important
 	}
-	.category-6 a:hover {
+	.category-6 a:hover, a.tag-type-6:hover {
     color:var(--tag-cat-6-hover)!important
 	}
-	.category-7 a {
+	.category-7 a, a.tag-type-7 {
     color:var(--tag-cat-7)!important
 	}
-	.category-7 a:hover {
+	.category-7 a:hover, a.tag-type-7:hover {
     color:var(--tag-cat-7-hover)!important
 	}
 	.source-links .source-link a {
@@ -882,10 +882,16 @@
     height: 100%;
     position: relative;
     display: flex;
+	flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: fit-content;
+   	min-width: fit-content;
     padding: .5rem .25rem;
+		p {
+		margin-top: .5rem;
+		font-size: .75rem;
+		border-top: 1px solid var(--bg-400);
+		}
 	}
 	div#page div.site-notice {
     background-color: var(--bg)!important;
@@ -1546,9 +1552,9 @@
 				}
 			}
 	.spoiler {
-	border-left: .25rem solid #393939;
 	background: #1a1a1a!important;
-	color: #1a1a1a!important;
+	color: transparent!important;
+	text-shadow: none!important;
 	border-radius: 4px;
 	transition: 100ms;
 	padding: 0 .25rem;
@@ -1611,7 +1617,7 @@
 	article[data-creator-id="601225"] .author-info{
 		position:relative;
 		&::after {
-		content: url("data:image/svg+xml,%3Csvg height='16' viewBox='0 0 31.27 29.53' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M22.8 1 S34.8 9.19 30.24 20.69 S16.61 29 20 25.64 S16 20 11.27 15.64 L22.79 1' fill='%23ffffff'/%3E%3Cpath d='M22.07 12.26 C19.54 15.48 15.97 17.09 13.21 16.51 L3.58 28.78 A2 2 0 0 1 0.77 29.12 A2 2 0 0 1 0.42 26.3 L10 14.05 C8.73 11.51 9.43 7.62 12 4.37 C15.19 0.33 20 -1.18 22.79 1 S25.24 8.22 22.07 12.26 Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E");
+		content: url("data:image/svg+xml,%3Csvg height='16' viewBox='0 0 31.27 29.53' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M22.8 1 S34.8 9.19 30.24 20.69 S16.61 29 20 25.64 S16 20 11.27 15.64 L22.79 1' fill='%23ffffff7a'/%3E%3Cpath d='M22.07 12.26 C19.54 15.48 15.97 17.09 13.21 16.51 L3.58 28.78 A2 2 0 0 1 0.77 29.12 A2 2 0 0 1 0.42 26.3 L10 14.05 C8.73 11.51 9.43 7.62 12 4.37 C15.19 0.33 20 -1.18 22.79 1 S25.24 8.22 22.07 12.26 Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E");
 		position: absolute;
 		display:inline-block;
 		top:.25rem;
@@ -1828,6 +1834,31 @@
 	.inline-code {
 	background-color: var(--bg-400)!important;
 	text-decoration: underline;
+	}
+	#new-response-link {
+	position: relative;
+	height:0;
+	width:fit-content;
+	display:flex;
+	align-items:center;
+	gap: .25rem;
+	padding: 1rem;
+	font-size:0;
+	background-color: var(--bg)!important;
+	border-radius: 2px 8px 8px 8px;
+	border: 2px solid var(--bg);
+		&:hover {
+		background-color: var(--bg-400)!important;
+		}
+		&::before {
+		content: "Reply";
+		font-size: 1.2rem;
+		}
+		&::after {
+		content: url("data:image/svg+xml,%3Csvg height='24.0' viewBox='0 0 24.0 24.0' width='24.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 8.2667V4L3 11.4667L10 18.9333V14.56C15 14.56 18.5 16.2667 21 20C20 14.6667 17 9.3333 10 8.2667Z' fill='%23c8c8c8'/%3E%3C/svg%3E");
+		opacity: 1;
+		mix-blend-mode: luminosity;
+		}
 	}
 	div.paginator li a {
     transition: 100ms;
@@ -2332,7 +2363,7 @@
 		/* Secret helpers badge on the user page */
 		a[href="/users/601225"] {
 		&::after {
-		content: url("data:image/svg+xml,%3Csvg height='20' viewBox='0 0 31.27 29.53' width='25' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M22.8 1 S34.8 9.19 30.24 20.69 S16.61 29 20 25.64 S16 20 11.27 15.64 L22.79 1' fill='%23ffffff'/%3E%3Cpath d='M22.07 12.26 C19.54 15.48 15.97 17.09 13.21 16.51 L3.58 28.78 A2 2 0 0 1 0.77 29.12 A2 2 0 0 1 0.42 26.3 L10 14.05 C8.73 11.51 9.43 7.62 12 4.37 C15.19 0.33 20 -1.18 22.79 1 S25.24 8.22 22.07 12.26 Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E");
+		content: url("data:image/svg+xml,%3Csvg height='20' viewBox='0 0 31.27 29.53' width='25' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M22.8 1 S34.8 9.19 30.24 20.69 S16.61 29 20 25.64 S16 20 11.27 15.64 L22.79 1' fill='%23ffffff7a'/%3E%3Cpath d='M22.07 12.26 C19.54 15.48 15.97 17.09 13.21 16.51 L3.58 28.78 A2 2 0 0 1 0.77 29.12 A2 2 0 0 1 0.42 26.3 L10 14.05 C8.73 11.51 9.43 7.62 12 4.37 C15.19 0.33 20 -1.18 22.79 1 S25.24 8.22 22.07 12.26 Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E");
 		position: absolute;
 		right: 0;
 		top: -.5rem;
