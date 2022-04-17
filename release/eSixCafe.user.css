@@ -1,16 +1,26 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.2.0
+@version        1.2.1
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn (www.mandorinn.dev)
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
 @preprocessor stylus
+
+@var          select   themep    "Theme Pack" {
+    "Muted": "muted",
+    "Classic": "classic"
+}
+
 ==/UserStyle== */
+
+
+// Search 'Styling starts now' to skip to content
+
 
 @-moz-document domain("e621.net"), domain("e926.net") {
 	/* e621.net */
-
+if themep == muted {
 	:root {
 	--thin-scrollbar: var(--true);
 	--main-page-background: url(https://static1.e621.net/data/09/f8/09f84e1224df7b3502456589dd75c0c3.jpg)!important;
@@ -399,6 +409,417 @@
     --button-text-hover: #d6bbae;
     --button-text-hover-secondary: #f0cfc0;
 	}
+}
+if themep == classic {
+	:root {
+	--thin-scrollbar: var(--true);
+	--main-page-background: url(https://static1.e621.net/data/09/f8/09f84e1224df7b3502456589dd75c0c3.jpg)!important;
+	--artist-credit: "Background by Tom Fischbach";
+	--main-font: Yu Gothic UI, Arial;
+	--bg-300: #152f56;
+	--bg-400: #0e203c;
+	--bg: #031530;
+	--bg-visiting: rgba(200,200,200,1);
+	--bg-visiting-transition: 100ms;
+	--bg-editing-transition: 100ms;
+	--bg-visiting-hover:rgba(255,255,255,1);
+	--bg-editing: #a0d2d4;
+	--bg-editing-hover: #a6fffc;
+	--base-text: #fff;
+	--base-text-hover: #fff;
+	--base-text-faded: #ffffff7a;
+	--base-link: #b4c7d9;
+	--base-link-hover: #e9f2fa;
+	--header-link: #c3ccd4;
+	--header-link-hover: #d3ddd3;
+	--content-link:#fdbe2f;
+	--content-link-hover:#ffd575;
+	--header-link-transition: 100ms;
+	--header-link-editing-transition:100ms;
+	--header-link-visiting: #232e38;
+	--header-link-editing: #2c3946;
+	--header-link-editing-hover: #232e38;
+	--nav-hover-top-color:#c3ccd4;
+	--nav-hover-bottom-color: #c3ccd4;
+	--bg-image: #232e38;
+	--deleted-bg: #232323;
+	--deleted-text: #d2d2d2;
+	--blacklisted-bg: #6e4848;
+	--blacklisted-text: #d2d2d2;
+	/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+	--actions-fav-true:#be7aa1;
+	--flagged: maroon;
+	--elements-highlight: #fdbe2f;
+	--mode-edit: #713a20;
+	--mode-add-fav: #006400;
+	--mode-remove-fav: maroon;
+	--mode-blacklist:#242424;
+	--mode-download: #4d0054;
+	--mode-fullscreen: #194f4d;
+	--tag-cat-1:#b4c7d9;
+	--tag-cat-1-hover:#e9f2fa;
+	--tag-cat-2:#f2ac08;
+	--tag-cat-2-hover:#fbd67f;
+	--tag-cat-3:#d0d;
+	--tag-cat-3-hover:#ff5eff;
+	--tag-cat-4:#0a0;
+	--tag-cat-4-hover:#2bff2b;
+	--tag-cat-5:#ed5d1f;
+	--tag-cat-5-hover:#f6b295;
+	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6-hover:#ffbdbd;
+	--tag-cat-7:#fff;
+	--tag-cat-7-hover:#666;
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
+	--user-privileged: #4afc4a;
+	--user-privileged-hover: #75fd75;
+	--user-admin:#e69500;
+	--user-admin-hover: #9d6703;
+	--user-former-staff: #3fd6ba;
+	--user-former-staff-hover: #5eebd1;
+	--user-janitor: #d82828;
+	--user-janitor-hover: #cc5151;
+	--user-banned: #a41313;
+	--user-banned-hover: #df3e3e;
+	--favorite-button: #006400;
+	--favorite-button-hover: #004b00;
+	--remove-favorite: maroon;
+	--remove-favorite-hover: #670000;
+	--warn-button: sienna;
+	--warn-button-hover: #8c4827;
+	--button-color: #232e38;
+	--button-color-hover: #2c3946;
+	--button-text: #fff;
+	--button-text-hover: #fff;
+	--button-text-hover-secondary: #fff;
+	--true: thin;
+	scrollbar-width: var(--thin-scrollbar);
+	scrollbar-color: #3c3c3c #222;
+	}
+	body[data-th-main="pony"] {
+	--bg-300: #2f175c;
+	--bg-400: #250d51;
+	--bg: #190836;
+	--bg-visiting: rgba(200,200,200,1);
+	--bg-visiting-transition: 100ms;
+	--bg-editing-transition: 100ms;
+	--bg-visiting-hover:rgba(255,255,255,1);
+	--bg-editing: #a0d2d4;
+	--bg-editing-hover: #a6fffc;
+	--base-text: #fff;
+	--base-text-hover: #fff;
+	--base-text-faded: #ffffff7a;
+	--base-link: #b4c7d9;
+	--base-link-hover: #e9f2fa;
+	--header-link: #c3ccd4;
+	--header-link-hover: #d3ddd3;
+	--content-link:#ff5eff;
+	--content-link-hover:#ff8dff;
+	--header-link-transition: 100ms;
+	--header-link-editing-transition:100ms;
+	--header-link-visiting: #232e38;
+	--header-link-editing: #2c3946;
+	--header-link-editing-hover: #232e38;
+	--nav-hover-top-color:#c3ccd4;
+	--nav-hover-bottom-color: #c3ccd4;
+	--bg-image: #232e38;
+	--deleted-bg: #232323;
+	--deleted-text: #d2d2d2;
+	--blacklisted-bg: #646464;
+	--blacklisted-text: #d2d2d2;
+	/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+	--actions-fav-true:#be7aa1;
+	--flagged: maroon;
+	--elements-highlight: #ff5eff;
+	--mode-edit: #713a20;
+	--mode-add-fav: #006400;
+	--mode-remove-fav: maroon;
+	--mode-blacklist:#242424;
+	--mode-download: #4d0054;
+	--mode-fullscreen: #194f4d;
+	--tag-cat-1:#b4c7d9;
+	--tag-cat-1-hover:#e9f2fa;
+	--tag-cat-2:#f2ac08;
+	--tag-cat-2-hover:#fbd67f;
+	--tag-cat-3:#d0d;
+	--tag-cat-3-hover:#ff5eff;
+	--tag-cat-4:#0a0;
+	--tag-cat-4-hover:#2bff2b;
+	--tag-cat-5:#ed5d1f;
+	--tag-cat-5-hover:#f6b295;
+	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6-hover:#ffbdbd;
+	--tag-cat-7:#fff;
+	--tag-cat-7-hover:#666;
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
+	--user-privileged: #4afc4a;
+	--user-privileged-hover: #75fd75;
+	--user-admin:#e69500;
+	--user-admin-hover: #9d6703;
+	--user-former-staff: #3fd6ba;
+	--user-former-staff-hover: #5eebd1;
+	--user-janitor: #d82828;
+	--user-janitor-hover: #cc5151;
+	--user-banned: #a41313;
+	--user-banned-hover: #df3e3e;
+	--favorite-button: #006400;
+	--favorite-button-hover: #004b00;
+	--remove-favorite: maroon;
+	--remove-favorite-hover: #670000;
+	--warn-button: sienna;
+	--warn-button-hover: #8c4827;
+	--button-color: #232e38;
+	--button-color-hover: #2c3946;
+	--button-text: #fff;
+	--button-text-hover: #fff;
+	--button-text-hover-secondary: #fff;
+	}
+	body[data-th-main="bloodlust"] {
+   --bg-300: #333;
+	--bg-400: #222;
+	--bg: #111;
+	--bg-visiting: #ffee95;
+	--bg-visiting-transition: 100ms;
+	--bg-editing-transition: 100ms;
+	--bg-visiting-hover: #f68b00;
+	--bg-editing: #a0d2d4;
+	--bg-editing-hover: #a6fffc;
+	--base-text: #fff;
+	--base-text-hover: #fff;
+	--base-text-faded: #ffffff7a;
+	--base-link: #ffee95;
+	--base-link-hover: #f68b00;
+	--header-link: #ffee95;
+	--header-link-hover: #f68b00;
+	--content-link: #ffee95;
+	--content-link-hover:#f68b00;
+	--header-link-transition: 100ms;
+	--header-link-editing-transition:100ms;
+	--header-link-visiting: #232e38;
+	--header-link-editing: #2c3946;
+	--header-link-editing-hover: #232e38;
+	--nav-hover-top-color:#ffee95;
+	--nav-hover-bottom-color: #ffee95;
+	--bg-image: #232e38;
+	--deleted-bg: #232323;
+	--deleted-text: #d2d2d2;
+	--blacklisted-bg: #656565;
+	--blacklisted-text: #d2d2d2;
+	/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+	--actions-fav-true:#be7aa1;
+	--flagged: maroon;
+	--elements-highlight: #ffee95;
+	--mode-edit: #713a20;
+	--mode-add-fav: #006400;
+	--mode-remove-fav: maroon;
+	--mode-blacklist:#000;
+	--mode-download: #4d0054;
+	--mode-fullscreen: #194f4d;
+	--tag-cat-1:#ffee95;
+	--tag-cat-1-hover:#f68b00;
+	--tag-cat-2:#f2ac08;
+	--tag-cat-2-hover:#fbd67f;
+	--tag-cat-3:#d0d;
+	--tag-cat-3-hover:#ff5eff;
+	--tag-cat-4:#0a0;
+	--tag-cat-4-hover:#2bff2b;
+	--tag-cat-5:#ed5d1f;
+	--tag-cat-5-hover:#f6b295;
+	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6-hover:#ffbdbd;
+	--tag-cat-7:#fff;
+	--tag-cat-7-hover:#666;
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
+	--user-privileged: #4afc4a;
+	--user-privileged-hover: #75fd75;
+	--user-admin:#e69500;
+	--user-admin-hover: #9d6703;
+	--user-former-staff: #3fd6ba;
+	--user-former-staff-hover: #5eebd1;
+	--user-janitor: #d82828;
+	--user-janitor-hover: #cc5151;
+	--user-banned: #a41313;
+	--user-banned-hover: #df3e3e;
+	--favorite-button: #006400;
+	--favorite-button-hover: #004b00;
+	--remove-favorite: maroon;
+	--remove-favorite-hover: #670000;
+	--warn-button: sienna;
+	--warn-button-hover: #8c4827;
+	--button-color: #232e38;
+	--button-color-hover: #2c3946;
+	--button-text: #fff;
+	--button-text-hover: #fff;
+	--button-text-hover-secondary: #fff;
+	}
+	body[data-th-main="serpent"] {
+    --bg: #f6eb86;
+	--bg-400: #dacf6b;
+	--bg-300: #44a544;
+	--bg-visiting: #000;
+	--bg-visiting-transition: 100ms;
+	--bg-editing-transition: 100ms;
+	--bg-visiting-hover:rgba(255,255,255,1);
+	--bg-editing: #a0d2d4;
+	--bg-editing-hover: #a6fffc;
+	--base-text: #000;
+	--base-text-hover: #000;
+	--base-text-faded: #0000007a;
+	--base-link: #000;
+	--base-link-hover: #222;
+	--header-link: #000;
+	--header-link-hover: #222;
+	--content-link:#504afc;
+	--content-link-hover:#847fff;
+	--header-link-transition: 100ms;
+	--header-link-editing-transition:100ms;
+	--header-link-visiting: #fff;
+	--header-link-editing: #2c3946;
+	--header-link-editing-hover: #232e38;
+	--nav-hover-top-color:#000;
+	--nav-hover-bottom-color: #000;
+	--bg-image: #232e38;
+	--deleted-bg: #232323;
+	--deleted-text: #d2d2d2;
+	--blacklisted-bg: #646464;
+	--blacklisted-text: #d2d2d2;
+	/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+	--actions-fav-true:#be7aa1;
+	--flagged: maroon;
+	--elements-highlight: #44a544;
+	--mode-edit: #713a20;
+	--mode-add-fav: #006400;
+	--mode-remove-fav: maroon;
+	--mode-blacklist:#242424;
+	--mode-download: #4d0054;
+	--mode-fullscreen: #194f4d;
+	--tag-cat-1:#000;
+	--tag-cat-1-hover:#222;
+	--tag-cat-2:#f2ac08;
+	--tag-cat-2-hover:#fbd67f;
+	--tag-cat-3:#d0d;
+	--tag-cat-3-hover:#ff5eff;
+	--tag-cat-4:#0a0;
+	--tag-cat-4-hover:#2bff2b;
+	--tag-cat-5:#ed5d1f;
+	--tag-cat-5-hover:#f6b295;
+	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6-hover:#ffbdbd;
+	--tag-cat-7:#fff;
+	--tag-cat-7-hover:#666;
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
+	--user-privileged: #4afc4a;
+	--user-privileged-hover: #75fd75;
+	--user-admin:#e69500;
+	--user-admin-hover: #9d6703;
+	--user-former-staff: #3fd6ba;
+	--user-former-staff-hover: #5eebd1;
+	--user-janitor: #d82828;
+	--user-janitor-hover: #cc5151;
+	--user-banned: #a41313;
+	--user-banned-hover: #df3e3e;
+	--favorite-button: #006400;
+	--favorite-button-hover: #004b00;
+	--remove-favorite: maroon;
+	--remove-favorite-hover: #670000;
+	--warn-button: sienna;
+	--warn-button-hover: #8c4827;
+	--button-color: #232e38;
+	--button-color-hover: #2c3946;
+	--button-text: #000;
+	--button-text-hover: #222;
+	--button-text-hover-secondary: #222;
+	}
+    body[data-th-main="hotdog"] { 
+     --bg: #f00;
+	--bg-400: #ffff2b;
+	--bg-300: #ff0;
+	--bg-visiting: #000;
+	--bg-visiting-transition: 100ms;
+	--bg-editing-transition: 100ms;
+	--bg-visiting-hover:rgba(255,255,255,1);
+	--bg-editing: #a0d2d4;
+	--bg-editing-hover: #a6fffc;
+	--base-text: #000;
+	--base-text-hover: #000;
+	--base-text-faded: #0000007a;
+	--base-link: #000;
+	--base-link-hover: #222;
+	--header-link: #000;
+	--header-link-hover: #222;
+	--content-link:#504afc;
+	--content-link-hover:#847fff;
+	--header-link-transition: 100ms;
+	--header-link-editing-transition:100ms;
+	--header-link-visiting: #fff;
+	--header-link-editing: #2c3946;
+	--header-link-editing-hover: #232e38;
+	--nav-hover-top-color:#000;
+	--nav-hover-bottom-color: #000;
+	--bg-image: #232e38;
+	--deleted-bg: #232323;
+	--deleted-text: #d2d2d2;
+	--blacklisted-bg: #646464;
+	--blacklisted-text: #d2d2d2;
+	/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+	--actions-fav-true:#be7aa1;
+	--flagged: maroon;
+	--elements-highlight: #ff0;
+	--mode-edit: #713a20;
+	--mode-add-fav: #006400;
+	--mode-remove-fav: maroon;
+	--mode-blacklist:#242424;
+	--mode-download: #4d0054;
+	--mode-fullscreen: #194f4d;
+	--tag-cat-1:#000;
+	--tag-cat-1-hover:#222;
+	--tag-cat-2:#f2ac08;
+	--tag-cat-2-hover:#fbd67f;
+	--tag-cat-3:#d0d;
+	--tag-cat-3-hover:#ff5eff;
+	--tag-cat-4:#0a0;
+	--tag-cat-4-hover:#2bff2b;
+	--tag-cat-5:#ed5d1f;
+	--tag-cat-5-hover:#f6b295;
+	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6-hover:#ffbdbd;
+	--tag-cat-7:#fff;
+	--tag-cat-7-hover:#666;
+	--user-member: var(--base-text);
+	--user-member-hover: var(--base-text-hover);
+	--user-privileged: #4afc4a;
+	--user-privileged-hover: #75fd75;
+	--user-admin:#e69500;
+	--user-admin-hover: #9d6703;
+	--user-former-staff: #3fd6ba;
+	--user-former-staff-hover: #5eebd1;
+	--user-janitor: #d82828;
+	--user-janitor-hover: #cc5151;
+	--user-banned: #a41313;
+	--user-banned-hover: #df3e3e;
+	--favorite-button: #006400;
+	--favorite-button-hover: #004b00;
+	--remove-favorite: maroon;
+	--remove-favorite-hover: #670000;
+	--warn-button: sienna;
+	--warn-button-hover: #8c4827;
+	--button-color: #232e38;
+	--button-color-hover: #2c3946;
+	--button-text: #000;
+	--button-text-hover: #222;
+	--button-text-hover-secondary: #222;
+	}
+}
+
+
+
+/* -------------- Styling starts now --------------*/
+
+
 /* Body things */
 	body {
 	background-color: var(--bg-300)!important;
@@ -436,10 +857,17 @@
 	margin: 0!important;
 	text-align: center!important;
 	top: 0!important;
+	border-bottom: none!important;
+	min-height: 60px!important;
 		menu {
 			background-color: rgba(0,0,0,0)!important;
    			margin: 0 auto;
+			border: none!important;
+			outline: none!important;
 		}
+	}
+	header#top nav#nav.grid {
+	border-bottom: none!important;
 	}
 	header#top menu.main {
     background-color: rgba(0,0,0,0)!important
@@ -456,7 +884,7 @@
    margin: 0 auto;
 	}
 	header#top nav#nav.grid menu.main {
-    border-bottom: 1px solid var(--header-link);
+    border-bottom: 1px solid var(--header-link)!important;
     padding: 0 0 0rem 0;
     border-radius:0;
 	}
@@ -471,9 +899,9 @@
 	background-color: var(--bg-400)!important;
 	margin-right:.5rem;
 	border-radius: 0 0 8px 8px;
-   	border-bottom: 2px solid var(--bg-300);
-	border-left: 2px solid var(--bg-300);
-   	border-right: 2px solid var(--bg-300);
+   	border-bottom: 2px solid var(--bg-300)!important;
+	border-left: 2px solid var(--bg-300)!important;
+   	border-right: 2px solid var(--bg-300)!important;
 	}
 	.update-notification[data-loading="true"]::after {
 	bottom: 1rem;
@@ -1257,6 +1685,21 @@
 	a[href^="/tickets/new?disp_id"]:hover {
 	color: var(--user-banned-hover)!important;
 	}
+
+	/* This puts a Discord logo in front of any link that contains "discord.com" in it. Not sure if it should be in the main theme.
+	a[href*="discord.com"] {
+		&::before {
+		content: url("data:image/svg+xml,%3Csvg role='img' height='16.0'  viewBox='0 -1 25 21' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EDiscord%3C/title%3E%3Cpath d='M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z'/%3E%3C/svg%3E");
+		opacity: .8;
+		mix-blend-mode: soft-light;
+		}	
+	}
+	a[href*="discord"]:hover {
+		&::before {
+		opacity: 1;
+		mix-blend-mode: soft-light;
+		}
+	}*/
 	/* Popular page */
 	#a-popular {
     background-color: var(--bg)!important;
@@ -1617,6 +2060,26 @@
 	.comments article {
 	position:relative;
 	}
+	/* fun lil thing for me - suggest by faucet lolll */
+	article[data-creator-id="192568"] .author-info {
+		position:relative;
+		.name-rank {
+		font-size: 0!important;
+		&::after {
+		content: "Café Dev"
+		font-size: .75rem;
+		}
+		}
+		&::after {
+		content: url("data:image/svg+xml,%3Csvg height='24.0' viewBox='0 0 24.0 24.0' width='24.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.58 11.4L17.3 4.01l-0.35 -0.6L7.04 3.41l-0.35 0.6 -4.27 7.39 -0.35 0.6 0.35 0.6 4.27 7.39 0.35 0.6h9.92l0.35 -0.6 4.28 -7.39 0.35 -0.6 -0.36 -0.6zM8.51 10.37L6.88 12l1.63 1.63v2.73L4.15 12l4.37 -4.37v2.74zM11.63 17.3l-2.04 -0.63 3.1 -9.98 2.04 0.64 -3.1 9.97zM15.49 16.37v-2.73L17.12 12l-1.63 -1.63L15.49 7.63L19.85 12l-4.36 4.37z' fill='%23ffffffff'/%3E%3C/svg%3E");
+		position: absolute;
+		display:inline-block;
+		top:.25rem;
+		right:.25rem;
+		mix-blend-mode: soft-light;
+		opacity:.6;
+		}
+	}
 	/* Super Secret Helper badges */ 
 	article[data-creator-id="601225"] .author-info{
 		position:relative;
@@ -1631,6 +2094,9 @@
 		}
 	}
 	/* Forums */
+	table.striped tr.forum-topic-row {
+	background-color: transparent!important;
+	}
 	table.striped tr.forum-topic-row > td:nth-child(1) {
 	display: flex;
 	align-items: center;
@@ -2143,15 +2609,18 @@
 	/* Site map */
 
 	#a-site-map {
-	width: 100%;
+	width: 80vw!important;
 	display: flex;
+	flex-direction: row!important;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	margin-inline: auto;
 	background-color: var(--bg)!important;
 	padding: 2rem;
 	border-radius: 8px;
 	gap: .5rem;
 		section {
+		width: calc(15% + 1rem)!important;
 		max-width: calc(15% + 1rem)!important;
 		background-color: var(--bg-400);
 		padding: 2rem;
@@ -2290,6 +2759,9 @@
 	font-size: inherit;
 	order: inherit;
 	}
+	body.resp form select {
+	font-size: .75rem;
+	}
 	aside#sidebar.collapsed {
 	position: absolute;
 	left: -1rem;
@@ -2301,8 +2773,11 @@
 	display: flex;
 	margin-top: .5rem;
 	}
+	body.resp form input[type="email"], body.resp form input[type="number"], body.resp form input[type="password"], body.resp form input[type="text"] {
+	font-size: .75rem;
+	}
 	div#c-posts div#a-index section#content, div#c-posts div#a-show section#content, div#c-favorites div#a-index section#content {
-	max-width: 50vw;
+	max-width: 99%;
 	}
 	.desktop-only {
 	display: flex!important;
@@ -2310,12 +2785,70 @@
 	div#c-posts div#a-index aside#sidebar, div#c-posts div#a-show aside#sidebar, div#c-favorites div#a-index aside#sidebar {
 	width: 14.15rem;
 	}
-	div.comments-for-post div.list-of-comments article.comment .avatar, div#c-blips article.blip .avatar, div.comments-for-post div.list-of-comments article.comment .blacklisted, div#c-blips article.blip .blacklisted {
-	display:none;
+	.list-of-comments {
+	margin-top: 2rem;
 	}
-	div.comments-for-post div.list-of-comments article.comment .author-info, div#c-blips article.blip .author-info {
+	div.comments-for-post div.list-of-comments article.comment .author-info, div.list-of-forum-posts .author-info {
+	position:relative;
+	overflow:hidden;
+		.blacklisted {
+		display:none;
+		}
+		.post-thumbnail[data-status="deleted"] {
+		display:none;
+		}
+		.name-rank {
+		z-index: 1;
+		margin-top: .25rem;
+		}
+		.post-time {
+		z-index: 1;
+		}
+	}
+	div.comments-for-post div.list-of-comments article.comment .avatar, div.list-of-forum-posts .avatar {
+	position:absolute;
+	top: -50%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 0
+	border-radius: 0%!important;
+	min-width: 100% !important;
+	max-width: unset!important;
+	aspect-ratio: unset!important;
+	.post-thumbnail {
+	max-width: unset!important;
+	aspect-ratio: unset;
+	border: none;
+	border-radius: 0%!important;
+	height: 200%;
+	width: 100%;
+	pointer-events: none!important;
+	overflow:hidden;
+	}
+	a, a img {
+	border-radius: 0%!important;
+	max-width: unset!important;
+	overflow: visible!important;
+	aspect-ratio: unset;
+	min-height: 100%!important;
+	min-width: 100%!important;
+	}
+	.post-thumbnail  img {
+	outline: none!important;
+	aspect-ratio: unset!important;
+	border-radius: 0%!important;
+	margin: 0!important;
+	min-height: 100%!important;
+	min-width: 100%!important;
+	opacity: .2;
+	filter: blur(10px);
+	}
+	}
+	div.comments-for-post div.list-of-comments article.comment .author-info, div#c-blips article.blip .author-info, div.list-of-forum-posts .author-info {
 	width: 100%;
 	padding: 0rem;
+	position:relative;
 		.post-time {
 			margin-right:.5rem;
 			user-select: none;
@@ -2325,14 +2858,41 @@
 	width: 7rem!important;
 	font-size: .8rem!important;
 	}
+	body.resp div#page #c-help #sidebar {
+	top: 5rem;
+	}
+	body.resp div#page #c-help section#content {
+	margin-left: 20vw!important;
+	}
 	body[data-sticky="true"] aside#sidebar div#re621-search, body[data-sticky="true"] aside#sidebar section#downloader-box, body[data-sticky="true"] aside#sidebar section#fav-downloader-box {
   	position: -webkit-sticky;
   	position: sticky;
   	max-height: 50vh;
 	width:7.5rem;
-  	border-bottom: 5px solid var(--bg);
 	overflow: scroll;
 	scrollbar-width:thin;
+	}
+	.stats-section {
+	overflow:scroll;
+	}
+	.profile-stats {
+	overflow: scroll;
+	
+		.column {
+		min-width: 150px;
+		}
+	}
+	div#page[enhancements="true"] div#c-users div#a-show div.box.user-favorites div.vertical-section, div#page[enhancements="true"] div#c-users div#a-show div.box.user-favorites div.vertical-section, div#page[enhancements="true"] div#c-users div#a-show div.box.user-uploads div.vertical-section, div#page[enhancements="true"] div#c-users div#a-show div.box.user-uploads div.vertical-sectionn {
+	flex-wrap: unset!important;
+	gap: .25rem;
+	}
+	body.resp article.post-preview a {
+	margin: revert;
+	}
+	.vertical-section article:nth-child( n + 4 ) {
+	display: none!important;
+	justify-content: center!important;
+	display:flex;
 	}
 	}
 	}
@@ -2400,6 +2960,18 @@
 		place-content: center;
 		border-bottom: 1px solid var(--bg-300);
 		}
+		/* fun lil thing for me suggested by faucet lolll - user page */
+		a[href="/users/192568"] {
+		&::after {
+		content: url("data:image/svg+xml,%3Csvg height='24.0' viewBox='0 0 24.0 24.0' width='24.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.58 11.4L17.3 4.01l-0.35 -0.6L7.04 3.41l-0.35 0.6 -4.27 7.39 -0.35 0.6 0.35 0.6 4.27 7.39 0.35 0.6h9.92l0.35 -0.6 4.28 -7.39 0.35 -0.6 -0.36 -0.6zM8.51 10.37L6.88 12l1.63 1.63v2.73L4.15 12l4.37 -4.37v2.74zM11.63 17.3l-2.04 -0.63 3.1 -9.98 2.04 0.64 -3.1 9.97zM15.49 16.37v-2.73L17.12 12l-1.63 -1.63L15.49 7.63L19.85 12l-4.36 4.37z' fill='%23ffffffff'/%3E%3C/svg%3E");
+		position: absolute;
+		right: 0;
+		top: -.5rem;
+		mix-blend-mode: soft-light;
+		opacity: .6;
+		pointer-events: none;
+		}
+	}
 		/* Secret helpers badge on the user page */
 		a[href="/users/601225"] {
 		&::after {
