@@ -38,23 +38,31 @@ A comprehensive restyle of e621, made to be easier on the eyes while being compa
   
   
   # Previews
-![homepage](https://github.com/mandorinn/eSix-Cafe/blob/main/full%20release%20previews%20uwu/homepage.jpg?raw=true)
-<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/posts-page.jpg?raw=true" width="49%"> 
-<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/comments.png?raw=true" width="49%"> 
-<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/profile-page.png?raw=true" width="49%"> 
-<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/popular-page.png?raw=true" width="49%"> 
+![homepage](https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/homepage.jpg?raw=true)
+<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/posts-page.jpg?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/comments.png?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/profile-page.png?raw=true" width="49%"> 
+<img align="center" src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/popular-page.png?raw=true" width="49%"> 
 
 
 
 # Individual theme previews!
 <p align="center">
-<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/pony.png?raw=true" width="49%"> 
-<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/bloodlust.png?raw=true" width="49%"> 
-<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/serpent.png?raw=true" width="49%"> 
-<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/1.1.0%20release%20previews/hot-coffee.png?raw=true" width="49%"> 
- 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/pony.png?raw=true" width="49%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/bloodlust.png?raw=true" width="49%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/serpent.png?raw=true" width="49%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/hot-coffee.png?raw=true" width="49%"> 
 </p>
    
+# Wait, I like what you did with the UI n stuff, but what about the old colorsss???
+   Well you're in luck! With this latest update you can now choose every classic theme via the userstyle's settings menu!
+<p align="center">
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/classic-hexa.png?raw=true" width="30%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/classic-pony.png?raw=true" width="30%"> 
+<img src="https://github.com/mandorinn/eSix-Cafe/blob/main/Previews%201.2.1%20Releaseeee/classic-blood.png?raw=true" width="30%"> 
+</p>
+<sup>we dont talk about serpent and hotdog</sup>
+    
 # Bug reporting (this applies to suggestions too I supposeeee)
   If you see an element that is unstyled, or if a styled element is behaving in a way that it shouldn't be,
   <br>**Create an issue, I'd like to keep my other socials free from random css element DMsssss lolll**
