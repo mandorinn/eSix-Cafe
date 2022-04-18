@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.2.1
+@version        1.2.2
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn (www.mandorinn.dev)
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -1031,19 +1031,33 @@ if themep == classic {
     outline: solid 2px var(--base-text);
 	}
 	/* Re621 menus */
+	.ui-widget-content.ui-widget-content {
+	color: var(--base-text)!important;
+	}
 	.ui-widget.ui-widget-content {
   	border: 2px solid var(--bg-300) !important;
   	border-radius: 2px 8px 8px 8px;
   	overflow: hidden!important;
 	height:fit-content;
+	color: var(--base-text)!important;
+		.border-highlight {
+		border-color: var(--base-text)!important;
+		}
 	}
 	div#modal-container div.re621-ui-dialog.modal-reserve-height div.ui-dialog-content {
 	min-height: fit-content!important;
+	color: var(--base-text);
 		input {
 		background-color: var(--bg)!important
 		}
 		h3 {
-		color: var(--base-text);
+		color: var(--base-text)!important;
+		}
+		button.btn-neutral[id^="conf-misc-"], .btn-neutral[id^="conf"] {
+		background-color: var(--bg-300)!important;
+			&:hover {
+			background-color: var(--bg)!important;
+			}
 		}
     }
 	tabbed.config-tabs ul.ui-tabs-nav {
@@ -2330,6 +2344,10 @@ if themep == classic {
 		mix-blend-mode: luminosity;
 		}
 	}
+	div.paginator {
+	max-width: 100vw;
+	overflow:hidden;
+	}
 	div.paginator li a {
     transition: 100ms;
 	}
@@ -2724,6 +2742,9 @@ if themep == classic {
 		
 	}
 	@media screen and (max-width: 800px)  {
+	div#page {
+	overflow: hidden;
+	}
 	body.resp #maintoggle {
 	display:none;
 	}
@@ -2759,6 +2780,12 @@ if themep == classic {
 	font-size: inherit;
 	order: inherit;
 	}
+	body aside#sidebar div#re621-search {
+	top: -25px!important;
+	}
+	section#content search-content search-stats {
+	right: .5rem;
+	}
 	body.resp form select {
 	font-size: .75rem;
 	}
@@ -2777,7 +2804,8 @@ if themep == classic {
 	font-size: .75rem;
 	}
 	div#c-posts div#a-index section#content, div#c-posts div#a-show section#content, div#c-favorites div#a-index section#content {
-	max-width: 99%;
+	max-width: 65vw;
+	margin-inline:auto;
 	}
 	.desktop-only {
 	display: flex!important;
