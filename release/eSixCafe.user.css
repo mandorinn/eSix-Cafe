@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.2.6
+@version        1.2.7
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn (www.mandorinn.dev)
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -1416,15 +1416,18 @@ if themep == classic {
     background-color: var(--bg-400)
 	}
 	search-content > post[sound="true"] span.post-sound {
-		bottom: 1.5rem;
+		bottom: 2.5rem;
 	}
 	.video-duration {
   	position: absolute;
-  	top: 0;
-  	right: 0;
-  	background-color: var(--bg);
-  	padding: .1rem .2rem .1rem .2rem;
-	border-radius: 0 0 0 4px;
+  	bottom: 1.45rem!important;
+  	left: 0;
+	height: fit-content;
+  	background-color: #00000080!important;
+	font-family: monospace!important;
+  	padding: .1rem .2rem!important;
+	border-radius: 0 4px 4px 0!important;
+	z-index: 2!important;
 	}
 	.button {
     transition: 100ms;
