@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.2.5
+@version        1.2.6
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn (www.mandorinn.dev)
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -1418,6 +1418,14 @@ if themep == classic {
 	search-content > post[sound="true"] span.post-sound {
 		bottom: 1.5rem;
 	}
+	.video-duration {
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	background-color: var(--bg);
+  	padding: .1rem .2rem .1rem .2rem;
+	border-radius: 0 0 0 4px;
+	}
 	.button {
     transition: 100ms;
 	}
@@ -2498,6 +2506,41 @@ if themep == classic {
 	}
 	div#c-pools div#a-show #blacklist-box {
 		display: flex;
+	}
+	#a-gallery {
+    background-color: var(--bg)!important;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+	.paginator {
+	min-width: fit-content;
+	width: 25vw;
+	position:relative;
+	margin-inline: auto;
+	position:relative;
+	}
+	}
+	#a-gallery h2 {
+    margin-inline: auto;
+    margin-bottom: 1rem;
+	}
+	#a-gallery section {
+    margin-inline: auto;
+    width: 90%;
+	}
+	#a-gallery section {
+    display: flex;
+	flex-direction: row;
+	max-width: 90vw;
+	min-height: fit-content;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: center;
+	}
+	#a-gallery #posts > div > article {
+    min-width: fit-content;
+    margin-inline: auto;
 	}
 /* Comments page */
 	div#c-comments div#a-index .comment-post {
