@@ -1916,10 +1916,10 @@ if themep == classic {
 		user-select: auto;
 		}	
 	}
-	.score-positive a {
+	.score-positive a, search-content post[vote="1"] button.button.voteButton.vote[action=up] {
 	color: var(--favorite-button)!important
 	}
-	.score-negative a {
+	.score-negative a, search-content post[vote="-1"] button.button.voteButton.vote[action=down] {
 	color: var(--remove-favorite)!important;
 	}
 	div.comments-for-post div.list-of-comments article.comment, div#c-blips article.blip, #p-index-by-comment div.comments article.comment {
