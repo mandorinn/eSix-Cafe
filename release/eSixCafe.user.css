@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.3.1
+@version        1.3.2
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn (www.mandorinn.dev)
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -467,7 +467,7 @@ if themep == classic {
 	--tag-cat-4-hover:#2bff2b;
 	--tag-cat-5:#ed5d1f;
 	--tag-cat-5-hover:#f6b295;
-	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6:#ff3d3d;
 	--tag-cat-6-hover:#ffbdbd;
 	--tag-cat-7:#fff;
 	--tag-cat-7-hover:#666;
@@ -549,7 +549,7 @@ if themep == classic {
 	--tag-cat-4-hover:#2bff2b;
 	--tag-cat-5:#ed5d1f;
 	--tag-cat-5-hover:#f6b295;
-	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6:#ff3d3d;
 	--tag-cat-6-hover:#ffbdbd;
 	--tag-cat-7:#fff;
 	--tag-cat-7-hover:#666;
@@ -628,7 +628,7 @@ if themep == classic {
 	--tag-cat-4-hover:#2bff2b;
 	--tag-cat-5:#ed5d1f;
 	--tag-cat-5-hover:#f6b295;
-	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6:#ff3d3d;
 	--tag-cat-6-hover:#ffbdbd;
 	--tag-cat-7:#fff;
 	--tag-cat-7-hover:#666;
@@ -707,7 +707,7 @@ if themep == classic {
 	--tag-cat-4-hover:#2bff2b;
 	--tag-cat-5:#ed5d1f;
 	--tag-cat-5-hover:#f6b295;
-	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6:#ff3d3d;
 	--tag-cat-6-hover:#ffbdbd;
 	--tag-cat-7:#fff;
 	--tag-cat-7-hover:#666;
@@ -786,7 +786,7 @@ if themep == classic {
 	--tag-cat-4-hover:#2bff2b;
 	--tag-cat-5:#ed5d1f;
 	--tag-cat-5-hover:#f6b295;
-	--tag-cat-6:#ff3d3d;;
+	--tag-cat-6:#ff3d3d;
 	--tag-cat-6-hover:#ffbdbd;
 	--tag-cat-7:#fff;
 	--tag-cat-7-hover:#666;
@@ -930,7 +930,7 @@ if themep == classic {
     top:-4px;
 	border-radius: 8px;
     background-color:var(--nav-hover-top-color);
-    transition:var(--header-link-transition)
+    transition:var(--header-link-transition);
 	opacity: 0;
 	}
 	nav menu:nth-child(2) li a:hover::after {
@@ -945,7 +945,7 @@ if themep == classic {
     left:0;
     bottom:0;
     background-color:var(--nav-hover-bottom-color);
-    transition:var(--header-link-transition)
+    transition:var(--header-link-transition);
 	opacity: 0;
 	}
 	nav menu:nth-child(4) li a:hover::after {
@@ -1022,7 +1022,7 @@ if themep == classic {
     justify-content: center;
     }
 	nav .logo a::before {
-	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.4in' height='0.4in' viewBox='0 0 512 512'%3E%3Cpath id='ear top' fill='%2300000055' stroke='' stroke-width='1' d='M 380.13 197.37 C 380.13 197.37 418.73 188.36 425.48 201.97 431.00 213.10 406.05 233.76 406.05 233.76 406.05 233.76 427.54 262.31 427.54 262.31 427.54 262.31 456.01 241.36 469.58 230.05 484.85 217.33 509.87 195.24 499.21 176.82 478.17 140.49 383.20 162.58 359.33 170.08 359.33 170.08 380.13 197.37 380.13 197.37 Z M 207.81 118.33 C 207.81 118.33 223.84 82.07 238.78 84.87 250.98 87.15 252.48 119.52 252.48 119.52 252.48 119.52 288.21 119.52 288.21 119.52 288.21 119.52 288.61 84.17 287.73 66.53 286.75 46.69 284.15 13.40 263.04 10.84 221.35 5.79 181.87 94.95 173.51 118.53 173.51 118.53 207.81 118.33 207.81 118.33 Z' /%3E%3Cpath id='ear bottom' fill='%23ffffff33' stroke='' stroke-width='1' d='M 207.81 118.33 C 207.81 118.33 223.84 82.07 238.78 84.87 250.98 87.15 252.48 119.52 252.48 119.52 252.48 119.52 288.21 119.52 288.21 119.52 288.21 119.52 288.36 105.64 287.82 87.64 277.45 62.09 235.78 45.56 214.67 43.00 208.33 47.67 181.87 94.95 173.51 118.53 173.51 118.53 207.81 118.33 207.81 118.33 Z M 380.13 197.37 C 380.13 197.37 418.73 188.36 425.48 201.97 431.00 213.10 406.05 233.76 406.05 233.76 406.05 233.76 427.54 262.31 427.54 262.31 427.54 262.31 442.93 250.69 456.50 239.38 444.88 238.50 464.75 192.12 437.12 157.12 436.12 156.25 383.20 162.58 359.33 170.08 359.33 170.08 380.13 197.37 380.13 197.37 Z' /%3E%3Cpath id='head' fill='%2300000055' stroke='' stroke-width='1' d='M 116.28 141.70 C 116.28 141.70 316.11 142.72 316.11 142.72 316.11 142.72 415.99 315.34 415.99 315.34 415.99 315.34 315.93 486.70 315.93 486.70 315.93 486.70 117.36 487.74 117.36 487.74 117.36 487.74 16.59 314.35 16.59 314.35 16.59 314.35 116.28 141.70 116.28 141.70 Z' /%3E %3Cpath id='e' fill='%23ffffff33' stroke='' stroke-width='1' d='M 207.68 207.16 C 207.68 207.16 212.96 207.16 212.96 207.16 230.97 206.92 246.86 208.68 263.44 216.28 296.73 231.53 323.29 268.63 323.72 305.71 323.72 305.71 323.72 321.54 323.72 321.54 323.72 323.27 324.01 326.37 322.52 327.55 321.44 328.40 317.74 328.43 316.19 328.64 316.19 328.64 295.84 330.26 295.84 330.26 295.84 330.26 287.56 330.71 287.56 330.71 287.56 330.71 254.40 332.91 254.40 332.91 254.40 332.91 219.74 335.17 219.74 335.17 219.74 335.17 202.41 336.58 202.41 336.58 202.41 336.58 179.80 338.19 179.80 338.19 179.80 338.19 173.02 338.19 173.02 338.19 171.11 338.56 164.85 338.75 163.84 340.07 162.76 341.49 163.93 343.59 164.64 344.90 166.19 347.74 170.50 353.63 172.61 356.20 181.76 367.31 199.76 377.88 214.46 378.05 214.46 378.05 222.75 378.05 222.75 378.05 234.07 377.92 244.30 374.22 253.65 367.99 253.65 367.99 262.69 360.94 262.69 360.94 264.15 359.76 265.93 358.17 267.96 358.70 269.57 359.12 274.11 363.26 275.50 364.56 275.50 364.56 290.57 378.37 290.57 378.37 292.52 380.07 296.97 383.40 296.23 386.34 295.78 388.12 292.69 391.03 291.32 392.30 287.67 395.72 281.87 400.32 277.76 403.23 265.17 412.09 245.07 420.23 229.54 420.25 229.54 420.25 209.19 420.25 209.19 420.25 195.97 420.09 180.53 414.45 169.25 407.74 132.58 385.92 115.69 352.04 115.75 310.23 115.81 272.17 138.81 235.86 172.27 218.22 183.22 212.45 195.54 209.31 207.68 207.16 Z M 159.46 295.92 C 159.46 295.92 191.86 294.41 191.86 294.41 191.86 294.41 199.39 293.66 199.39 293.66 199.39 293.66 206.93 293.66 206.93 293.66 206.93 293.66 216.73 292.90 216.73 292.90 216.73 292.90 225.01 292.15 225.01 292.15 225.01 292.15 231.80 292.15 231.80 292.15 231.80 292.15 248.37 290.71 248.37 290.71 248.37 290.71 269.47 289.35 269.47 289.35 271.35 289.13 275.76 289.58 276.40 287.40 277.13 284.85 272.18 277.70 270.65 275.57 263.47 265.57 252.35 257.20 240.84 252.82 231.58 249.31 223.38 249.91 213.71 249.95 194.56 250.04 176.51 263.58 166.85 279.34 163.78 284.36 160.38 290.06 159.46 295.92 Z' /%3E%3C/svg%3E")
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.4in' height='0.4in' viewBox='0 0 512 512'%3E%3Cpath id='ear top' fill='%2300000055' stroke='' stroke-width='1' d='M 380.13 197.37 C 380.13 197.37 418.73 188.36 425.48 201.97 431.00 213.10 406.05 233.76 406.05 233.76 406.05 233.76 427.54 262.31 427.54 262.31 427.54 262.31 456.01 241.36 469.58 230.05 484.85 217.33 509.87 195.24 499.21 176.82 478.17 140.49 383.20 162.58 359.33 170.08 359.33 170.08 380.13 197.37 380.13 197.37 Z M 207.81 118.33 C 207.81 118.33 223.84 82.07 238.78 84.87 250.98 87.15 252.48 119.52 252.48 119.52 252.48 119.52 288.21 119.52 288.21 119.52 288.21 119.52 288.61 84.17 287.73 66.53 286.75 46.69 284.15 13.40 263.04 10.84 221.35 5.79 181.87 94.95 173.51 118.53 173.51 118.53 207.81 118.33 207.81 118.33 Z' /%3E%3Cpath id='ear bottom' fill='%23ffffff33' stroke='' stroke-width='1' d='M 207.81 118.33 C 207.81 118.33 223.84 82.07 238.78 84.87 250.98 87.15 252.48 119.52 252.48 119.52 252.48 119.52 288.21 119.52 288.21 119.52 288.21 119.52 288.36 105.64 287.82 87.64 277.45 62.09 235.78 45.56 214.67 43.00 208.33 47.67 181.87 94.95 173.51 118.53 173.51 118.53 207.81 118.33 207.81 118.33 Z M 380.13 197.37 C 380.13 197.37 418.73 188.36 425.48 201.97 431.00 213.10 406.05 233.76 406.05 233.76 406.05 233.76 427.54 262.31 427.54 262.31 427.54 262.31 442.93 250.69 456.50 239.38 444.88 238.50 464.75 192.12 437.12 157.12 436.12 156.25 383.20 162.58 359.33 170.08 359.33 170.08 380.13 197.37 380.13 197.37 Z' /%3E%3Cpath id='head' fill='%2300000055' stroke='' stroke-width='1' d='M 116.28 141.70 C 116.28 141.70 316.11 142.72 316.11 142.72 316.11 142.72 415.99 315.34 415.99 315.34 415.99 315.34 315.93 486.70 315.93 486.70 315.93 486.70 117.36 487.74 117.36 487.74 117.36 487.74 16.59 314.35 16.59 314.35 16.59 314.35 116.28 141.70 116.28 141.70 Z' /%3E %3Cpath id='e' fill='%23ffffff33' stroke='' stroke-width='1' d='M 207.68 207.16 C 207.68 207.16 212.96 207.16 212.96 207.16 230.97 206.92 246.86 208.68 263.44 216.28 296.73 231.53 323.29 268.63 323.72 305.71 323.72 305.71 323.72 321.54 323.72 321.54 323.72 323.27 324.01 326.37 322.52 327.55 321.44 328.40 317.74 328.43 316.19 328.64 316.19 328.64 295.84 330.26 295.84 330.26 295.84 330.26 287.56 330.71 287.56 330.71 287.56 330.71 254.40 332.91 254.40 332.91 254.40 332.91 219.74 335.17 219.74 335.17 219.74 335.17 202.41 336.58 202.41 336.58 202.41 336.58 179.80 338.19 179.80 338.19 179.80 338.19 173.02 338.19 173.02 338.19 171.11 338.56 164.85 338.75 163.84 340.07 162.76 341.49 163.93 343.59 164.64 344.90 166.19 347.74 170.50 353.63 172.61 356.20 181.76 367.31 199.76 377.88 214.46 378.05 214.46 378.05 222.75 378.05 222.75 378.05 234.07 377.92 244.30 374.22 253.65 367.99 253.65 367.99 262.69 360.94 262.69 360.94 264.15 359.76 265.93 358.17 267.96 358.70 269.57 359.12 274.11 363.26 275.50 364.56 275.50 364.56 290.57 378.37 290.57 378.37 292.52 380.07 296.97 383.40 296.23 386.34 295.78 388.12 292.69 391.03 291.32 392.30 287.67 395.72 281.87 400.32 277.76 403.23 265.17 412.09 245.07 420.23 229.54 420.25 229.54 420.25 209.19 420.25 209.19 420.25 195.97 420.09 180.53 414.45 169.25 407.74 132.58 385.92 115.69 352.04 115.75 310.23 115.81 272.17 138.81 235.86 172.27 218.22 183.22 212.45 195.54 209.31 207.68 207.16 Z M 159.46 295.92 C 159.46 295.92 191.86 294.41 191.86 294.41 191.86 294.41 199.39 293.66 199.39 293.66 199.39 293.66 206.93 293.66 206.93 293.66 206.93 293.66 216.73 292.90 216.73 292.90 216.73 292.90 225.01 292.15 225.01 292.15 225.01 292.15 231.80 292.15 231.80 292.15 231.80 292.15 248.37 290.71 248.37 290.71 248.37 290.71 269.47 289.35 269.47 289.35 271.35 289.13 275.76 289.58 276.40 287.40 277.13 284.85 272.18 277.70 270.65 275.57 263.47 265.57 252.35 257.20 240.84 252.82 231.58 249.31 223.38 249.91 213.71 249.95 194.56 250.04 176.51 263.58 166.85 279.34 163.78 284.36 160.38 290.06 159.46 295.92 Z' /%3E%3C/svg%3E");
     position:relative;
     margin-inline: auto;
     top: 0rem;
@@ -1268,7 +1268,7 @@ if themep == classic {
 	padding-top: .4rem;
 		&::before {
 		font-size: .85rem;
-		content: "View the pending replacements:"
+		content: "View the pending replacements:";
 		pointer-events: none!important;
 		color: var(--base-text);
 		position:relative;
@@ -1276,7 +1276,7 @@ if themep == classic {
 		}
 		&::after {
 		font-size: .85rem;
-		content: " here."
+		content: " here.";
 		position:relative;
 		pointer-events: auto;
 		}
@@ -1793,7 +1793,7 @@ if themep == classic {
 	border-radius: 8px 8px 0 0!important	
 	}
 	div#nav-links-bottom {
-	border-radius: 0 0 8px 8px!important
+	border-radius: 0 0 8px 8px!important;
 	margin-top: -3px;
 	}
 	div#c-posts div#a-show .pool-nav, div#c-posts div#a-show .search-seq-nav, div#c-posts div#a-show .set-nav {
@@ -1934,7 +1934,6 @@ if themep == classic {
 		border-right: 2px solid var(--bg-300)!important;
 		height: 100%;
 		width: 90%;
-		position:relative;
 			.name-rank {
 			width: 100%;
 			color: var(--base-text-faded);
@@ -2038,7 +2037,7 @@ if themep == classic {
 		}
 	}
 	#c-forum-topics .comment-post-grid .content .content-menu menu{
-	gap .75rem;
+	gap: .75rem;
 		ul {
 		flex-wrap: wrap;
 		}
@@ -2047,7 +2046,7 @@ if themep == classic {
 			li {
 			background-color: var(--bg-400);
 			margin: .25rem;
-			height: 28px
+			height: 28px;
 			padding: 0 .5rem;
 			border-radius: 4px;
 			display:flex;
@@ -2071,7 +2070,7 @@ if themep == classic {
 		blockquote {
 		background-color: rgba(255,255,255,.035)!important;
 			blockquote {
-			margin.5rem;
+			margin: .5rem;
 			}
 		}
 		pre {
@@ -2082,7 +2081,7 @@ if themep == classic {
 		}
 		if buttons { .content-menu {
 		margin: .5rem 0;
-		margin-top; 1rem;
+		margin-top: 1rem;
 			menu {
 			display:flex;
 			align-items: center;
@@ -2113,7 +2112,7 @@ if themep == classic {
 		display:flex;
 		align-items: center;
 		justify-content: center;
-		width: 26px
+		width: 26px;
 		position:relative;
 			&::before {
 			content: "";
@@ -2190,7 +2189,7 @@ if themep == classic {
 		display:flex;
 		align-items: center;
 		justify-content: center;
-		width: 26px
+		width: 26px;
 		position:relative;
 			&::before {
 			content: "";
@@ -2217,7 +2216,7 @@ if themep == classic {
 		display:flex;
 		align-items: center;
 		justify-content: center;
-		width: 26px
+		width: 26px;
 		position:relative;
 		margin-left: .25rem;
 			&::before {
@@ -2244,7 +2243,7 @@ if themep == classic {
 		display:flex;
 		align-items: center;
 		justify-content: center;
-		width: 26px
+		width: 26px;
 		position:relative;
 			&::before {
 			content: "";
@@ -2270,7 +2269,7 @@ if themep == classic {
 		display:flex;
 		align-items: center;
 		justify-content: center;
-		width: 26px
+		width: 26px;
 		position:relative;
 			&::before {
 			content: "";
@@ -2383,7 +2382,7 @@ if themep == classic {
 		.name-rank {
 		font-size: 0!important;
 		&::after {
-		content: "Café Dev"
+		content: "Café Dev";
 		font-size: .75rem;
 		}
 		}
@@ -2659,7 +2658,7 @@ if themep == classic {
     border-radius: 4px
 	}
 	table.striped thead tr, table.table thead tr {
-	background-color: transparent!important	
+	background-color: transparent!important;	
 	border-bottom-color: var(--bg-300)!important
 	}
 	table.striped thead th, table.table thead th {
@@ -2826,7 +2825,6 @@ if themep == classic {
 	width: 25vw;
 	position:relative;
 	margin-inline: auto;
-	position:relative;
 	}
 	}
 	#a-gallery h2 {
@@ -3274,7 +3272,7 @@ if themep == classic {
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 0
+	z-index: 0;
 	border-radius: 0%!important;
 	min-width: 100% !important;
 	max-width: unset!important;
@@ -3362,7 +3360,6 @@ if themep == classic {
 	.vertical-section article:nth-child( n + 4 ) {
 	display: none!important;
 	justify-content: center!important;
-	display:flex;
 	}
 	#c-help #sidebar, #c-wiki-pages #sidebar {
 	width: auto!important;
