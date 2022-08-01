@@ -1,17 +1,22 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.3.3
+@version        1.3.4
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
-@author         mandorinn (www.mandorinn.dev), faucet 
+@author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
 @preprocessor stylus
 
-@var		checkbox	buttons		" Comment Buttons" 1
 @var          select   themep    "Theme Pack" {
     "Muted": "muted",
     "Classic": "classic"
 }
+@var select  roundness "Profile picture shape" {
+	"Circle":"circle",
+	"Square":"square"
+}
+@var		checkbox	buttons		" Comment Buttons" 1
+
 
 ==/UserStyle== */
 
@@ -21,6 +26,22 @@
 
 @-moz-document domain("e621.net"), domain("e926.net") {
 	/* e621.net */
+
+if roundness == square {
+	:root {
+		--avatar-border-radius: 2.5%;
+	}
+	.avatar .post-thumbnail {
+		background-color: var(--elements-highlight);
+	}
+}
+if roundness == circle {
+	:root {
+		--avatar-border-radius: 50%;
+	}
+}
+
+
 if themep == muted {
 	:root {
 	--thin-scrollbar: var(--true);
@@ -1965,14 +1986,14 @@ if themep == classic {
 		max-width: 90%;
 		position: relative;
 		aspect-ratio: 1/1;
-		border-radius: 50%;
+		border-radius: var(--avatar-border-radius);
 		overflow: hidden;
 			a {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			overflow: hidden;
-			border-radius: 50%;
+			border-radius: var(--avatar-border-radius);
 			}
 			.post-thumbnail {
 			display: flex;
@@ -1982,7 +2003,7 @@ if themep == classic {
 			aspect-ratio: 1/1;
 			}
 			.post-thumbnail, img {
-			border-radius: 50%;
+			border-radius: var(--avatar-border-radius);
 			object-fit: cover;
 			width: 100%;
 			margin-inline: auto;
@@ -1993,7 +2014,7 @@ if themep == classic {
 				a {
 				height: 100%;
 				aspect-ratio: 1/1;
-				border-radius: 50%;
+				border-radius: var(--avatar-border-radius);
 				overflow: hidden;
 				position: relative;
 				}
@@ -2009,7 +2030,7 @@ if themep == classic {
 				align-items: center;
 				justify-content: center;
 				font-size: 1.5rem;
-				border-radius: 50%;
+				border-radius: var(--avatar-border-radius);
 				}
 			}
 				
@@ -2381,7 +2402,7 @@ if themep == classic {
 	.comments article {
 	position:relative;
 	}
-	/* fun lil thing for me - suggest by faucet lolll */
+	/* fun lil thing for me - suggested by faucet lolll */
 	article[data-creator-id="192568"] .author-info {
 		position:relative;
 		.name-rank {
@@ -2401,6 +2422,19 @@ if themep == classic {
 		opacity:.6;
 		}
 	}
+/*---- Uncomment this and pull request if you wanna consider yourself a dev faucet, dunno if you want to change your rank from "Priviliged"  to "Priviliged Café Dev" or not lolllll
+		article[data-creator-id="601225"] .author-info {
+			position:relative;
+			.name-rank {
+			font-size: 0!important;
+			&::after {
+				content: "Privileged Café Dev";
+			font-size: .75rem;
+		}
+	}}
+----*/
+
+
 	/* Super Secret Helper badges */ 
 	article[data-creator-id="601225"] .author-info, article[data-creator-id="884003"] .author-info{
 		position:relative;
@@ -2546,14 +2580,14 @@ if themep == classic {
 			max-width: 90%!important;
 			position: relative;
 			aspect-ratio: 1/1;
-			border-radius: 50%;
+			border-radius: var(--avatar-border-radius);
 			overflow: hidden;
 			a {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			overflow: hidden;
-			border-radius: 50%;
+			border-radius: var(--avatar-border-radius);
 			}
 			.post-thumbnail {
 			display: flex;
@@ -2563,7 +2597,7 @@ if themep == classic {
 			aspect-ratio: 1/1;
 			}
 			.post-thumbnail, img {
-			border-radius: 50%;
+			border-radius: var(--avatar-border-radius);
 			max-height: 100%!important;
 			object-fit: cover;
 			width: 100%!important;
@@ -2575,7 +2609,7 @@ if themep == classic {
 				a {
 				height: 100%;
 				aspect-ratio: 1/1;
-				border-radius: 50%;
+				border-radius: var(--avatar-border-radius);
 				overflow: hidden;
 				position: relative;
 				}
@@ -2591,7 +2625,7 @@ if themep == classic {
 				align-items: center;
 				justify-content: center;
 				font-size: 1.5rem;
-				border-radius: 50%;				
+				border-radius: var(--avatar-border-radius);				
 				}
 			}				
 			}
@@ -3133,6 +3167,9 @@ if themep == classic {
 	align-items: center;
 	overflow:hidden;
 	}
+	body.resp .comment-post-grid .author-info .avatar .post-thumbnail {
+		background-color: transparent;
+	}
 	body.resp .comment-post-grid .author-info .avatar .post-thumbnail img {
  	height: 100px;
 	aspect-ratio:1/1;
@@ -3433,7 +3470,7 @@ if themep == classic {
 	.post-thumbnail a img {
     object-fit: cover;
     height: 100%;
-    border-radius: 50%;
+    border-radius: var(--avatar-border-radius);
     aspect-ratio: 1/1;
     outline: 5px solid var(--bg-300)!important;
 	}
@@ -3470,7 +3507,7 @@ if themep == classic {
 		place-content: center;
 		border-bottom: 1px solid var(--bg-300);
 		}
-		/* fun lil thing for me suggested by faucet lolll - user page */
+		/* fun lil thing for me suggested by faucet - user page */
 		a[href="/users/192568"] {
 		&::after {
 		content: url("data:image/svg+xml,%3Csvg height='32.0' viewBox='0 0 24.0 20.0' width='30.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.58 11.4L17.3 4.01l-0.35 -0.6L7.04 3.41l-0.35 0.6 -4.27 7.39 -0.35 0.6 0.35 0.6 4.27 7.39 0.35 0.6h9.92l0.35 -0.6 4.28 -7.39 0.35 -0.6 -0.36 -0.6zM8.51 10.37L6.88 12l1.63 1.63v2.73L4.15 12l4.37 -4.37v2.74zM11.63 17.3l-2.04 -0.63 3.1 -9.98 2.04 0.64 -3.1 9.97zM15.49 16.37v-2.73L17.12 12l-1.63 -1.63L15.49 7.63L19.85 12l-4.36 4.37z' fill='%23ffffffff'/%3E%3C/svg%3E");
@@ -3552,7 +3589,7 @@ if themep == classic {
 			font-size: 1.3rem;
 			width: 100%;
 			aspect-ratio: 1/1;
-			border-radius: 50%;
+			border-radius: var(--avatar-border-radius);
 			}
 		}
 	}
@@ -3562,7 +3599,7 @@ if themep == classic {
 				display: flex;
 				align-items: center!important;
 				justify-content: center!important;
-				border-radius: 50%;
+				border-radius: var(--avatar-border-radius);
 				overflow:hidden;
 				border: 5px solid var(--bg-300)!important;
 				}
