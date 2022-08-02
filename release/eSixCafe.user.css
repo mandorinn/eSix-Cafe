@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.3.4
+@version        1.3.5
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -106,6 +106,8 @@ if themep == muted {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
+ 	--user-contributor: #93c190;
+	--user-contributor: #b0e7ad;
 	--user-admin:#cc946d;
 	--user-admin-hover: #eeae82;
 	--user-former-staff: #6cd5aa;
@@ -184,6 +186,8 @@ if themep == muted {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
+ 	--user-contributor: #93c190;
+	--user-contributor: #b0e7ad;
 	--user-admin:#cc946d;
 	--user-admin-hover: #eeae82;
 	--user-former-staff: #6cd5aa;
@@ -259,6 +263,8 @@ if themep == muted {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
+	--user-contributor: #93c190;
+	--user-contributor-hover: #b0e7ad;
 	--user-admin:#cc946d;
 	--user-admin-hover: #eeae82;
 	--user-former-staff: #6cd5aa;
@@ -334,6 +340,8 @@ if themep == muted {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
+ 	--user-contributor: #93c190;
+	--user-contributor-hover: #b0e7ad;
 	--user-admin:#cc946d;
 	--user-admin-hover: #eeae82;
 	--user-former-staff: #6cd5aa;
@@ -411,6 +419,8 @@ if themep == muted {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #93c190;
 	--user-privileged-hover: #b0e7ad;
+ 	--user-contributor: #93c190;
+	--user-contributor-hover: #b0e7ad;
 	--user-admin:#cc946d;
 	--user-admin-hover: #eeae82;
 	--user-former-staff: #6cd5aa;
@@ -496,6 +506,8 @@ if themep == classic {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #4afc4a;
 	--user-privileged-hover: #75fd75;
+	--user-contributor: #4afc4a;
+	--user-contributor-hover: #75fd75;
 	--user-admin:#e69500;
 	--user-admin-hover: #9d6703;
 	--user-former-staff: #3fd6ba;
@@ -578,6 +590,8 @@ if themep == classic {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #4afc4a;
 	--user-privileged-hover: #75fd75;
+ 	--user-contributor: #4afc4a;
+	--user-contributor-hover: #75fd75;
 	--user-admin:#e69500;
 	--user-admin-hover: #9d6703;
 	--user-former-staff: #3fd6ba;
@@ -657,6 +671,8 @@ if themep == classic {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #4afc4a;
 	--user-privileged-hover: #75fd75;
+ 	--user-contributor: #4afc4a;
+	--user-contributor-hover: #75fd75;
 	--user-admin:#e69500;
 	--user-admin-hover: #9d6703;
 	--user-former-staff: #3fd6ba;
@@ -736,6 +752,8 @@ if themep == classic {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #4afc4a;
 	--user-privileged-hover: #75fd75;
+ 	--user-contributor: #4afc4a;
+	--user-contributor-hover: #75fd75;
 	--user-admin:#e69500;
 	--user-admin-hover: #9d6703;
 	--user-former-staff: #3fd6ba;
@@ -815,6 +833,8 @@ if themep == classic {
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #4afc4a;
 	--user-privileged-hover: #75fd75;
+ 	--user-contributor: #4afc4a;
+	--user-contributor-hover: #75fd75;
 	--user-admin:#e69500;
 	--user-admin-hover: #9d6703;
 	--user-former-staff: #3fd6ba;
@@ -1741,7 +1761,7 @@ if themep == classic {
 	display: none;		
 	}
 	/* Link colors */
-	#description a, .about-section a, .comment-post-grid .styled-dtext .dtext-link {
+	#description a, .about-section a, .comment-post-grid .styled-dtext .dtext-link, .dtext-formatter .dtext-link:not([href^="/user/show/"], #c-wiki-pages a)  {
 	color: var(--content-link)!important;
 		&:hover {
 		color: var(--content-link-hover)!important
@@ -2369,10 +2389,16 @@ if themep == classic {
 		color: var(--user-member-hover)!important;
 		}
 	}
-	.user-privileged{
+	.user-privileged {
 	color: var(--user-privileged)!important;
 		&:hover {
 		color: var(--user-privileged-hover)!important;
+		}
+	}
+	.user-contributor {
+	color: var(--user-contributor)!important;
+		&:hover {
+		color: var(--user-contributor)!important;
 		}
 	}
 	.user-admin {
