@@ -857,6 +857,27 @@ if themep == classic {
 	}
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-300);
+}
+
+if themep == muted {
+     ::selection {
+        color: var(--bg);
+        background: var(--elements-highlight);
+    }
+}
+if themep == classic {
+     ::selection {
+        color: var(--bg);
+        background: var(--header-link);
+    }
+}
 
 
 /* -------------- Styling starts now --------------*/
@@ -878,6 +899,10 @@ if themep == classic {
 		border-radius:0!important;
 		padding-top: 1.5rem;
 		padding-bottom: 4rem;
+	}
+	#ad-leaderboard {
+		width:fit-content;
+		margin-inline:auto;
 	}
 	footer#page-footer {
 		margin: 0rem 0 0 0;
@@ -1062,11 +1087,15 @@ if themep == classic {
 		align-items: center;
 		justify-content: center;
     }
+    nav .logo a {
+        color: rgb(0,0,0,0);
+        font-size:0;
+    }
 	nav .logo a::before {
-		content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.4in' height='0.4in' viewBox='0 0 512 512'%3E%3Cpath id='ear top' fill='%2300000055' stroke='' stroke-width='1' d='M 380.13 197.37 C 380.13 197.37 418.73 188.36 425.48 201.97 431.00 213.10 406.05 233.76 406.05 233.76 406.05 233.76 427.54 262.31 427.54 262.31 427.54 262.31 456.01 241.36 469.58 230.05 484.85 217.33 509.87 195.24 499.21 176.82 478.17 140.49 383.20 162.58 359.33 170.08 359.33 170.08 380.13 197.37 380.13 197.37 Z M 207.81 118.33 C 207.81 118.33 223.84 82.07 238.78 84.87 250.98 87.15 252.48 119.52 252.48 119.52 252.48 119.52 288.21 119.52 288.21 119.52 288.21 119.52 288.61 84.17 287.73 66.53 286.75 46.69 284.15 13.40 263.04 10.84 221.35 5.79 181.87 94.95 173.51 118.53 173.51 118.53 207.81 118.33 207.81 118.33 Z' /%3E%3Cpath id='ear bottom' fill='%23ffffff33' stroke='' stroke-width='1' d='M 207.81 118.33 C 207.81 118.33 223.84 82.07 238.78 84.87 250.98 87.15 252.48 119.52 252.48 119.52 252.48 119.52 288.21 119.52 288.21 119.52 288.21 119.52 288.36 105.64 287.82 87.64 277.45 62.09 235.78 45.56 214.67 43.00 208.33 47.67 181.87 94.95 173.51 118.53 173.51 118.53 207.81 118.33 207.81 118.33 Z M 380.13 197.37 C 380.13 197.37 418.73 188.36 425.48 201.97 431.00 213.10 406.05 233.76 406.05 233.76 406.05 233.76 427.54 262.31 427.54 262.31 427.54 262.31 442.93 250.69 456.50 239.38 444.88 238.50 464.75 192.12 437.12 157.12 436.12 156.25 383.20 162.58 359.33 170.08 359.33 170.08 380.13 197.37 380.13 197.37 Z' /%3E%3Cpath id='head' fill='%2300000055' stroke='' stroke-width='1' d='M 116.28 141.70 C 116.28 141.70 316.11 142.72 316.11 142.72 316.11 142.72 415.99 315.34 415.99 315.34 415.99 315.34 315.93 486.70 315.93 486.70 315.93 486.70 117.36 487.74 117.36 487.74 117.36 487.74 16.59 314.35 16.59 314.35 16.59 314.35 116.28 141.70 116.28 141.70 Z' /%3E %3Cpath id='e' fill='%23ffffff33' stroke='' stroke-width='1' d='M 207.68 207.16 C 207.68 207.16 212.96 207.16 212.96 207.16 230.97 206.92 246.86 208.68 263.44 216.28 296.73 231.53 323.29 268.63 323.72 305.71 323.72 305.71 323.72 321.54 323.72 321.54 323.72 323.27 324.01 326.37 322.52 327.55 321.44 328.40 317.74 328.43 316.19 328.64 316.19 328.64 295.84 330.26 295.84 330.26 295.84 330.26 287.56 330.71 287.56 330.71 287.56 330.71 254.40 332.91 254.40 332.91 254.40 332.91 219.74 335.17 219.74 335.17 219.74 335.17 202.41 336.58 202.41 336.58 202.41 336.58 179.80 338.19 179.80 338.19 179.80 338.19 173.02 338.19 173.02 338.19 171.11 338.56 164.85 338.75 163.84 340.07 162.76 341.49 163.93 343.59 164.64 344.90 166.19 347.74 170.50 353.63 172.61 356.20 181.76 367.31 199.76 377.88 214.46 378.05 214.46 378.05 222.75 378.05 222.75 378.05 234.07 377.92 244.30 374.22 253.65 367.99 253.65 367.99 262.69 360.94 262.69 360.94 264.15 359.76 265.93 358.17 267.96 358.70 269.57 359.12 274.11 363.26 275.50 364.56 275.50 364.56 290.57 378.37 290.57 378.37 292.52 380.07 296.97 383.40 296.23 386.34 295.78 388.12 292.69 391.03 291.32 392.30 287.67 395.72 281.87 400.32 277.76 403.23 265.17 412.09 245.07 420.23 229.54 420.25 229.54 420.25 209.19 420.25 209.19 420.25 195.97 420.09 180.53 414.45 169.25 407.74 132.58 385.92 115.69 352.04 115.75 310.23 115.81 272.17 138.81 235.86 172.27 218.22 183.22 212.45 195.54 209.31 207.68 207.16 Z M 159.46 295.92 C 159.46 295.92 191.86 294.41 191.86 294.41 191.86 294.41 199.39 293.66 199.39 293.66 199.39 293.66 206.93 293.66 206.93 293.66 206.93 293.66 216.73 292.90 216.73 292.90 216.73 292.90 225.01 292.15 225.01 292.15 225.01 292.15 231.80 292.15 231.80 292.15 231.80 292.15 248.37 290.71 248.37 290.71 248.37 290.71 269.47 289.35 269.47 289.35 271.35 289.13 275.76 289.58 276.40 287.40 277.13 284.85 272.18 277.70 270.65 275.57 263.47 265.57 252.35 257.20 240.84 252.82 231.58 249.31 223.38 249.91 213.71 249.95 194.56 250.04 176.51 263.58 166.85 279.34 163.78 284.36 160.38 290.06 159.46 295.92 Z' /%3E%3C/svg%3E");
+		content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.4in' height='0.4in' viewBox='0 0 36 36'%3E%3Cpath id='Ear Tops' fill='%2300000055' d='M 26.73,13.88 C 26.73,13.88 29.44,13.24 29.92,14.20 30.30,14.98 28.55,16.43 28.55,16.43 28.55,16.43 30.06,18.45 30.06,18.45 30.06,18.45 32.06,16.97 33.02,16.18 34.09,15.28 35.85,13.73 35.10,12.43 33.62,9.88 26.95,11.43 25.27,11.96 25.27,11.96 26.73,13.88 26.73,13.88 Z M 14.61,8.32 C 14.61,8.32 15.74,5.77 16.79,5.97 17.65,6.13 17.75,8.41 17.75,8.41 17.75,8.41 20.26,8.41 20.26,8.41 20.26,8.41 20.30,5.92 20.23,4.68 20.16,3.29 19.98,0.94 18.50,0.76 15.57,0.41 12.79,6.68 12.20,8.33 12.20,8.33 14.61,8.32 14.61,8.32 Z' /%3E%3Cpath id='Ear Bottoms' fill='%23ffffff33' d='M 14.61,8.32 C 14.61,8.32 15.74,5.77 16.79,5.97 17.65,6.13 17.75,8.41 17.75,8.41 17.75,8.41 20.26,8.41 20.26,8.41 20.26,8.41 20.30,7.43 20.27,6.17 19.54,4.37 16.52,3.18 15.03,3.00 14.27,3.83 12.79,6.68 12.20,8.33 12.20,8.33 14.61,8.32 14.61,8.32 Z M 26.73,13.88 C 26.73,13.88 29.44,13.24 29.92,14.20 30.30,14.98 28.55,16.43 28.55,16.43 28.55,16.43 30.06,18.45 30.06,18.45 30.06,18.45 31.41,17.50 32.36,16.70 31.56,16.69 32.70,13.48 30.75,11.02 29.57,10.99 26.95,11.43 25.27,11.96 25.27,11.96 26.73,13.88 26.73,13.88 Z' /%3E%3Cpath id='Head' fill='%2300000055' d='M 8.17,9.97 C 10.27,9.96 19.20,10.03 22.22,10.03 22.88,11.15 28.57,20.96 29.24,22.17 28.50,23.45 22.29,34.12 22.22,34.21 21.22,34.25 8.25,34.29 8.25,34.29 8.15,34.13 1.88,23.32 1.17,22.10 1.80,21.20 7.24,11.57 8.17,9.97 Z' /%3E%3Cpath id='e' fill='%23ffffff33' d='M 14.90,14.62 C 21.12,14.31 22.95,19.43 22.81,23.04 22.69,23.05 11.69,23.93 11.53,23.93 14.80,28.95 18.63,25.34 18.81,25.20 18.95,25.34 19.39,25.75 20.85,27.10 17.10,31.38 8.78,30.54 8.02,21.83 8.53,15.14 14.90,14.62 14.90,14.62 Z M 11.21,20.81 C 11.21,20.81 17.95,20.38 19.47,20.28 17.02,15.62 12.25,17.69 11.21,20.81 Z' /%3E%3C/svg%3E%0A");
 		position:relative;
 		margin-inline: auto;
-		top: 0rem;
+		top: .25rem;
 		left: .5rem;
 		z-index: 2;
 		background-color: var(--bg-300);
@@ -1583,7 +1612,6 @@ if themep == classic {
 	search-content button.button.voteButton.fav {
 		display:flex;
  		justify-content: center;
-		align-items: center;
 		width: 3.5ch;
 		max-height: 1.5rem;
 	}
@@ -1664,7 +1692,7 @@ if themep == classic {
 		transition:200ms;
 		display:flex;
 		flex-direction: column;
-		position: relative
+		position: relative;
 	}
 	#sidebar #disable-all-blacklists, #sidebar #re-enable-all-blacklists {
 		position: relative;
@@ -1795,29 +1823,29 @@ if themep == classic {
 		}
 	}*/
 	/* Popular page */
-	#a-popular {
+	#c-popular {
 		background-color: var(--bg)!important;
 		padding: 2rem;
 		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
 	}
-	#a-popular h1 {
+	#c-popular h1 {
 		margin-inline: auto;
 		margin-bottom: 1rem;
 	}
-	#a-popular #posts > div {
+	#c-popular #posts > div {
 		margin-inline: auto;
 		width: 90%;
 	}
-	#a-popular #posts > div {
+	#c-popular #posts > div {
 		display: grid;
 		grid-template-columns: repeat( auto-fill, minmax(175px, 1fr) );
 		max-width: 90vw;
 		min-height: fit-content;
 		position:relative;
 	}
-	#a-popular #posts > div > article {
+	#c-popular #posts > div > article {
 		min-width: fit-content;
 		margin-inline: auto;
 	}
@@ -2147,12 +2175,12 @@ if themep == classic {
 		p.info {
 			padding-bottom: .5rem;
 		}
-		.re621-comment-reply:hover, .re621-forum-post-reply:hover, .reply-link:hover {
+		.re621-comment-reply:hover, .re621-forum-post-reply:hover, .reply-link:hover, .blip-reply-link:hover, a[href^="/blips/"]:hover {
 			&::before {
 				background-color: var(--bg-300)!important;
 			}
 		}
-		.re621-comment-reply, .re621-forum-post-reply, .reply-link {
+		.re621-comment-reply, .re621-forum-post-reply, .reply-link, .blip-reply-link {
 			font-size: 0;
 			display:flex;
 			align-items: center;
@@ -2173,6 +2201,32 @@ if themep == classic {
 				mix-blend-mode: soft-light;
 			}
 		}
+		.content-menu a[href^="/blips/"]{
+			font-size: 0;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			width: 26px;
+			position:relative;
+			margin-right:.5rem;
+			&::before {
+				content: "";
+				aspect-ratio: 1/1;
+				width: 28px;
+				position:absolute;
+				background-color: var(--bg-400);
+				border-radius: 4px;
+			}
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg height='24.0' viewBox='0 0 24.0 24.0' width='24.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12,2C6.486,2 2,6.486 2,12C2,17.515 6.486,22 12,22C14.039,22 15.993,21.398 17.652,20.259L16.521,18.611C15.195,19.519 13.633,20 12,20C7.589,20 4,16.411 4,12C4,7.589 7.589,4 12,4C16.411,4 20,7.589 20,12V12.782C20,14.17 19.402,15 18.4,15L18.398,15.018C18.338,15.005 18.273,15 18.209,15H18C17.437,15 16.6,14.182 16.6,13.631V12C16.6,9.464 14.537,7.4 12,7.4C9.463,7.4 7.4,9.463 7.4,12C7.4,14.537 9.463,16.6 12,16.6C13.234,16.6 14.35,16.106 15.177,15.313C15.826,16.269 16.93,17 18,17L18.002,16.981C18.064,16.994 18.129,17 18.195,17H18.4C20.552,17 22,15.306 22,12.782V12C22,6.486 17.514,2 12,2ZM12,14.599C10.566,14.599 9.4,13.433 9.4,11.999C9.4,10.565 10.566,9.399 12,9.399C13.434,9.399 14.6,10.565 14.6,11.999C14.6,13.433 13.434,14.599 12,14.599Z' fill='%23ffffffff'/%3E%3C/svg%3E%0A");
+				position:absolute;
+				mix-blend-mode: soft-light;
+			}
+		}
+        .blip-atme-link {
+            font-size: 0;
+            margin-inline: .25rem;
+        }
 		li[id^="comment-vote-up-"] a {
 			background-color: var(--bg-400)!important;
 			height: 28px;
@@ -2383,37 +2437,37 @@ if themep == classic {
 		color: var(--flagged);
 	}
 	/* Name rank colors */
-	.user-member {
+	a[class^="user-"] {
 		color: var(--user-member)!important;
 		&:hover {
 			color: var(--user-member-hover)!important;
 		}
 	}
-	.user-privileged {
+	.user-privileged.with-style {
 		color: var(--user-privileged)!important;
 		&:hover {
 			color: var(--user-privileged-hover)!important;
 		}
 	}
-	.user-contributor {
+	.user-contributor.with-style {
 		color: var(--user-contributor)!important;
 		&:hover {
 			color: var(--user-contributor)!important;
 		}
 	}
-	.user-admin {
+	.user-admin.with-style {
 		color: var(--user-admin)!important;
 		&:hover {
 			color: var(--user-admin-hover)!important;
 		}
 	}
-	.user-former {
+	.user-former.with-style {
 		color: var(--user-former-staff)!important;
 		&:hover {
 			color: var(--user-former-staff-hover)!important;
 		}
 	}
-	.user-janitor {
+	.user-janitor.with-style {
 		color: var(--user-janitor)!important;
 		&:hover {
 			color: var(--user-janitor-hover)!important;
@@ -2865,7 +2919,7 @@ if themep == classic {
 		}
 	}
 /* Pools page */
-	article.post-preview .desc {
+/*	article.post-preview .desc {
 		background-color: var(--bg-400)!important;
 		border-radius: 0 0 .5rem .5rem;
 	}
@@ -2911,7 +2965,7 @@ if themep == classic {
 	#a-gallery #posts > div > article {
 		min-width: fit-content;
 		margin-inline: auto;
-	}
+	}*/
 /* Comments page */
 	div#c-comments div#a-index .comment-post, 
 	div#c-comments div#a-show {
@@ -3402,6 +3456,9 @@ if themep == classic {
 	.stats-section {
 		overflow:scroll;
 	}
+    .profile-avatar {
+        user-select:none;
+    }
 	.profile-stats {
 		overflow: scroll;	
 		.column {
@@ -3482,6 +3539,9 @@ if themep == classic {
 		border-radius: 1rem;
 		justify-content: space-around;
 	}
+     .profile-avatar {
+        user-select:none;
+    }
 	.post-thumbnail {
 		display:flex;
 		align-items: center;
