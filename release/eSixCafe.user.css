@@ -3849,3 +3849,20 @@ if themep == classic {
 		margin-left: .05rem;
 	}
 }
+
+@-moz-document url-prefix("https://e621.net/extensions"), url-prefix("https://e926.net/extensions") {
+	/* idem's Sourcing Suite */
+	h1 {
+		background-color: var(--bg);
+		color: var(--content-link) !important;
+	}
+	.setting_section{
+		background-color: var(--bg) !important;
+	}
+	.setting_description, .setting_values{
+		color: var(--base-text);
+	}
+	.setting_header, .settings_table_head{
+		color: var(--content-link) !important;
+	}
+}
