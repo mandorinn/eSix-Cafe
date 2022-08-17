@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.3.9
+@version        1.4.0
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -3108,7 +3108,7 @@ if themep == classic {
 	button.rating-s.active {
 		background-color: var(--favorite-button)!important;
 	}
-	.collection_radio_buttons{
+	form.simple_form div.collection-radio-buttons input + label{
 		color: var(--base-text)!important;
 	}
 	.radio_buttons:not(:checked)+label {
