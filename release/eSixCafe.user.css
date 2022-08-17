@@ -3108,6 +3108,21 @@ if themep == classic {
 	button.rating-s.active {
 		background-color: var(--favorite-button)!important;
 	}
+	.collection_radio_buttons{
+		color: var(--base-text)!important;
+	}
+	.radio_buttons:not(:checked)+label {
+		background-color: var(--bg-300)!important;
+	}
+	#post_rating_e:checked+label {
+		background-color: var(--remove-favorite)!important;
+	}	
+	#post_rating_q:checked+label {
+		background-color: var(--warn-button)!important;
+	}
+	#post_rating_s:checked+label {
+		background-color: var(--favorite-button)!important;
+	}
 	/* Site map */
 
 	#a-site-map {
