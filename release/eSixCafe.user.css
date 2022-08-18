@@ -1903,6 +1903,14 @@ if themep == classic {
 		height: 20px;
 		width: 20px;
 	}
+    div#c-iqdb-queries div#a-check article.post-preview{
+        border: 0;
+        background-color: #00000040!important;
+        border-radius: 6px;
+    }
+    article.post-preview .desc{
+        background-color: var(--bg-400) !important;
+    }
 	/* Editing mode */ 
 	div#c-posts div#a-show #edit .edit-submit {
 		background-color: var(--bg)!important;
