@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.4.3
+@version        1.4.4
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -3773,6 +3773,11 @@ if themep == classic {
 			border-radius: 4px;
 		}
 	}
+	@media (max-width: 800px) {	
+		div#c-users div#a-show .about-section .about-piece {
+			margin: 0 0 1em 0;
+		}
+	}
 	}
 	/* Regular userpage */
 	div#page:not([enhancements="true"]) {
@@ -3782,6 +3787,12 @@ if themep == classic {
 		border-radius: var(--avatar-border-radius);
 		aspect-ratio: 1/1;
 		outline: 5px solid var(--elements-highlight) !important;
+		}
+		@media (max-width: 800px) {	
+			div#c-users div#a-show .profile-avatar {
+				margin: 0.5em auto 1em auto;
+				width: fit-content;
+			}
 		}
 	}
 }
