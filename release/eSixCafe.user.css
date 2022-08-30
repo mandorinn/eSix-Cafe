@@ -1789,7 +1789,7 @@ if themep == classic {
 		display: none;
 	}
 	/* Link colors */
-	#description a, .about-section a, .comment-post-grid .styled-dtext .dtext-link, .dtext-formatter .dtext-link:not([href^="/user/show/"], #c-wiki-pages a) {
+	#description a, #post-description-container .dtext-container a, .about-section a, .comment-post-grid .styled-dtext .dtext-link, .dtext-formatter .dtext-link:not([href^="/user/show/"], #c-wiki-pages a) {
 		color: var(--content-link)!important;
 		&:hover {
 			color: var(--content-link-hover)!important;
@@ -2823,6 +2823,12 @@ if themep == classic {
 	}
 	.replacement-pending-row td:nth-child(-n + 2) {
 		background-color: var(--flagged)!important;
+	}
+	.pool-category-series a, .pool-category-collection a, table tr[id^='artist-'] a, #set-index a[href^="/post"] {
+		color: var(--content-link)!important;
+		&:hover {
+			color: var(--content-link-hover)!important;
+		}
 	}
 	/* User feedback table */
 	div#c-user-feedbacks #a-index .striped > tbody > tr > td {
