@@ -1438,6 +1438,8 @@ if themep == classic {
 		border: 2px solid var(--bg-400)!important;
 		border-radius: 8px;
 		color: var(--base-text)!important;
+		margin-inline: auto;
+		margin-bottom: 1rem;
 	}
 	div#notice {
 		background-color: var(--bg)!important;
