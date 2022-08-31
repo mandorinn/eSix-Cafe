@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.4.5
+@version        1.4.6
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -106,7 +106,7 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
-	 	--user-contributor: #93c190;
+		--user-contributor: #93c190;
 		--user-contributor: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
@@ -135,7 +135,7 @@ if themep == muted {
 		--bg-300: #604a67;
 		--bg-400: #55425a;
 		--bg: #4b3a50;
-		 --bg-visiting: #ffe4e9;
+		--bg-visiting: #ffe4e9;
 		--bg-visiting-hover:#f6eaec;
 		--bg-editing: #d4a0ab;
 		--bg-editing-hover: #ffa6c2;
@@ -186,7 +186,7 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
-	 	--user-contributor: #93c190;
+		--user-contributor: #93c190;
 		--user-contributor: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
@@ -340,7 +340,7 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
-	 	--user-contributor: #93c190;
+		--user-contributor: #93c190;
 		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
@@ -419,7 +419,7 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
- 		--user-contributor: #93c190;
+		--user-contributor: #93c190;
 		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
@@ -590,7 +590,7 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
- 		--user-contributor: #4afc4a;
+		--user-contributor: #4afc4a;
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
@@ -671,7 +671,7 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
- 		--user-contributor: #4afc4a;
+		--user-contributor: #4afc4a;
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
@@ -752,7 +752,7 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
- 		--user-contributor: #4afc4a;
+		--user-contributor: #4afc4a;
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
@@ -833,7 +833,7 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
-	 	--user-contributor: #4afc4a;
+		--user-contributor: #4afc4a;
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
@@ -890,7 +890,7 @@ if themep == classic {
 		color: var(--base-text)!important;
 		font-family: var(--main-font);
 		padding:0;
- 		margin:0;
+		margin:0;
 		max-width: 100vw;
 	}
 	div#page {
@@ -1195,7 +1195,7 @@ if themep == classic {
 	}
 	#sidebar > div[style="color:darkorange;margin-bottom:0.5rem;"] {
 		display:none;
- 	}
+	}
 	.color-muted {
 		color: var(--base-text)!important;
 		opacity: .5;
@@ -1245,12 +1245,12 @@ if themep == classic {
 	.source-links .source-link a {
 		color: var(--content-link)!important;
 		transition: 100ms;
-	 	&:hover {
+		&:hover {
 			color: var(--content-link-hover)!important;
 			background-color: var(--bg)!important;
 			padding: 0 .5rem;
 			border-radius: 4px;
-	 }
+		}
 	}
 	/* Sidebar searchbox */
 	div#page aside#sidebar section#search-box form, div#page aside#sidebar section#re621-insearch form, div#page aside#sidebar section#mode-box form {
@@ -1438,6 +1438,8 @@ if themep == classic {
 		border: 2px solid var(--bg-400)!important;
 		border-radius: 8px;
 		color: var(--base-text)!important;
+		margin-inline: auto;
+		margin-bottom: 1rem;
 	}
 	div#notice {
 		background-color: var(--bg)!important;
@@ -1539,7 +1541,7 @@ if themep == classic {
 	}
 	.button.score-positive {
 		background-color: var(--favorite-button)!important;
- 		color: var(--base-text)!important;
+		color: var(--base-text)!important;
 	}
 	.button.score-positive:hover {
 		background-color: var(--favorite-button-hover)!important;
@@ -1611,7 +1613,7 @@ if themep == classic {
 	}
 	search-content button.button.voteButton.fav {
 		display:flex;
- 		justify-content: center;
+		justify-content: center;
 		width: 3.5ch;
 		max-height: 1.5rem;
 	}
@@ -1673,7 +1675,7 @@ if themep == classic {
 		background-color: var(--bg)!important;
 		color:var(--base-text)!important;
 		transition: var(--header-link-transition);
- 	}
+	}
 	.button.btn-neutral:hover {
 		background-color: var(--bg-400)!important;
 		color:var(--base-text)!important;
@@ -1787,7 +1789,7 @@ if themep == classic {
 		display: none;
 	}
 	/* Link colors */
-	#description a, .about-section a, .comment-post-grid .styled-dtext .dtext-link, .dtext-formatter .dtext-link:not([href^="/user/show/"], #c-wiki-pages a) {
+	#description a, #post-description-container .dtext-container a, .about-section a, .comment-post-grid .styled-dtext .dtext-link, .dtext-formatter .dtext-link:not([href^="/user/show/"], #c-wiki-pages a) {
 		color: var(--content-link)!important;
 		&:hover {
 			color: var(--content-link-hover)!important;
@@ -2167,26 +2169,25 @@ if themep == classic {
 		}
 
 		if buttons {
- 		.content-menu {
-			margin: .5rem 0;
-			margin-top: 1rem;
-			menu {
-				display:flex;
-				align-items: center;
-				color: transparent!important;
-				user-select: none;
-				/*li:nth-child(2),
-				li:nth-child(6),
- 				li:nth-child(8){
-				display:none;
-				}*/
-				li {
-					margin: 0;
-					padding: 0;
+			.content-menu {
+				margin: .5rem 0;
+				margin-top: 1rem;
+				menu {
+					display:flex;
+					align-items: center;
+					color: transparent!important;
+					user-select: none;
+					/*li:nth-child(2),
+					li:nth-child(6),
+					li:nth-child(8){
+					display:none;
+					}*/
+					li {
+						margin: 0;
+						padding: 0;
+					}
 				}
-
 			}
-		}
 		p.info {
 			padding-bottom: .5rem;
 		}
@@ -2442,7 +2443,7 @@ if themep == classic {
 		text-shadow: none!important;
 		transition: 100ms;
 	}
-	 .spoiler:hover .dtext-link {
+	.spoiler:hover .dtext-link {
 		color: var(--content-link)!important;
 	}
 	.spoiler:hover .dtext-link:hover {
@@ -2823,6 +2824,12 @@ if themep == classic {
 	.replacement-pending-row td:nth-child(-n + 2) {
 		background-color: var(--flagged)!important;
 	}
+	.pool-category-series a, .pool-category-collection a, table tr[id^='artist-'] a, #set-index a[href^="/post"] {
+		color: var(--content-link)!important;
+		&:hover {
+			color: var(--content-link-hover)!important;
+		}
+	}
 	/* User feedback table */
 	div#c-user-feedbacks #a-index .striped > tbody > tr > td {
 		background: transparent!important;
@@ -2841,6 +2848,15 @@ if themep == classic {
 		&:hover {
 			color: var(--base-link-hover)!important;
 		}
+	}
+	/* Takedowns and Tickets */
+	.sect_green, .approved-ticket {
+		color: var(--favorite-button)!important;
+		font-weight: 900;
+	}
+	.sect_red, .redtext, .denied-ticket {
+		color: var(--flagged)!important;
+		font-weight: 900;
 	}
 	/* Tag Changes */
 	#p-revert-listing {
@@ -3076,7 +3092,7 @@ if themep == classic {
 	}
 /* Dtext help page */
 
-	 .dtext-container > .styled-dtext > blockquote > .striped > tbody {
+	.dtext-container > .styled-dtext > blockquote > .striped > tbody {
 		tr {
 			background-color: var(--bg-300)!important;
 			td {
@@ -3231,7 +3247,7 @@ if themep == classic {
 			}
 		}
 	@keyframes rotate-gear {
- 		from {
+		from {
 			transform: rotate(0deg);
 		}
 
@@ -3260,15 +3276,15 @@ if themep == classic {
 		height: fit-content;
 	}
 	header#top nav#nav.grid menu.extra:not(.main) {
- 		background-color: var(--bg)!important;
+		background-color: var(--bg)!important;
 		border-radius: 0 0 0 8px;
- 		border-bottom: 2px solid var(--bg-300);
+		border-bottom: 2px solid var(--bg-300);
 		border-left: 2px solid var(--bg-300);
 		margin-left: auto;
 		bottom: -1.55rem;
 		right: -8px;
 		border-right: none!important;
- 		z-index: 9970;
+		z-index: 9970;
 		display:flex;
 		align-items: center;
 		overflow:hidden;
@@ -3277,7 +3293,7 @@ if themep == classic {
 		background-color: transparent;
 	}
 	body.resp .comment-post-grid .author-info .avatar .post-thumbnail img {
- 		height: 100px;
+		height: 100px;
 		aspect-ratio:1/1;
 		margin: 1rem;
 	}
@@ -3329,7 +3345,7 @@ if themep == classic {
 			width: calc(100% - .5rem)!important;
 			margin-inline: auto;
 			display: flex;
- 			flex-direction: column;
+			flex-direction: column;
 		}
 		a#sidebar-collapse {
 			display:none;
@@ -3774,7 +3790,7 @@ if themep == classic {
 		}
 	}
 	@media (max-width: 800px) {	
-		div#c-users div#a-show .about-section .about-piece {
+		div#page div#c-users div#a-show .about-section .about-piece {
 			margin: 0 0 1em 0;
 		}
 	}
