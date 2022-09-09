@@ -2667,7 +2667,7 @@ if themep == classic {
 				}
 			}
 		}
-		.avatar, .blacklisted {
+		.avatar, .avatar .blacklisted {
 			display: flex;
 			align-items: center;
 			justify-content: center;
