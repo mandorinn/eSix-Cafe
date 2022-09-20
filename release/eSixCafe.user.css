@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.5.1
+@version        1.5.2
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -443,6 +443,7 @@ if themep == muted {
 		--button-text-hover-secondary: #f0cfc0;
 	}
 }
+
 if themep == classic {
 	:root {
 		--thin-scrollbar: var(--true);
@@ -857,7 +858,18 @@ if themep == classic {
 		--button-text-hover-secondary: #222;
 	}
 }
-
+if themep == classic {
+	if borderRank == 1 {
+		body[data-th-main="hexagon"] {
+			.author-info:has(.user-member) .post-thumbnail {
+				border-color: var(--user-member) !important;
+			}
+			.avatar .post-thumbnail {
+				background-color: var(--user-member);
+			}
+		}
+	}
+}
 ::-webkit-scrollbar {
 	width: 10px;
 	background: var(--bg);
@@ -2502,25 +2514,30 @@ if themep == classic {
 	}
 	
 	if borderRank == 1 {
-		
 	.author-info:has(.user-admin) .post-thumbnail {
 		border-color: var(--user-admin) !important;
+		background-color: var(--user-admin) !important;
 	}
 	.author-info:has(.user-privileged) .post-thumbnail {
 		border-color: var(--user-privileged) !important;
+		background-color: var(--user-privileged) !important;
 	}
 	.author-info:has(.user-contributor) .post-thumbnail {
 		border-color: var(--user-contributor) !important;
+		background-color: var(--user-contributor) !important;
 	}
 	.author-info:has(.user-former) .post-thumbnail {
 		border-color: var(--user-former-staff) !important;
+		background-color: var(--user-former-staff) !important;
 	}
 	.author-info:has(.user-janitor) .post-thumbnail {
 		border-color: var(--user-janitor) !important;
+		background-color: var(--user-janitor) !important;
 	}
 	.author-info:has(.user-banned) .post-thumbnail,
 	.author-info:has(.user-blocked) .post-thumbnail {
 		border-color: var(--user-banned) !important;
+		background-color: var(--user-banned) !important;
 	}
 	}
 	.comments article {
