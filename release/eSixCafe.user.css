@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.5.3
+@version        1.5.4
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -2517,30 +2517,105 @@ if themep == classic {
 	}
 	
 	if borderRank == 1 {
+	:root {
+		--mobileRankOpacity: 0.2;
+	}
 	.author-info:has(.user-admin) .post-thumbnail {
 		border-color: var(--user-admin) !important;
 		background-color: var(--user-admin) !important;
+		&::after {
+				content:'';
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);;
+				background-color: var(--user-admin);
+			}
+		@media screen and (max-width: 800px) {
+			background-color: transparent !important;
+		}
 	}
 	.author-info:has(.user-privileged) .post-thumbnail {
 		border-color: var(--user-privileged) !important;
 		background-color: var(--user-privileged) !important;
+		&::after {
+				content:'';
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);;
+				background-color: var(--user-privileged);
+			}
+		@media screen and (max-width: 800px) {
+			background-color: transparent !important;
+		}
 	}
 	.author-info:has(.user-contributor) .post-thumbnail {
 		border-color: var(--user-contributor) !important;
 		background-color: var(--user-contributor) !important;
+		&::after {
+				content:'';
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);;
+				background-color: var(--user-contributor);
+			}
+		@media screen and (max-width: 800px) {
+			background-color: transparent !important;
+		}
 	}
 	.author-info:has(.user-former) .post-thumbnail {
 		border-color: var(--user-former-staff) !important;
 		background-color: var(--user-former-staff) !important;
+		&::after {
+				content:'';
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);;
+				background-color: var(--user-former-staff);
+			}
+		@media screen and (max-width: 800px) {
+			background-color: transparent !important;
+		}
 	}
 	.author-info:has(.user-janitor) .post-thumbnail {
 		border-color: var(--user-janitor) !important;
 		background-color: var(--user-janitor) !important;
+		&::after {
+				content:'';
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);
+				background-color: var(--user-janitor);
+			}
+		@media screen and (max-width: 800px) {
+			background-color: transparent !important;
+		}
 	}
 	.author-info:has(.user-banned) .post-thumbnail,
 	.author-info:has(.user-blocked) .post-thumbnail {
 		border-color: var(--user-banned) !important;
 		background-color: var(--user-banned) !important;
+		&::after {
+				content:'';
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);;
+				background-color: var(--user-banned);
+			}
+		@media screen and (max-width: 800px) {
+			background-color: transparent !important;
+		}
 	}
 	}
 	.comments article {
@@ -3072,6 +3147,9 @@ if themep == classic {
 	div#c-comments div#a-show .post {
 		margin: .5rem auto 1rem auto;
 	}
+	.comment-post-grid .styled-dtext .blacklisted {
+		max-width: 150px !important;
+	}
 /* Settings Page */
 	a#delete-account {
 		color: var(--remove-favorite)!important;
@@ -3460,49 +3538,49 @@ if themep == classic {
 	.list-of-comments {
 	margin-top: 2rem;
 	}
-	div.comments-for-post div.list-of-comments article.comment .author-info, div.list-of-forum-posts .author-info {
-		position:relative;
-		overflow:hidden;
+	div.comments-for-post div.list-of-comments article.comment .author-info, div.list-of-forum-posts .author-info, .response-list .blip .author-info {
+		position:relative !important;
+		overflow:hidden !important;
 		.blacklisted {
-			display:none;
+			display:none !important;
 		}
 		.post-thumbnail[data-status="deleted"] {
-			display:none;
+			display:none !important;
 		}
 		.name-rank {
 			z-index: 1;
-			margin-top: .25rem;
+			margin-top: .25rem !important;
 		}
 		.post-time {
 			z-index: 1;
 		}
 	}
-	div.comments-for-post div.list-of-comments article.comment .avatar, div.list-of-forum-posts .avatar {
-		position:absolute;
-		top: -50%;
-		display:flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 0;
+	div.comments-for-post div.list-of-comments article.comment .avatar, div.list-of-forum-posts .avatar, .response-list .blip .avatar {
+		position:absolute !important;
+		top: -50% !important;
+		display:flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		z-index: 0 !important;
 		border-radius: 0%!important;
 		min-width: 100% !important;
 		max-width: unset!important;
 		aspect-ratio: unset!important;
 	.post-thumbnail {
 		max-width: unset!important;
-		aspect-ratio: unset;
-		border: none;
+		aspect-ratio: unset !important;
+		border: none !important;
 		border-radius: 0%!important;
-		height: 200%;
-		width: 100%;
+		height: 200% !important;
+		width: 100% !important;
 		pointer-events: none!important;
-		overflow:hidden;
+		overflow:hidden !important;
 	}
 	a, a img {
 		border-radius: 0%!important;
 		max-width: unset!important;
 		overflow: visible!important;
-		aspect-ratio: unset;
+		aspect-ratio: unset !important;
 		min-height: 100%!important;
 		min-width: 100%!important;
 	}
@@ -3513,8 +3591,8 @@ if themep == classic {
 		margin: 0!important;
 		min-height: 100%!important;
 		min-width: 100%!important;
-		opacity: .2;
-		filter: blur(10px);
+		opacity: .2 !important;
+		filter: blur(10px) !important;
 	}
 	}
 	div.comments-for-post div.list-of-comments article.comment .author-info, div#c-blips article.blip .author-info, div.list-of-forum-posts .author-info {
