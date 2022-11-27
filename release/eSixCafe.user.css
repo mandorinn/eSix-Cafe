@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.5.5
+@version        1.5.6
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -3341,6 +3341,35 @@ if themep == classic {
 	.border-gray-300 {
 		border-color: var(--base-text-faded);
 	}
+	}
+/* Server maintenance page */ 
+	#b {
+		* {
+			color: var(--base-text);
+		}
+		display:flex
+		align-items: center;
+		justify-content: center;
+		picture {
+			display: none;
+		}
+		.v.ps3.s3.c2 {
+			&::before {
+				content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.888889in' height='0.888889in' viewBox='0 0 80 80'%3E%3Cpath id='Ears' fill='%230000007a' d='M 59.40,30.84 C 59.40,30.84 65.43,29.43 66.48,31.56 67.34,33.30 63.45,36.52 63.45,36.52 63.45,36.52 66.80,40.99 66.80,40.99 66.80,40.99 71.25,37.71 73.37,35.95 75.76,33.96 79.67,30.51 78.00,27.63 74.71,21.95 59.88,25.40 56.15,26.58 56.15,26.58 59.40,30.84 59.40,30.84 Z M 32.47,18.49 C 32.47,18.49 34.98,12.82 37.31,13.26 39.22,13.62 39.45,18.68 39.45,18.68 39.45,18.68 45.03,18.68 45.03,18.68 45.03,18.68 45.10,13.15 44.96,10.40 44.80,7.30 44.40,2.09 41.10,1.69 34.59,0.90 28.42,14.84 27.11,18.52 27.11,18.52 32.47,18.49 32.47,18.49 Z' /%3E%3Cpath id='Head' fill='%230000007a' d='M 18.16,22.16 C 22.82,22.14 42.66,22.28 49.38,22.28 50.84,24.78 63.48,46.58 64.97,49.27 63.33,52.12 49.54,75.82 49.37,76.03 47.16,76.11 18.34,76.20 18.34,76.20 18.12,75.85 4.17,51.82 2.59,49.11 4.01,47.12 16.09,25.71 18.16,22.16 Z M 50.70,51.17 C 50.52,44.43 49.33,38.74 43.16,34.88 32.70,28.33 18.38,35.78 17.87,48.35 18.38,65.75 36.78,70.96 46.33,60.22 46.33,60.22 41.80,56.02 41.80,56.02 35.65,60.70 30.39,60.13 25.61,53.17 25.61,53.17 50.70,51.17 50.70,51.17 Z M 24.88,46.19 C 28.25,37.38 39.13,36.39 43.22,45.12 43.22,45.12 24.88,46.19 24.88,46.19 Z' /%3E%3C/svg%3E");
+				mix-blend-mode: overlay;
+				height: 100%;
+				aspect-ratio: 1/1;
+				margin-inline: auto;
+				position: relative;
+				display:flex;
+			}
+		}
+		.v.ps.s.c {
+			background: var(--bg-300);
+		}
+		.ps5.v2.s5 {
+			display: none;
+		}
 	}
 	/* Confirm you're not a robot page */
 	.message {
