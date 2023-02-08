@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.5.9
+@version        1.6.0
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -22,7 +22,7 @@
 ==/UserStyle== */
 
 
-// Search 'Styling starts now' to skip to content
+/* Search 'Styling starts now' to skip to content */
 
 
 @-moz-document domain("e621.net"), domain("e926.net") {
@@ -103,6 +103,8 @@ if themep == muted {
 		--tag-cat-6-hover:#f6a2a2;
 		--tag-cat-7:#d8e1e9;
 		--tag-cat-7-hover:#eef7ff;
+		--tag-cat-8: #60a979;
+		--tag-cat-8-hover: #93efb3;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
@@ -111,6 +113,8 @@ if themep == muted {
 		--user-contributor: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
+		--user-moderator:#cc946d;
+		--user-moderator-hover: #eeae82;
 		--user-former-staff: #6cd5aa;
 		--user-former-staff-hover: #7ff7c6;
 		--user-janitor: #7dafd8;
@@ -183,6 +187,8 @@ if themep == muted {
 		--tag-cat-6-hover:#f6a2a2;
 		--tag-cat-7:#d8e1e9;
 		--tag-cat-7-hover:#eef7ff;
+		--tag-cat-8: #60a979;
+		--tag-cat-8-hover: #93efb3;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
@@ -191,6 +197,8 @@ if themep == muted {
 		--user-contributor: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
+		--user-moderator:#cc946d;
+		--user-moderator-hover: #eeae82;
 		--user-former-staff: #6cd5aa;
 		--user-former-staff-hover: #7ff7c6;
 		--user-janitor: #7dafd8;
@@ -260,6 +268,8 @@ if themep == muted {
 		--tag-cat-6-hover:#f657c3;
 		--tag-cat-7:#dee1e4;
 		--tag-cat-7-hover:#eef4f8;
+		--tag-cat-8: #60a979;
+		--tag-cat-8-hover: #93efb3;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
@@ -268,6 +278,8 @@ if themep == muted {
 		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
+		--user-moderator:#cc946d;
+		--user-moderator-hover: #eeae82;
 		--user-former-staff: #6cd5aa;
 		--user-former-staff-hover: #7ff7c6;
 		--user-janitor: #7dafd8;
@@ -337,6 +349,8 @@ if themep == muted {
 		--tag-cat-6-hover:#f6a2a2;
 		--tag-cat-7:#d8e1e9;
 		--tag-cat-7-hover:#eef7ff;
+		--tag-cat-8: #60a979;
+		--tag-cat-8-hover: #93efb3;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
@@ -345,6 +359,8 @@ if themep == muted {
 		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
+		--user-moderator:#cc946d;
+		--user-moderator-hover: #eeae82;
 		--user-former-staff: #6cd5aa;
 		--user-former-staff-hover: #7ff7c6;
 		--user-janitor: #7dafd8;
@@ -416,6 +432,8 @@ if themep == muted {
 		--tag-cat-6-hover:#f6a2a2;
 		--tag-cat-7:#d8e1e9;
 		--tag-cat-7-hover:#eef7ff;
+		--tag-cat-8: #60a979;
+		--tag-cat-8-hover: #93efb3;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
@@ -424,6 +442,8 @@ if themep == muted {
 		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
+		--user-moderator:#cc946d;
+		--user-moderator-hover: #eeae82;
 		--user-former-staff: #6cd5aa;
 		--user-former-staff-hover: #7ff7c6;
 		--user-janitor: #7dafd8;
@@ -504,6 +524,8 @@ if themep == classic {
 		--tag-cat-6-hover:#ffbdbd;
 		--tag-cat-7:#fff;
 		--tag-cat-7-hover:#666;
+		--tag-cat-8: #228822;
+		--tag-cat-8-hover: #5fdb5f;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
@@ -512,6 +534,8 @@ if themep == classic {
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
+		--user-moderator:#e69500;
+		--user-moderator-hover: #9d6703;
 		--user-former-staff: #3fd6ba;
 		--user-former-staff-hover: #5eebd1;
 		--user-janitor: #d82828;
@@ -588,6 +612,8 @@ if themep == classic {
 		--tag-cat-6-hover:#ffbdbd;
 		--tag-cat-7:#fff;
 		--tag-cat-7-hover:#666;
+		--tag-cat-8: #228822;
+		--tag-cat-8-hover: #5fdb5f;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
@@ -596,6 +622,8 @@ if themep == classic {
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
+		--user-moderator:#e69500;
+		--user-moderator-hover: #9d6703;
 		--user-former-staff: #3fd6ba;
 		--user-former-staff-hover: #5eebd1;
 		--user-janitor: #d82828;
@@ -669,6 +697,8 @@ if themep == classic {
 		--tag-cat-6-hover:#ffbdbd;
 		--tag-cat-7:#fff;
 		--tag-cat-7-hover:#666;
+		--tag-cat-8: #228822;
+		--tag-cat-8-hover: #5fdb5f;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
@@ -677,6 +707,8 @@ if themep == classic {
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
+		--user-moderator:#e69500;
+		--user-moderator-hover: #9d6703;
 		--user-former-staff: #3fd6ba;
 		--user-former-staff-hover: #5eebd1;
 		--user-janitor: #d82828;
@@ -750,6 +782,8 @@ if themep == classic {
 		--tag-cat-6-hover:#ffbdbd;
 		--tag-cat-7:#fff;
 		--tag-cat-7-hover:#666;
+		--tag-cat-8: #228822;
+		--tag-cat-8-hover: #5fdb5f;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
@@ -758,6 +792,8 @@ if themep == classic {
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
+		--user-moderator:#e69500;
+		--user-moderator-hover: #9d6703;
 		--user-former-staff: #3fd6ba;
 		--user-former-staff-hover: #5eebd1;
 		--user-janitor: #d82828;
@@ -831,6 +867,8 @@ if themep == classic {
 		--tag-cat-6-hover:#ffbdbd;
 		--tag-cat-7:#fff;
 		--tag-cat-7-hover:#666;
+		--tag-cat-8: #228822;
+		--tag-cat-8-hover: #5fdb5f;
 		--user-member: var(--base-text);
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
@@ -839,6 +877,8 @@ if themep == classic {
 		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
+		--user-moderator:#e69500;
+		--user-moderator-hover: #9d6703;
 		--user-former-staff: #3fd6ba;
 		--user-former-staff-hover: #5eebd1;
 		--user-janitor: #d82828;
@@ -1255,6 +1295,12 @@ if themep == classic {
 	.category-7 a:hover, a.tag-type-7:hover {
 		color:var(--tag-cat-7-hover)!important;
 	}
+	.category-8 a, a.tag-type-8, .dtext-color-lore {
+		color:var(--tag-cat-8)!important;
+	}
+	.category-8 a:hover, a.tag-type-8:hover {
+		color:var(--tag-cat-8-hover)!important;
+	}
 	.source-links .source-link a {
 		color: var(--content-link)!important;
 		transition: 100ms;
@@ -1373,7 +1419,7 @@ if themep == classic {
 	.notice-pending ~ .notice-flagged {
 		font-size: 0.85rem;
 		a {
-			font-size: 0.85rem
+			font-size: 0.85rem;
 			margin: 0;
 			pointer-events: auto;
 		&::before {
@@ -2512,13 +2558,19 @@ if themep == classic {
 			color: var(--user-contributor)!important;
 		}
 	}
+	.user-moderator.with-style {
+		color: var(--user-moderator)!important;
+		&:hover {
+			color: var(--user-moderator-hover)!important;
+		}
+	}
 	.user-admin.with-style {
 		color: var(--user-admin)!important;
 		&:hover {
 			color: var(--user-admin-hover)!important;
 		}
 	}
-	.user-former.with-style {
+	.user-former-staff.with-style {
 		color: var(--user-former-staff)!important;
 		&:hover {
 			color: var(--user-former-staff-hover)!important;
@@ -2541,6 +2593,22 @@ if themep == classic {
 	:root {
 		--mobileRankOpacity: 0.2;
 	}
+	.author-info:has(.user-moderator) .post-thumbnail {
+		border-color: var(--user-moderator) !important;
+		background-color: var(--user-moderator) !important;
+		&::after {
+				content:'';
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);
+				background-color: var(--user-moderator);
+			}
+		@media screen and (max-width: 800px) {
+			background-color: transparent !important;
+		}
+	}
 	.author-info:has(.user-admin) .post-thumbnail {
 		border-color: var(--user-admin) !important;
 		background-color: var(--user-admin) !important;
@@ -2550,7 +2618,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-admin);
 			}
 		@media screen and (max-width: 800px) {
@@ -2566,7 +2634,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-privileged);
 			}
 		@media screen and (max-width: 800px) {
@@ -2582,14 +2650,14 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-contributor);
 			}
 		@media screen and (max-width: 800px) {
 			background-color: transparent !important;
 		}
 	}
-	.author-info:has(.user-former) .post-thumbnail {
+	.author-info:has(.user-former-staff) .post-thumbnail {
 		border-color: var(--user-former-staff) !important;
 		background-color: var(--user-former-staff) !important;
 		&::after {
@@ -2598,7 +2666,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-former-staff);
 			}
 		@media screen and (max-width: 800px) {
@@ -2631,7 +2699,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-banned);
 			}
 		@media screen and (max-width: 800px) {
@@ -3407,7 +3475,7 @@ if themep == classic {
 		* {
 			color: var(--base-text);
 		}
-		display:flex
+		display:flex;
 		align-items: center;
 		justify-content: center;
 		picture {
@@ -3645,8 +3713,8 @@ if themep == classic {
 					text-overflow: ellipsis;
 					max-width: 10ch;
 				}
-				a.wiki-link { grid-area: 1 / 1 / 2 / 2; };
-				a.search-tag { grid-area: 1 / 2 / 2 / 3; }; 
+				a.wiki-link { grid-area: 1 / 1 / 2 / 2; }
+				a.search-tag { grid-area: 1 / 2 / 2 / 3; }
 			}
 	}
 	body[data-action="show"] div#c-posts #a-show, body[data-action="show-seq"] div#c-posts #a-show, div#c-posts div#a-index, div#c-posts div#a-show, div#c-favorites div#a-index {
