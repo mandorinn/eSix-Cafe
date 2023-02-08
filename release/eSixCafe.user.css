@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.5.9
+@version        1.6.0
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -22,7 +22,7 @@
 ==/UserStyle== */
 
 
-// Search 'Styling starts now' to skip to content
+/* Search 'Styling starts now' to skip to content */
 
 
 @-moz-document domain("e621.net"), domain("e926.net") {
@@ -1419,7 +1419,7 @@ if themep == classic {
 	.notice-pending ~ .notice-flagged {
 		font-size: 0.85rem;
 		a {
-			font-size: 0.85rem
+			font-size: 0.85rem;
 			margin: 0;
 			pointer-events: auto;
 		&::before {
@@ -2602,7 +2602,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-moderator);
 			}
 		@media screen and (max-width: 800px) {
@@ -2618,7 +2618,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-admin);
 			}
 		@media screen and (max-width: 800px) {
@@ -2634,7 +2634,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-privileged);
 			}
 		@media screen and (max-width: 800px) {
@@ -2650,7 +2650,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-contributor);
 			}
 		@media screen and (max-width: 800px) {
@@ -2666,7 +2666,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-former-staff);
 			}
 		@media screen and (max-width: 800px) {
@@ -2699,7 +2699,7 @@ if themep == classic {
 				width: 100%;
 				position:absolute;
 				z-index: -1;
-				opacity: var(--mobileRankOpacity);;
+				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-banned);
 			}
 		@media screen and (max-width: 800px) {
@@ -3475,7 +3475,7 @@ if themep == classic {
 		* {
 			color: var(--base-text);
 		}
-		display:flex
+		display:flex;
 		align-items: center;
 		justify-content: center;
 		picture {
@@ -3713,8 +3713,8 @@ if themep == classic {
 					text-overflow: ellipsis;
 					max-width: 10ch;
 				}
-				a.wiki-link { grid-area: 1 / 1 / 2 / 2; };
-				a.search-tag { grid-area: 1 / 2 / 2 / 3; }; 
+				a.wiki-link { grid-area: 1 / 1 / 2 / 2; }
+				a.search-tag { grid-area: 1 / 2 / 2 / 3; }
 			}
 	}
 	body[data-action="show"] div#c-posts #a-show, body[data-action="show-seq"] div#c-posts #a-show, div#c-posts div#a-index, div#c-posts div#a-show, div#c-favorites div#a-index {
