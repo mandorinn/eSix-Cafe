@@ -2570,7 +2570,7 @@ if themep == classic {
 			color: var(--user-admin-hover)!important;
 		}
 	}
-	.user-former.with-style {
+	.user-former-staff.with-style {
 		color: var(--user-former-staff)!important;
 		&:hover {
 			color: var(--user-former-staff-hover)!important;
@@ -2657,7 +2657,7 @@ if themep == classic {
 			background-color: transparent !important;
 		}
 	}
-	.author-info:has(.user-former) .post-thumbnail {
+	.author-info:has(.user-former-staff) .post-thumbnail {
 		border-color: var(--user-former-staff) !important;
 		background-color: var(--user-former-staff) !important;
 		&::after {
