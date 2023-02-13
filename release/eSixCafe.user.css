@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.6.1
+@version        1.6.2
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -1259,31 +1259,31 @@ if themep == classic {
 	#sidebar .general-tag-list a:hover {
 		color:var(--tag-cat-1-hover)!important;
 	}
-	.category-1 a, a.tag-type-1, .dtext-color-artist {
+	.category-1 a, a.tag-type-1, .dtext-color-art, .dtext-color-artist {
 		color:var(--tag-cat-2)!important;
 	}
 	.category-1 a:hover, a.tag-type-1:hover {
 		color:var(--tag-cat-2-hover)!important;
 	}
-	.category-3 a, a.tag-type-3, .dtext-color-copyright {
+	.category-3 a, a.tag-type-3, .dtext-color-copy, .dtext-color-copyright {
 		color:var(--tag-cat-3)!important;
 	}
 	.category-3 a:hover, a.tag-type-3:hover {
 		color:var(--tag-cat-3-hover)!important;
 	}
-	.category-4 a, a.tag-type-4, .dtext-color-character {
+	.category-4 a, a.tag-type-4, .dtext-color-char, .dtext-color-character {
 		color:var(--tag-cat-4)!important;
 	}
 	.category-4 a:hover, a.tag-type-4:hover {
 		color:var(--tag-cat-4-hover)!important;
 	}
-	.category-5 a, a.tag-type-5, .dtext-color-species {
+	.category-5 a, a.tag-type-5, .dtext-color-spec, .dtext-color-species {
 		color:var(--tag-cat-5)!important;
 	}
 	.category-5 a:hover, a.tag-type-5:hover {
 		color:var(--tag-cat-5-hover)!important;
 	}
-	.category-6 a, a.tag-type-6, .dtext-color-invalid {
+	.category-6 a, a.tag-type-6, .dtext-color-inv, .dtext-color-invalid {
 		color:var(--tag-cat-6)!important;
 	}
 	.category-6 a:hover, a.tag-type-6:hover {
