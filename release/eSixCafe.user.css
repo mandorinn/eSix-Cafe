@@ -1265,7 +1265,7 @@ if themep == classic {
 	.category-1 a:hover, a.tag-type-1:hover {
 		color:var(--tag-cat-2-hover)!important;
 	}
-	.category-3 a, a.tag-type-3, .dtext-color-copyright {
+	.category-3 a, a.tag-type-3, .dtext-color-copy, .dtext-color-copyright {
 		color:var(--tag-cat-3)!important;
 	}
 	.category-3 a:hover, a.tag-type-3:hover {
