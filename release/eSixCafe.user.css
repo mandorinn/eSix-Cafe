@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.6.3
+@version        1.6.4
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -969,6 +969,9 @@ if themep == classic {
 			color: var(--base-link-hover)!important;
 			background: none!important;
 		}
+	}
+	ul.backtrace {
+		background: var(--bg);
 	}
 /* Header */
 	header#top {
@@ -3047,13 +3050,13 @@ if themep == classic {
 	div#c-user-feedbacks #a-index .striped > tbody > tr > td {
 		background: transparent!important;
 	}
-	div#c-moderator-dashboards div#col2 .feedback-category-negative, div#c-user-feedbacks .feedback-category-negative {
+	div#c-moderator-dashboards div#col2 .feedback-category-negative td, div#c-user-feedbacks .feedback-category-negative {
 		background: var(--flagged)!important;
 	}
-	div#c-moderator-dashboards div#col2 .feedback-category-negative, div#c-user-feedbacks .feedback-category-neutral {
+	div#c-moderator-dashboards div#col2 .feedback-category-neutral td, div#c-user-feedbacks .feedback-category-neutral {
 		background: var(--bg-400)!important;
 	}
-	div#c-moderator-dashboards div#col2 .feedback-category-negative, div#c-user-feedbacks .feedback-category-positive {
+	div#c-moderator-dashboards div#col2 .feedback-category-positive td, div#c-user-feedbacks .feedback-category-positive {
 		background: var(--favorite-button)!important;
 	}
 	.feedback-category-negative .user-blocked, .feedback-category-negative .user-banned {
