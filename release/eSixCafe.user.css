@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.6.9
+@version        1.7.0
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -1878,7 +1878,7 @@ if themep == classic {
 		display: none;
 	}
 	/* Link colors */
-	#description a, #post-description-container .dtext-container a, .about-section a, .comment-post-grid .styled-dtext .dtext-link, .dtext-formatter .dtext-link:not([href^="/user/show/"], #c-wiki-pages a) {
+	#description a, #post-description-container .styled-dtext a, .about-section a, .comment-post-grid .styled-dtext .dtext-link, .dtext-formatter .dtext-link:not([href^="/user/show/"], #c-wiki-pages a) {
 		color: var(--content-link)!important;
 		&:hover {
 			color: var(--content-link-hover)!important;
@@ -2236,11 +2236,8 @@ if themep == classic {
 	.comment-post-grid .content {
 		margin: .5rem;
 		color: var(--base-text)!important;
-		blockquote {
-			background-color: rgba(255,255,255,.035)!important;
-			blockquote {
-				margin: .5rem;
-			}
+		blockquote blockquote {
+			margin: .5rem;
 		}
 		pre {
 		background-color: var(--bg-400)!important;
@@ -3229,13 +3226,15 @@ if themep == classic {
 	div#c-comments div#a-show .post {
 		margin: .5rem auto 1rem auto;
 	}
-	.comment-post-grid .content .styled-dtext blockquote {
+	.comment-post-grid .styled-dtext .blacklisted {
+		max-width: 150px !important;
+	}
+/* DText */
+	.styled-dtext blockquote {
 		border: none;
 		border-left: .25rem solid var(--color-danger);
 		border-left-color: var(--elements-highlight) !important;
-	}
-	.comment-post-grid .styled-dtext .blacklisted {
-		max-width: 150px !important;
+		background-color: rgba(255,255,255,.035)!important;
 	}
 /* Settings Page */
 	a#delete-account {
