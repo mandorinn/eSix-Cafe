@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.7.1
+@version        1.7.2
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -2293,6 +2293,32 @@ if themep == classic {
 			}
 			&::after {
 				content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 24.0 24.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 8.2667V4L3 11.4667L10 18.9333V14.56C15 14.56 18.5 16.2667 21 20C20 14.6667 17 9.3333 10 8.2667Z' fill='%23ffffffff'/%3E%3C/svg%3E");
+				position:absolute;
+				mix-blend-mode: soft-light;
+			}
+		}
+		.content-menu a:not([data-bid])[href^="/blips"]:hover{
+			&::before {
+				background-color: var(--bg-300)!important;
+			}
+		}
+		.content-menu a:not([data-bid])[href^="/blips"] {
+			font-size: 0;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			width: 26px;
+			position:relative;
+			&::before {
+				content: "";
+				aspect-ratio: 1/1;
+				width: 28px;
+				position:absolute;
+				background-color: var(--bg-400);
+				border-radius: 4px;
+			}
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg height='24.0' viewBox='0 0 24.0 24.0' width='24.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.998,3C2.894,3 1.998,3.895 1.998,5V17C1.998,18.104 2.894,19 3.998,19H6.9981V23L10.998,19H19.998C21.103,19 21.998,18.104 21.998,17V5C21.998,3.895 21.103,3 19.998,3H3.998Z' fill='%23ffffffff'/%3E%3C/svg%3E");
 				position:absolute;
 				mix-blend-mode: soft-light;
 			}
