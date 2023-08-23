@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.7.3
+@version        1.7.4
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -109,8 +109,6 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
-		--user-contributor: #93c190;
-		--user-contributor: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -193,8 +191,6 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
-		--user-contributor: #93c190;
-		--user-contributor: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -274,8 +270,6 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
-		--user-contributor: #93c190;
-		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -355,8 +349,6 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
-		--user-contributor: #93c190;
-		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -438,8 +430,6 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
-		--user-contributor: #93c190;
-		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -530,8 +520,6 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
-		--user-contributor: #4afc4a;
-		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -618,8 +606,6 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
-		--user-contributor: #4afc4a;
-		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -703,8 +689,6 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
-		--user-contributor: #4afc4a;
-		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -788,8 +772,6 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
-		--user-contributor: #4afc4a;
-		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -873,8 +855,6 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
-		--user-contributor: #4afc4a;
-		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -2574,12 +2554,6 @@ if themep == classic {
 			color: var(--user-privileged-hover)!important;
 		}
 	}
-	.user-contributor.with-style {
-		color: var(--user-contributor)!important;
-		&:hover {
-			color: var(--user-contributor)!important;
-		}
-	}
 	.user-moderator.with-style {
 		color: var(--user-moderator)!important;
 		&:hover {
@@ -2658,22 +2632,6 @@ if themep == classic {
 				z-index: -1;
 				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-privileged);
-			}
-		@media screen and (max-width: 800px) {
-			background-color: transparent !important;
-		}
-	}
-	.author-info:has(.user-contributor) .post-thumbnail {
-		border-color: var(--user-contributor) !important;
-		background-color: var(--user-contributor) !important;
-		&::after {
-				content:'';
-				height: 100%;
-				width: 100%;
-				position:absolute;
-				z-index: -1;
-				opacity: var(--mobileRankOpacity);
-				background-color: var(--user-contributor);
 			}
 		@media screen and (max-width: 800px) {
 			background-color: transparent !important;
