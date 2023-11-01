@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        1.7.4
+@version        2.0.0
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
@@ -9,7 +9,8 @@
 
 @var          select   themep    "Theme Pack" {
     "Muted": "muted",
-    "Classic": "classic"
+    "Classic": "classic",
+	"Popular": "pThemes"
 }
 @var select  roundness "Profile picture shape" {
 	"Circle":"circle",
@@ -45,6 +46,7 @@ if roundness == circle {
 
 if themep == muted {
 	:root {
+		--themeName: "Classic blue"
 		--thin-scrollbar: var(--true);
 		--main-page-background: url(https://static1.e621.net/data/09/f8/09f84e1224df7b3502456589dd75c0c3.jpg)!important;
 		--artist-credit: "Background by Tom Fischbach";
@@ -109,6 +111,8 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
+		--user-contributor: #93c190;
+		--user-contributor: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -135,6 +139,7 @@ if themep == muted {
 		scrollbar-color: #3c3c3c #222;
 	}
 	body[data-th-main="pony"] {
+		--themeName: "Pony";
 		--bg-300: #604a67;
 		--bg-400: #55425a;
 		--bg: #4b3a50;
@@ -191,6 +196,8 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
+		--user-contributor: #93c190;
+		--user-contributor: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -214,6 +221,7 @@ if themep == muted {
 		--button-text-hover-secondary: #fff;
 	}
 	body[data-th-main="bloodlust"] {
+		--themeName: "Discord-esque";
 		--bg-300: #36393e;
 		--bg-400: #282b30;
 		--bg: #1e2124;
@@ -270,6 +278,8 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
+		--user-contributor: #93c190;
+		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -293,6 +303,7 @@ if themep == muted {
 		--button-text-hover-secondary: #fff;
 	}
 	body[data-th-main="serpent"] {
+		--themeName: "Forest"
 		--bg-300: #3e5341;
 		--bg-400: #354535;
 		--bg: #2f382e;
@@ -349,6 +360,8 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
+		--user-contributor: #93c190;
+		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -374,6 +387,7 @@ if themep == muted {
 		scrollbar-width: var(--thin-scrollbar);
 	}
 	body[data-th-main="hotdog"] {
+		--themeName: "Hot Coffee"
 		--bg-300: #3c3836;
 		--bg-400: #323232;
 		--bg: #282828;
@@ -430,6 +444,8 @@ if themep == muted {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #93c190;
 		--user-privileged-hover: #b0e7ad;
+		--user-contributor: #93c190;
+		--user-contributor-hover: #b0e7ad;
 		--user-admin:#cc946d;
 		--user-admin-hover: #eeae82;
 		--user-moderator:#7dafd8;
@@ -456,9 +472,10 @@ if themep == muted {
 
 if themep == classic {
 	:root {
+		--themeName:"Hexagon";
 		--thin-scrollbar: var(--true);
-		--main-page-background: url(https://static1.e621.net/data/09/f8/09f84e1224df7b3502456589dd75c0c3.jpg)!important;
-		--artist-credit: "Background by Tom Fischbach";
+		--main-page-background: url(https://static1.e621.net/data/d2/ca/d2cacf82e3e5c0f462da7d8753806ec6.jpg)!important;
+		--artist-credit: "Background by Coffeesoda";
 		--main-font: Yu Gothic UI, Arial;
 		--bg-300: #152f56;
 		--bg-400: #0e203c;
@@ -520,6 +537,8 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
+		--user-contributor: #4afc4a;
+		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -546,6 +565,7 @@ if themep == classic {
 		scrollbar-color: #3c3c3c #222;
 	}
 	body[data-th-main="pony"] {
+		--themeName:"Pony";
 		--bg-300: #2f175c;
 		--bg-400: #250d51;
 		--bg: #190836;
@@ -606,6 +626,8 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
+		--user-contributor: #4afc4a;
+		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -629,6 +651,7 @@ if themep == classic {
 		--button-text-hover-secondary: #fff;
 	}
 	body[data-th-main="bloodlust"] {
+		--themeName:"Bloodlust";
 		--bg-300: #333;
 		--bg-400: #222;
 		--bg: #111;
@@ -689,6 +712,8 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
+		--user-contributor: #4afc4a;
+		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -712,6 +737,7 @@ if themep == classic {
 		--button-text-hover-secondary: #fff;
 	}
 	body[data-th-main="serpent"] {
+		--themeName:"Serpent";
 		--bg: #f6eb86;
 		--bg-400: #dacf6b;
 		--bg-300: #44a544;
@@ -772,6 +798,8 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
+		--user-contributor: #4afc4a;
+		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -795,6 +823,7 @@ if themep == classic {
 		--button-text-hover-secondary: #222;
 	}
 	body[data-th-main="hotdog"] {
+		--themeName:"Hotdog";
 		--bg: #f00;
 		--bg-400: #ffff2b;
 		--bg-300: #ff0;
@@ -855,6 +884,8 @@ if themep == classic {
 		--user-member-hover: var(--base-text-hover);
 		--user-privileged: #4afc4a;
 		--user-privileged-hover: #75fd75;
+		--user-contributor: #4afc4a;
+		--user-contributor-hover: #75fd75;
 		--user-admin:#e69500;
 		--user-admin-hover: #9d6703;
 		--user-moderator:#d82828;
@@ -876,6 +907,431 @@ if themep == classic {
 		--button-text: #000;
 		--button-text-hover: #222;
 		--button-text-hover-secondary: #222;
+	}
+}
+if themep == pThemes {
+	:root {
+		--themeName: "Nord"
+		--thin-scrollbar: var(--true);
+		--main-page-background: url(https://static1.e621.net/data/42/c6/42c6450e4cb046e6b23f9f1a19957e98.png)!important;
+		--artist-credit: "Background by Zackary911";
+		--main-font: Segoe UI, Arial;
+		--bg-300: #434c5e;
+		--bg-400: #3b4252;
+		--bg: #2e3440;
+		--bg-visiting: #e5e9f0;
+		--bg-visiting-transition: 100ms;
+		--bg-editing-transition: 100ms;
+		--bg-visiting-hover: #eceff4;
+		--bg-editing: #a0d2d4;
+		--bg-editing-hover: #a6fffc;
+		--base-text: #e5e9f0;
+		--base-text-hover: #eceff4;
+		--base-text-faded: #e5e9f07a;
+		--base-link: #88c0d0;
+		--base-link-hover: #8cdaf1;
+		--header-link: #d8dee9;
+		--header-link-hover: #eceff4;
+		--content-link:#a3be8c;
+		--content-link-hover:#b6df92;
+		--header-link-transition: 100ms;
+		--header-link-editing-transition:100ms;
+		--header-link-visiting: #2e3440;
+		--header-link-editing: #393f4c;
+		--header-link-editing-hover: #4c5363;
+		--nav-hover-top-color:#e5e9f0;
+		--nav-hover-bottom-color: #e5e9f0;
+		--bg-image: #4c5363;
+		--deleted-bg: #2e333f;
+		--deleted-text: #4b5669;
+		--blacklisted-bg: #5e434c;
+		--blacklisted-text: #b0667f;
+		/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+		--actions-fav-true:#bf616a;
+		--flagged: #bf616a;
+		--elements-highlight: #8fbcbb;
+		--mode-edit:#534738;
+		--mode-add-fav:#36583a;
+		--mode-remove-fav:#583636;
+		--mode-blacklist:#171c22;
+		--mode-download: #553658;
+		--mode-fullscreen: #365857;
+		--tag-cat-1:#88c0d0;
+		--tag-cat-1-hover:#8ad4e9;
+		--tag-cat-2:#d08770;
+		--tag-cat-2-hover:#f0a087;
+		--tag-cat-3:#b48ead;
+		--tag-cat-3-hover:#e4a4d9;
+		--tag-cat-4:#8cbe94;
+		--tag-cat-4-hover:#a8e5b5;
+		--tag-cat-5:#ebcb8b;
+		--tag-cat-5-hover:#f9dda4;
+		--tag-cat-6:#bf616a;
+		--tag-cat-6-hover:#e05d69;
+		--tag-cat-7:#d8dee9;
+		--tag-cat-7-hover:#ecf0f7;
+		--tag-cat-8: #a3be8c;
+		--tag-cat-8-hover: #b1d791;
+		--user-member: var(--base-text);
+		--user-member-hover: var(--base-text-hover);
+		--user-privileged: #93c190;
+		--user-privileged-hover: #b0e7ad;
+		--user-contributor: #93c190;
+		--user-contributor-hover: #b0e7ad;
+		--user-admin:#cc946d;
+		--user-admin-hover: #eeae82;
+		--user-moderator:#7dafd8;
+		--user-moderator-hover: #8fc8f7;
+		--user-former-staff: #6cd5aa;
+		--user-former-staff-hover: #7ff7c6;
+		--user-janitor: #7dafd8;
+		--user-janitor-hover: #8fc8f7;
+		--user-banned: #bf616a;
+		--user-banned-hover: #e05d69;
+		--favorite-button: #a3be8c;
+		--favorite-button-hover: #b1d791;
+		--remove-favorite: #bf616a;
+		--remove-favorite-hover: #e05d69;
+		--warn-button: #d08770;
+		--warn-button-hover: #dc9b86;
+		--button-color: #232e38;
+		--button-color-hover: #2c3946;
+		--button-text: #c3ccd4;
+		--button-text-hover: #c3ccd4;
+		--button-text-hover-secondary: #eceff4;
+		--true: thin;
+		scrollbar-width: var(--thin-scrollbar);
+		scrollbar-color: #3c3c3c #222;
+	}
+	body[data-th-main="pony"] {
+		--themeName: "Rosé Pine";
+		--bg-300: #393552;
+		--bg-400: #2a273f;
+		--bg: #232136;
+		--bg-visiting: #e0def4;
+		--bg-visiting-hover:#f5f4ff;
+		--bg-editing: #c4a7e7;
+		--bg-editing-hover: #e0c8fc;
+		--base-text: #e0def4;
+		--base-text-hover: #f5f4ff;
+		--base-text-faded: #e0def47a;
+		--base-link: #ebbcba;
+		--base-link-hover: #f7dbda;
+		--header-link: #e0def4;
+		--header-link-hover: #f5f4ff;
+		--content-link:#c4a7e7;
+		--content-link-hover:#c4a7e7;
+		--header-link-visiting: #38232b;
+		--header-link-editing: #462c34;
+		--header-link-editing-hover: #38232b;
+		--nav-hover-top-color:#e0def4;
+		--nav-hover-bottom-color: #e0def4;
+		--bg-image: #38232e;
+		--deleted-bg: #232136;
+		--deleted-text: #56526e;
+		--blacklisted-bg: #36212a;
+		--blacklisted-text: #eb6f92;
+		/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+		--actions-fav-true:#a87abe;
+		--flagged: #eb6f92;
+		--elements-highlight: #c4a7e7;
+		--mode-edit:#534738;
+		--mode-add-fav:#36583a;
+		--mode-remove-fav:#583636;
+		--mode-blacklist:#171c22;
+		--mode-download: #553658;
+		--mode-fullscreen: #365857;
+		--tag-cat-1:#ebbcba;
+		--tag-cat-1-hover:#f7dbda;
+		--tag-cat-2:#f6c177;
+		--tag-cat-2-hover:#fed9a4;
+		--tag-cat-3:#9ccfd8;
+		--tag-cat-3-hover:#c3edf4;
+		--tag-cat-4:#45d07a;
+		--tag-cat-4-hover:#6aec9c;
+		--tag-cat-5:#f6f677;
+		--tag-cat-5-hover:#ffffa8;
+		--tag-cat-6:#eb6f92;
+		--tag-cat-6-hover:#ff91b0;
+		--tag-cat-7:#f4def1;
+		--tag-cat-7-hover:#fff4fd;
+		--tag-cat-8: #9cd8a9;
+		--tag-cat-8-hover: #bef0c9;
+		--user-member: var(--base-text);
+		--user-member-hover: var(--base-text-hover);
+		--user-privileged: #93c190;
+		--user-privileged-hover: #b0e7ad;
+		--user-contributor: #45d07a;
+		--user-contributor-hover: #6aec9c;
+		--user-admin:#f6c177;
+		--user-admin-hover: #fed9a4;
+		--user-moderator:#9ccfd8;
+		--user-moderator-hover: #c3edf4;
+		--user-former-staff: #6cd5aa;
+		--user-former-staff-hover: #7ff7c6;
+		--user-janitor: #9ccfd8;
+		--user-janitor-hover: #c3edf4;
+		--user-banned: #eb6f92;
+		--user-banned-hover: #fa92af;
+		--favorite-button: #6cbd75;
+		--favorite-button-hover: #9effaa;
+		--remove-favorite: #eb6f92;
+		--remove-favorite-hover: #cd708a;
+		--warn-button: #cd974c;
+		--warn-button-hover: #f4ca91;
+		--button-color: #232e38;
+		--button-color-hover: #2c3946;
+		--button-text: #c3ccd4;
+		--button-text-hover: #c3ccd4;
+		--button-text-hover-secondary: #f5f4ff;
+	}
+	body[data-th-main="bloodlust"] {
+		--themeName: "Sonokai - Shusia";
+		--bg-300: #37343a;
+		--bg-400: #2d2a2e;
+		--bg: #211f21;
+		--bg-visiting: #e3e1e4;
+		--bg-visiting-hover:#fafafb;
+		--bg-editing: #be4343;
+		--bg-editing-hover: #c62929;
+		--base-text: #e3e1e4;
+		--base-text-hover: #fafafb;
+		--base-text-faded: #e1e1e17a;
+		--base-link: #7accd7;
+		--base-link-hover: #78dce8;
+		--header-link: #e3e1e4;
+		--header-link-hover: #fafafb;
+		--content-link:#61bac5;
+		--content-link-hover:#78dce8;
+		--header-link-visiting: #382323;
+		--header-link-editing: #462c2c;
+		--header-link-editing-hover: #382323;
+		--nav-hover-top-color:#fafafb;
+		--nav-hover-bottom-color: #fafafb;
+		--bg-image: #2f2f2f;
+		--deleted-bg: #1a181a;
+		--deleted-text: #615a61;
+		--blacklisted-bg: #55393d;
+		--blacklisted-text: #906369;
+		/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+		--actions-fav-true:#ff6188;
+		--flagged: #933c51;
+		--elements-highlight: #ff6188;
+		--mode-edit:#534738;
+		--mode-add-fav:#36583a;
+		--mode-remove-fav:#583636;
+		--mode-blacklist:#000;
+		--mode-download: #553658;
+		--mode-fullscreen: #365857;
+		--tag-cat-1:#63acb6;
+		--tag-cat-1-hover:#7accd7;
+		--tag-cat-2:#cb764d;
+		--tag-cat-2-hover:#ef9062;
+		--tag-cat-3:#61bac5;
+		--tag-cat-3-hover:#78dce8;
+		--tag-cat-4:#5fbb8b;
+		--tag-cat-4-hover:#76dca2;
+		--tag-cat-5:#c2a54e;
+		--tag-cat-5-hover:#e5c463;
+		--tag-cat-6:#8e81cd;
+		--tag-cat-6-hover:#ab9df2;
+		--tag-cat-7:#e3e1e4;
+		--tag-cat-7-hover:#fcfcfc;
+		--tag-cat-8: #8dbb5f;
+		--tag-cat-8-hover: #a9dc76;
+		--user-member: var(--base-text);
+		--user-member-hover: var(--base-text-hover);
+		--user-privileged: #a9dc76;
+		--user-privileged-hover: #b8e986;
+		--user-contributor: #a9dc76;
+		--user-contributor-hover: #b8e986;
+		--user-admin:#ef9062;
+		--user-admin-hover: #ffa579;
+		--user-moderator:#78dce8;
+		--user-moderator-hover: #96f1fc;
+		--user-former-staff: #78e8ae;
+		--user-former-staff-hover: #96ffc9;
+		--user-janitor: #78dce8;
+		--user-janitor-hover: #96f1fc;
+		--user-banned: #ff6188;
+		--user-banned-hover: #ff7798;
+		--favorite-button: #84ae5a;
+		--favorite-button-hover: #9ecd6f;
+		--remove-favorite: #d2496b;
+		--remove-favorite-hover: #f85e84;
+		--warn-button: #cb764d;
+		--warn-button-hover: #ef9062;
+		--button-color: #232e38;
+		--button-color-hover: #2c3946;
+		--button-text: #c3ccd4;
+		--button-text-hover: #c3ccd4;
+		--button-text-hover-secondary: #fafafb;
+	}
+	body[data-th-main="serpent"] {
+		--themeName: "Everforest"
+		--bg-300: #3d484d;
+		--bg-400: #343f44;
+		--bg: #2d353b;
+		--bg-visiting: #d3c6aa;
+		--bg-visiting-hover: #eadec2;
+		--bg-editing: #a0d2d4;
+		--bg-editing-hover: #a6fffc;
+		--base-text: #d3c6aa;
+		--base-text-hover: #eadec2;
+		--base-text-faded: #d3c6aa7a;
+		--base-link: #7fbbb3;
+		--base-link-hover: #9ad2ca;
+		--header-link: #d3c6aa;
+		--header-link-hover: #eadec2;
+		--content-link:#7fbbb3;
+		--content-link-hover:#9ad2ca;
+		--header-link-visiting: #2d353b;
+		--header-link-editing: #343f44;
+		--header-link-editing-hover: #2d353b;
+		--nav-hover-top-color:#d3c6aa;
+		--nav-hover-bottom-color: #d3c6aa;
+		--bg-image: #273823;
+		--deleted-bg: #425047;
+		--deleted-text: #748b7c;
+		--blacklisted-bg: #543a48;
+		--blacklisted-text: #7f596e;
+		/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+		--actions-fav-true:#e67e80;
+		--flagged: #c26566;
+		--elements-highlight: #a7c080;
+		--mode-edit:#534738;
+		--mode-add-fav:#36583a;
+		--mode-remove-fav:#583636;
+		--mode-blacklist:#171c22;
+		--mode-download: #553658;
+		--mode-fullscreen: #365857;
+		--tag-cat-1:#9da9a0;
+		--tag-cat-1-hover:#bbd6c2;
+		--tag-cat-2:#c27c5d;
+		--tag-cat-2-hover:#e69875;
+		--tag-cat-3:#b47e98;
+		--tag-cat-3-hover:#d699b6;
+		--tag-cat-4:#689d96;
+		--tag-cat-4-hover:#7fbbb3;
+		--tag-cat-5:#ba9e68;
+		--tag-cat-5-hover:#dbbc7f;
+		--tag-cat-6:#c26567;
+		--tag-cat-6-hover:#e67e80;
+		--tag-cat-7:#b3a78e;
+		--tag-cat-7-hover:#d3c6aa;
+		--tag-cat-8: #8ba269;
+		--tag-cat-8-hover: #a7c080;
+		--user-member: var(--base-text);
+		--user-member-hover: var(--base-text-hover);
+		--user-privileged: #83c092;
+		--user-privileged-hover: #83c092;
+		--user-contributor: #83c092;
+		--user-contributor-hover: #83c092;
+		--user-admin:#c27c5d;
+		--user-admin-hover: #e69875;
+		--user-moderator:#689d96;
+		--user-moderator-hover: #7fbbb3;
+		--user-former-staff: #b3a78e;
+		--user-former-staff-hover: #d3c6aa;
+		--user-janitor: #689d96;
+		--user-janitor-hover: #7fbbb3;
+		--user-banned: #c26567;
+		--user-banned-hover: #e67e80;
+		--favorite-button: #8ba269;
+		--favorite-button-hover: #a7c080;
+		--remove-favorite: #c26567;
+		--remove-favorite-hover: #e67e80;
+		--warn-button: #c37d5e;
+		--warn-button-hover: #e69875;
+		--button-color: #253823;
+		--button-color-hover: #2f462c;
+		--button-text: #c3ccd4;
+		--button-text-hover: #eadec2;
+		--button-text-hover-secondary: #eadec2;
+		--true: thin;
+		scrollbar-width: var(--thin-scrollbar);
+	}
+	body[data-th-main="hotdog"] {
+		--themeName: "Gruvbox"
+		--bg-300: #47403d;
+		--bg-400: #3c3836;
+		--bg: #32302f;
+		--bg-visiting: #ebdbb2;
+		--bg-visiting-hover:#fbf1c7;
+		--bg-editing: #a76b7b;
+		--bg-editing-hover: #d3869b
+		--base-text: #ebdbb2;
+		--base-text-hover: #fbf1c7;
+		--base-text-faded: #ebdbb27a;
+		--base-link: #a0c1c2;
+		--base-link-hover: #c0e1e2;
+		--header-link: #ebdbb2;
+		--header-link-hover: #fbf1c7;
+		--content-link: #a0c1c2;
+		--content-link-hover: #c0e1e2;
+		--header-link-visiting: #32302f;
+		--header-link-editing: #32302f;
+		--header-link-editing-hover: #47403d;
+		--nav-hover-top-color:#ebdbb2;
+		--nav-hover-bottom-color: #ebdbb2;
+		--bg-image: #38232e;
+		--deleted-bg: #302c2b;
+		--deleted-text: #665c54;
+		--blacklisted-bg: #7d0004;
+		--blacklisted-text: #e5918c;
+		/*--bg-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);*/
+		--actions-fav-true:#d3869b;
+		--flagged: #c83a29;
+		--elements-highlight: #fabd2f;
+		--mode-edit:#534738;
+		--mode-add-fav:#36583a;
+		--mode-remove-fav:#583636;
+		--mode-blacklist:#171c22;
+		--mode-download: #553658;
+		--mode-fullscreen: #365857;
+		--tag-cat-1:#ebdbb2;
+		--tag-cat-1-hover:#fbf1c7;
+		--tag-cat-2:#fe8019;
+		--tag-cat-2-hover:#ffa861;
+		--tag-cat-3:#83a598;
+		--tag-cat-3-hover:#aaccbf;
+		--tag-cat-4:#8ec07c;
+		--tag-cat-4-hover:#b3e3a1;
+		--tag-cat-5:#fabd2f;
+		--tag-cat-5-hover:#ffd46f;
+		--tag-cat-6:#fb4934;
+		--tag-cat-6-hover:#ff7f70;
+		--tag-cat-7:#f9f5d7;
+		--tag-cat-7-hover:#fffce7;
+		--tag-cat-8: #b8bb26;
+		--tag-cat-8-hover: #d3d642;
+		--user-member: var(--base-text);
+		--user-member-hover: var(--base-text-hover);
+		--user-privileged: #8ec07c;
+		--user-privileged-hover: #b3e3a1;
+		--user-contributor: #8ec07c;
+		--user-contributor-hover: #b3e3a1;
+		--user-admin:#fe8019;
+		--user-admin-hover: #ffa861;
+		--user-moderator:#83a598;
+		--user-moderator-hover: #aaccbf;
+		--user-former-staff: #fabd2f;
+		--user-former-staff-hover: #ffd46f;
+		--user-janitor: #83a598;
+		--user-janitor-hover: #aaccbf;
+		--user-banned: #fb4934;
+		--user-banned-hover: #ff7f70;
+		--favorite-button: #98971a;
+		--favorite-button-hover: #b4b33e;
+		--remove-favorite: #cc241d;
+		--remove-favorite-hover: #d34741;
+		--warn-button: #d65d0e;
+		--warn-button-hover: #e07733;
+		--button-color: #232e38;
+		--button-color-hover: #2c3946;
+		--button-text: #d6bbae;
+		--button-text-hover: #d6bbae;
+		--button-text-hover-secondary: #fbf1c7;
 	}
 }
 if themep == classic {
@@ -911,6 +1367,14 @@ if themep == classic {
 	background: var(--header-link);
 	}
 }
+	body {
+	 	--color-score-positive: var(--favorite-button);
+		--color-score-negative: var(--remove-favorite);
+		--color-rating-safe: var(--favorite-button);
+		--color-rating-questionable: var(--warn-button);
+		--color-rating-explicit: var(--remove-favorite)
+	}
+
 
 
 /* -------------- Styling starts now --------------*/
@@ -1038,7 +1502,7 @@ if themep == classic {
 			background-image: none;
 		}
 	}
-	nav menu:nth-child(2) li a::after {
+	nav menu:nth-child(2) li a::before {
 		content:'';
 		position:absolute;
 		height: 1.5px;
@@ -1050,7 +1514,7 @@ if themep == classic {
 		transition:var(--header-link-transition);
 		opacity: 0;
 	}
-	nav menu:nth-child(2) li a:hover::after {
+	nav menu:nth-child(2) li a:hover::before {
 		width:100%;
 		opacity: 1;
 	}
@@ -1069,7 +1533,10 @@ if themep == classic {
 		width:100%;
 		opacity: 1;
 	}
-	nav .bg-foreground a::after {
+	nav a.tab-has-updates::after {
+		color: var(--warn-button) !important;
+	}
+	nav .bg-foreground a::before {
 		display:none;
 	}
 	nav .bg-foreground {
@@ -1193,6 +1660,14 @@ if themep == classic {
 	.border-section {
 		border: 2px solid var(--bg-400)!important;
 	}
+	span.ui-dialog-title {
+		color: var(--base-text) !important;
+	}
+	/* Displays custom theme name in the theme picker */
+	.re621-ui-dialog:has(label[for^="theme-customizer"]) div.ui-dialog-titlebar span::after {
+		content: " - "var(--themeName);
+	}
+
 	/* Sidebar */
 	div#c-posts div#a-index aside#sidebar, div#c-posts div#a-show aside#sidebar, div#c-favorites div#a-index aside#sidebar {
 		width: 14.5rem;
@@ -1366,6 +1841,18 @@ if themep == classic {
 	#search-box button {
 		display:none;
 	}
+	/* Fixes select box arrows being black */
+	select, select:active, select:focus, select:hover, select.button.btn-neutral, select.button.btn-neutral:active, select.button.btn-neutral:focus, select.button.btn-neutral:hover {
+		 background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='opacity:.3'%3E%3Cpath fill='%23fff' d='M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z'/%3E%3C/svg%3E") no-repeat;
+	background-position: 100% 50% !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+	}
+	select#image-resize-selector {
+		padding-right: 20px;
+	}
+	
 	/* Notices */
 	div#c-posts div.notice.notice-flagged, div#c-posts div.notice.notice-deleted {
 		background-color: var(--flagged)!important;
@@ -1773,7 +2260,7 @@ if themep == classic {
 	#disable-all-blacklists, #re-enable-all-blacklists {
 		position: absolute;
 		top: .2rem;
-		left: 16ch;
+		left: 17ch;
 	}
 	#disable-all-blacklists *, #sidebar #blacklist-box #disable-all-blacklists {
 		color: var(--remove-favorite)!important;
@@ -1796,6 +2283,7 @@ if themep == classic {
 			justify-content: center!important;
 			&::before {
 				content: "Blacklisted";
+				font-weight:bold;
 				background-color: var(--blacklisted-bg);
 				color: var(--blacklisted-text);
 				position: absolute;
@@ -1814,6 +2302,7 @@ if themep == classic {
 			content: "Blacklisted";
 			background-color: var(--blacklisted-bg);
 			color: var(--blacklisted-text);
+			font-weight:bold;
 			position: absolute;
 			display: flex;
 			align-items: center!important;
@@ -1843,6 +2332,7 @@ if themep == classic {
 		content: "Deleted";
 		background-color: var(--deleted-bg);
 		color: var(--deleted-text);
+		font-weight: bold;
 		position: absolute;
 		display: flex;
 		align-items: center!important;
@@ -2146,6 +2636,7 @@ if themep == classic {
 					background-color: var(--deleted-bg);
 					border: 5px solid var(--elements-highlight);
 					color: var(--deleted-text);
+					font-weight:bold;
 					position: absolute;
 					display: flex;
 					height: 100%;
@@ -2163,6 +2654,7 @@ if themep == classic {
 					content: "Blacklisted";
 					background-color: var(--blacklisted-bg);
 					color: var(--blacklisted-text);
+					font-weight: bold;
 					height: 100%;
 					width: 100%;
 					position: absolute;
@@ -2506,6 +2998,7 @@ if themep == classic {
 				content: "Deleted";
 				background-color: var(--deleted-bg);
 				color: var(--deleted-text);
+				font-weight:bold;
 				position: absolute;
 				display: flex;
 				height: 100%;
@@ -2552,6 +3045,12 @@ if themep == classic {
 		color: var(--user-privileged)!important;
 		&:hover {
 			color: var(--user-privileged-hover)!important;
+		}
+	}
+	.user-contributor.with-style {
+		color: var(--user-contributor)!important;
+		&:hover {
+			color: var(--user-contributor)!important;
 		}
 	}
 	.user-moderator.with-style {
@@ -2632,6 +3131,22 @@ if themep == classic {
 				z-index: -1;
 				opacity: var(--mobileRankOpacity);
 				background-color: var(--user-privileged);
+			}
+		@media screen and (max-width: 800px) {
+			background-color: transparent !important;
+		}
+	}
+	.author-info:has(.user-contributor) .post-thumbnail {
+		border-color: var(--user-contributor) !important;
+		background-color: var(--user-contributor) !important;
+		&::after {
+				content:'';
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);
+				background-color: var(--user-contributor);
 			}
 		@media screen and (max-width: 800px) {
 			background-color: transparent !important;
@@ -2906,6 +3421,7 @@ if themep == classic {
 					background-color: var(--deleted-bg);
 					border: 5px solid var(--elements-highlight);
 					color: var(--deleted-text);
+					font-weight: bold;
 					position: absolute;
 					display: flex;
 					height: 100%;
@@ -2922,6 +3438,7 @@ if themep == classic {
 					content: "Blacklisted";
 					background-color: var(--blacklisted-bg);
 					color: var(--blacklisted-text);
+					font-weight: bold;
 					height: 100%;
 					width: 100%;
 					position: absolute;
@@ -4120,6 +4637,7 @@ if themep == classic {
 					content: "Deleted";
 					background-color: var(--deleted-bg);
 					color: var(--deleted-text);
+					font-weight: bold;
 					position: absolute;
 					display: flex;
 					height: 100%;
@@ -4250,7 +4768,7 @@ if themep == classic {
 			margin-top: 2rem;
 		}
 	}
-	#searchbox3::before {
+	#searchbox3::after {
 		content: var(--artist-credit);
 		padding: .2rem;
 		border-radius: .25rem;
