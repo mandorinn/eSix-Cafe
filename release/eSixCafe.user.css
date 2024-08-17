@@ -1,10 +1,9 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.0.3
+@version        2.0.4
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
-@updateURL		https://github.com/mandorinn/eSix-Cafe/raw/main/release/eSixCafe.user.css
 @preprocessor stylus
 
 @var          select   themep    "Theme Pack" {
@@ -1854,6 +1853,42 @@ if themep == classic {
 	}
 	
 	/* Notices */
+
+	div#c-posts div#a-show div#avoid-posting-notice {
+		background-color: var(--bg);
+		border-color: var(--bg);
+		border-left: 0.25rem solid var(--flagged) !important;
+		margin:0;
+		overflow: unset !important;
+		& * {
+			margin:0;
+			min-width: unset;
+			font-size: 1rem;
+		}
+		& h3 {
+			color: var(--flagged);
+			font-size:1.25rem;
+		}
+		& li * {
+			display:block ruby !important;
+		}
+		& .artist a {
+			color: var(--tag-cat-2)!important;
+			&:hover {
+				color: var(--tag-cat-2-hover)!important;
+			}
+		}
+	}
+	div#c-posts div#a-show div#avoid-posting-notice ul {
+		display:flex;
+		flex-direction: row;
+	}
+	div#c-posts div#a-show div#avoid-posting-notice li {
+		display:flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
 	div#c-posts div.notice.notice-flagged, div#c-posts div.notice.notice-deleted {
 		background-color: var(--flagged)!important;
 		border-left: .25rem solid var(--elements-highlight)!important;
@@ -1871,7 +1906,7 @@ if themep == classic {
 		pointer-events: none;
 		padding-top: .4rem;
 		&::before {
-			font-size: .85rem;
+			font-size: 1rem;
 			content: "View the pending replacements:";
 			pointer-events: none!important;
 			color: var(--base-text);
@@ -1879,7 +1914,7 @@ if themep == classic {
 			user-select: inherit;
 		}
 		&::after {
-			font-size: .85rem;
+			font-size: 1rem;
 			content: " here.";
 			position:relative;
 			pointer-events: auto;
@@ -1909,6 +1944,7 @@ if themep == classic {
 			position:relative;
 			pointer-events: auto;
 		}}
+		
 	}
 	div#c-posts div.notice ul {
 		margin-left: .25rem;
@@ -1961,8 +1997,14 @@ if themep == classic {
 	}
 	div#c-posts div.notice.notice-pending::before {
 		content: "This post is pending moderator approval";
-		font-size: .75rem;
-		margin-right: .5rem;
+		font-size: 1.1rem;
+		margin-left: .5rem;
+	}
+	div#c-posts div.notice.notice-pending a {
+		display:flex;
+		height:0;
+		width:auto;
+		place-items:center;
 	}
 	div#c-posts div.notice.notice-pending a::after {
 		content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 24.0 24.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10 -4.48 10 -10S17.52 2 12 2zM13 19h-2v-2h2v2zM15.07 11.25l-0.9 0.92C13.45 12.9 13 13.5 13 15h-2v-0.5c0 -1.1 0.45 -2.1 1.17 -2.83l1.24 -1.26c0.37 -0.36 0.59 -0.86 0.59 -1.41 0 -1.1 -0.9 -2 -2 -2s-2 0.9 -2 2L8 9c0 -2.21 1.79 -4 4 -4s4 1.79 4 4c0 0.88 -0.36 1.68 -0.93 2.25z' fill='%23ffffff'/%3E%3C/svg%3E");
@@ -1982,7 +2024,7 @@ if themep == classic {
 		align-items: center;
 		justify-content: center;
 		min-width: fit-content;
-		padding: .5rem .25rem;
+		0.25rem .25rem 0.25rem
 		p {
 			margin-top: .5rem;
 			font-size: .75rem;
