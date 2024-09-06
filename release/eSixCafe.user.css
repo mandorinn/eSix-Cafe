@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.0.5
+@version        2.1.0
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1662,6 +1662,13 @@ if themep == classic {
 	span.ui-dialog-title {
 		color: var(--base-text) !important;
 	}
+	div.re621-ui-dialog a.delete-link {
+		background-color: var(--mode-remove-fav) !important;
+	}
+	div.re621-ui-dialog tabbed.config-tabs form-section.subscription-settings > form-section input[type="text"] {
+		margin-left: .5rem;
+		margin-right:.5rem;
+	}
 	/* Displays custom theme name in the theme picker */
 	.re621-ui-dialog:has(label[for^="theme-customizer"]) div.ui-dialog-titlebar span::after {
 		content: " - "var(--themeName);
@@ -1674,6 +1681,9 @@ if themep == classic {
 	a#sidebar-collapse::after {
 		position: absolute;
 		top: -.5rem;
+	}
+	.blacklist-header::before {
+		border-color: transparent var(--base-text) var(--base-text) transparent !important;
 	}
 	body aside#sidebar div#re621-search {
 		transition:200ms;
@@ -2435,6 +2445,7 @@ if themep == classic {
 		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
+        overflow:hidden;
 	}
 	#c-popular h1 {
 		margin-inline: auto;
@@ -2455,6 +2466,136 @@ if themep == classic {
 		min-width: fit-content;
 		margin-inline: auto;
 	}
+	/* New popular page gridification */
+	#c-popular #a-index {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: 3rem 3rem 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+        position:relative;
+	}
+	#c-popular #a-index h1 {
+		grid-area: 1 / 1 / 3 / 5;
+		height:fit-content;
+	}
+	#c-popular #popular-nav-links {
+		grid-area: 2 / 5 / 3 / 11;
+		height:fit-content;
+		margin:none;
+	}
+	#c-popular section.blacklist-ui.blacklist-ui.blacklist-inline {
+		grid-area: 2/2/2/2;
+        margin-right:auto;
+        padding: 0 0 1rem 0;
+        display:flex;
+        position:relative;
+        flex-direction: column;
+        & .blacklist-header {
+            height:fit-content;
+			&::before {
+				border-color: transparent var(--base-text) var(--base-text) transparent !important;
+			}
+        }
+        &[collapsed="true"] .blacklist-filters {
+            display:none;
+        }
+		& .blacklist-filters {
+			z-index: 99;
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+			background-color:var(--bg);
+			border: 2px solid var(--bg-300);
+			border-radius: 6px;
+			position:absolute;
+            padding:.5rem;
+            top:calc(80% + 1rem);
+            overflow:unset;
+            max-width:calc(80ch + 2rem + 20px);
+            & li[enabled="true"] a {
+                border-bottom:2px solid var(--favorite-button);
+            }
+            & li[enabled=false] a {
+                border-bottom:2px solid var(--flagged);
+            }
+            & a {
+                height:2rem;
+                width: 10ch;
+                padding-inline:.5rem;
+                margin-inline:auto;
+                background-color: var(--bg);
+                white-space:nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display:block;
+                position:relative;
+                -webkit-line-clamp: 2;
+                -moz-line-clamp: 2;
+                -ms-line-clamp: 2;
+                z-index: 101;
+                & span {
+                    position:absolute;
+                    bottom:0;
+                    right:0;
+                }
+            }
+			&::before {
+				content:"";
+				width: .75rem;
+				height: .75rem;
+				position:absolute;
+				top: calc(-.6rem + 1px);
+                left: .75rem;
+				background-color: var(--bg);
+				border-top: 2px solid var(--bg-300);
+                border-left: 2px solid var(--bg-300);
+                transform:rotate(45deg);
+                z-index: 100;
+			}
+		}
+        & .blacklist-footer {
+            margin-left: .5rem;
+        }
+	}
+	#c-popular #a-index #posts {
+		grid-area: 3 / 1 / 11 / 11;
+		height:fit-content;
+        & article a {
+            height:150px;
+            width:175px;
+            position:relative;
+            display:grid;
+            place-items:center;
+            overflow:hidden;
+            border-radius: 6px 6px 0 0;
+            & picture {
+                width: 100%;
+                height:100%;
+                display:grid;
+                place-items:center;
+            }
+            & img {
+                height:100%;
+                width:100%;
+                max-height:150%;
+                max-width:150%;
+                object-fit:cover;
+                transition:200ms;
+                transform-origin:top;
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+            }
+            &:hover img {
+                height:105%;
+                width:105%;
+            }
+        }
+	}
+
+
 	/* Image content page */
 	div#image-and-nav {
 		min-width: 20%;
@@ -2464,10 +2605,46 @@ if themep == classic {
 	}
 	div#nav-links-top {
 		border-radius: 8px 8px 0 0!important;
+		overflow:clip;
 	}
 	div#nav-links-bottom {
 		border-radius: 0 0 8px 8px!important;
 		margin-top: -3px;
+		overflow:clip;
+	}
+	div#a-show div#nav-links-left {
+		background-color: var(--bg-400) !important;
+		border: 2px solid var(--bg-300) !important;
+		border-radius:8px;
+		overflow:clip;
+		width:calc(100% + .25rem);
+		position:relative;
+		margin-inline:auto;
+		& .nav-name {
+			width: fit-content !important;
+			max-width: 20ch;
+			white-space: wrap !important;
+			margin-top: .25rem;
+		}
+		& .active.post-nav {
+			display:flex;
+			flex-direction: column;
+			height:fit-content;
+			& .nav-left-down {
+				display:flex;
+				gap:1rem;
+			}
+			& a.nav-link {
+				padding: 0;
+			}
+		}
+		& *, .nav-block.search-seq-nav {
+			background:none !important;
+			border: none !important;
+		}
+		& .nav-left-down {
+			margin-top: 0;
+		}
 	}
 	div#c-posts div#a-show .pool-nav, div#c-posts div#a-show .search-seq-nav, div#c-posts div#a-show .set-nav {
 		background-color: var(--bg)!important;
