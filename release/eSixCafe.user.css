@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.1.0
+@version        2.1.1
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -2259,28 +2259,28 @@ if themep == classic {
 	#mode-box form select:focus {
 		border-radius: 8px 8px 0 0;
 	}
-	#page.mode-edit {
+	#page[data-mode-menu="edit"] {
 		background-color: var(--mode-edit)!important;
 	}
-	#page.mode-open {
+	#page[data-mode-menu="open"] {
 		background-color: var(--mode-fullscreen)!important;
 	}
-	#page.mode-add-fav {
+	#page[data-mode-menu="add-fav"] {
 		background-color: var(--mode-add-fav)!important;
 	}
-	#page.mode-remove-fav {
+	#page[data-mode-menu="remove-fav"] {
 		background-color: var(--mode-remove-fav)!important;
 	}
-	#page.mode-blacklist {
+	#page[data-mode-menu="blacklist"] {
 		background-color: var(--mode-blacklist)!important;
 	}
-	#page.mode-download {
+	#page[data-mode-menu="download"] {
 		background-color: var(--mode-download)!important;
 	}
-	#page.mode-add-to-set {
+	#page[data-mode-menu="add-to-set"] {
 		background-color: var(--mode-edit)!important;
 	}
-	#page.mode-remove-from-set {
+	#page[data-mode-menu="remove-from-set"] {
 		background-color: var(--mode-edit)!important;
 	}
 	.button.btn-neutral {
