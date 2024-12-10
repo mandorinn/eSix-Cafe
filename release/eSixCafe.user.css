@@ -2400,7 +2400,7 @@ if themep == classic {
 		width: 95%;
 		aspect-ratio: 1/1;
 	}
-	article.post-preview .desc a::before{
+	article.thumbnail .desc a::before{
 		display: none;
 	}
 	/* Link colors */
@@ -2655,26 +2655,26 @@ if themep == classic {
 		border: 2px solid var(--bg-300)!important;
 		border-radius: .50rem;
 	}
-	#posts-container article.post-preview .desc, #c-post-approvals article.post-preview .desc, #c-post-flags article.post-preview .desc,#c-post-replacements article.post-preview .desc	{
+	#posts-container article.thumbnail .desc, #c-post-approvals article.thumbnail .desc, #c-post-flags article.thumbnail .desc,#c-post-replacements article.thumbnail .desc	{
 		border-radius: 0 0 .5rem .5rem;
 		display: flex;
 		flex-direction: column;
 		background-color: var(--bg-400);
 	}
-	div#c-posts div.notice.notice-parent article.post-preview .desc, div#c-posts div.notice.notice-child article.post-preview .desc, .vertical-section article.post-preview .desc{
+	div#c-posts div.notice.notice-parent article.thumbnail .desc, div#c-posts div.notice.notice-child article.thumbnail .desc, .vertical-section article.thumbnail .desc{
 		background-color: var(--bg-300)!important;
 		border-radius: 0 0 .5rem .5rem;
 		display: flex;
 		flex-direction: column;
 	}
-	div#c-posts div.notice.notice-parent article.post-preview .desc div, div#c-posts div.notice.notice-child article.post-preview .desc div, .vertical-section article.post-preview .desc div {
+	div#c-posts div.notice.notice-parent article.thumbnail .desc div, div#c-posts div.notice.notice-child article.thumbnail .desc div, .vertical-section article.thumbnail .desc div {
 		display: flex;
 		justify-content: space-around;
 	}
-	div#c-posts div.notice.notice-parent article.post-preview .desc div *, div#c-posts div.notice.notice-child article.post-preview .desc div *, .vertical-section article.post-preview .desc div * {
+	div#c-posts div.notice.notice-parent article.thumbnail .desc div *, div#c-posts div.notice.notice-child article.thumbnail .desc div *, .vertical-section article.thumbnail .desc div * {
 		margin: 0;
 	}
-	article.post-preview[data-tags~="animated"] > a::before, article.post-preview[data-file-ext~="webm"] > a::before {
+	article.thumbnail[data-tags~="animated"] > a::before, article.thumbnail[data-file-ext~="webm"] > a::before {
 		background-color: var(--bg-300)!important;
 		color: var(--base-text)!important;
 		border: 2px solid var(--bg-400)!important;
@@ -2689,12 +2689,12 @@ if themep == classic {
 		align-items: center;
 		justify-content: center;
 	}
-	div#c-iqdb-queries div#a-check article.post-preview{
+	div#c-iqdb-queries div#a-check article.thumbnail{
 		border: 0;
 		background-color: #00000040!important;
 		border-radius: 6px;
 	}
-	article.post-preview .desc{
+	article.thumbnail .desc{
 		background-color: var(--bg-400) !important;
 	}
 	/* Editing mode */
@@ -3839,7 +3839,7 @@ if themep == classic {
 		min-height: fit-content;
 	}
 /* Post replacements */
-	#c-post-approvals article.post-preview.captioned, #c-post-flags article.post-preview.captioned, #c-post-replacements article.post-preview.captioned {
+	#c-post-approvals article.thumbnail.captioned, #c-post-flags article.thumbnail.captioned, #c-post-replacements article.thumbnail.captioned {
 		height: auto;
 		vertical-align: text-top;
 		border-radius: 8px;
@@ -3885,7 +3885,7 @@ if themep == classic {
 		}
 	}
 /* Pools page */
-/*	article.post-preview .desc {
+/*	article.thumbnail .desc {
 		background-color: var(--bg-400)!important;
 		border-radius: 0 0 .5rem .5rem;
 	}
@@ -4650,7 +4650,7 @@ if themep == classic {
 		flex-wrap: unset!important;
 		gap: .25rem;
 	}
-	body.resp article.post-preview a {
+	body.resp article.thumbnail a {
 		margin: revert;
 	}
 	.vertical-section article:nth-child( n + 4 ) {
@@ -4809,18 +4809,18 @@ if themep == classic {
 	picture.picture-container {
 		width: 154px;
 	}
-	article.post-preview.captioned {
+	article.thumbnail.captioned {
 		display:flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		width: 154px;
 	}
-	article.post-preview.captioned .desc {
+	article.thumbnail.captioned .desc {
 		width: 100%;
 		background-color: var(--bg)!important;
 	}
-	article.post-preview img {
+	article.thumbnail img {
 		object-fit: cover;
 		width: 154px;
 	}
