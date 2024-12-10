@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.1.2
+@version        2.1.3
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -2658,14 +2658,14 @@ if themep == classic {
 	#posts-container article.thumbnail .desc, #c-post-approvals article.thumbnail .desc, #c-post-flags article.thumbnail .desc,#c-post-replacements article.thumbnail .desc	{
 		border-radius: 0 0 .5rem .5rem;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		background-color: var(--bg-400);
 	}
 	div#c-posts div.notice.notice-parent article.thumbnail .desc, div#c-posts div.notice.notice-child article.thumbnail .desc, .vertical-section article.thumbnail .desc{
 		background-color: var(--bg-300)!important;
 		border-radius: 0 0 .5rem .5rem;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 	}
 	div#c-posts div.notice.notice-parent article.thumbnail .desc div, div#c-posts div.notice.notice-child article.thumbnail .desc div, .vertical-section article.thumbnail .desc div {
 		display: flex;
