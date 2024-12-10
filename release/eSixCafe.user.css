@@ -45,7 +45,7 @@ if roundness == circle {
 
 if themep == muted {
 	:root {
-		--themeName: "Classic blue"
+		--themeName: "Classic blue";
 		--thin-scrollbar: var(--true);
 		--main-page-background: url(https://static1.e621.net/data/09/f8/09f84e1224df7b3502456589dd75c0c3.jpg)!important;
 		--artist-credit: "Background by Tom Fischbach";
@@ -302,7 +302,7 @@ if themep == muted {
 		--button-text-hover-secondary: #fff;
 	}
 	body[data-th-main="serpent"] {
-		--themeName: "Forest"
+		--themeName: "Forest";
 		--bg-300: #3e5341;
 		--bg-400: #354535;
 		--bg: #2f382e;
@@ -386,7 +386,7 @@ if themep == muted {
 		scrollbar-width: var(--thin-scrollbar);
 	}
 	body[data-th-main="hotdog"] {
-		--themeName: "Hot Coffee"
+		--themeName: "Hot Coffee";
 		--bg-300: #3c3836;
 		--bg-400: #323232;
 		--bg: #282828;
@@ -910,7 +910,7 @@ if themep == classic {
 }
 if themep == pThemes {
 	:root {
-		--themeName: "Nord"
+		--themeName: "Nord";
 		--thin-scrollbar: var(--true);
 		--main-page-background: url(https://static1.e621.net/data/42/c6/42c6450e4cb046e6b23f9f1a19957e98.png)!important;
 		--artist-credit: "Background by Zackary911";
@@ -1167,7 +1167,7 @@ if themep == pThemes {
 		--button-text-hover-secondary: #fafafb;
 	}
 	body[data-th-main="serpent"] {
-		--themeName: "Everforest"
+		--themeName: "Everforest";
 		--bg-300: #3d484d;
 		--bg-400: #343f44;
 		--bg: #2d353b;
@@ -1251,7 +1251,7 @@ if themep == pThemes {
 		scrollbar-width: var(--thin-scrollbar);
 	}
 	body[data-th-main="hotdog"] {
-		--themeName: "Gruvbox"
+		--themeName: "Gruvbox";
 		--bg-300: #47403d;
 		--bg-400: #3c3836;
 		--bg: #32302f;
