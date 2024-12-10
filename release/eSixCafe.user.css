@@ -4702,6 +4702,12 @@ if themep == classic {
 	div#c-users div#a-show .profile-stats {
 		background-color: var(--bg-400)!important;
 	}
+	div#c-users div#a-show .posts-section .profile-sample-posts {
+		background-color: var(--bg-400)!important;
+	}
+	div#c-users div#a-show .about-section .profile-about-entry {
+		background-color: var(--bg-400)!important;
+	}
 	body[re621="true"] {
 	div#c-users div#a-show .bottom-section{
 		padding: 1rem;
