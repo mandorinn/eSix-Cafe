@@ -2054,10 +2054,10 @@ if themep == classic {
 	}
 	div#notice {
 		background-color: var(--bg)!important;
-		height: 2rem;
-		width: 20%!important;
+		/*height: 2rem;*/
+		/*width: 20%!important;*/
 		top: 3rem!important;
-		left: 40%;
+		/*left: 40%;*/
 		margin-inline: auto;
 		position: absolute;
 		display:flex;
