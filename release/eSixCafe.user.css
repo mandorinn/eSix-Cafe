@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.1.4
+@version        2.1.5
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1460,6 +1460,7 @@ if themep == classic {
 		position: absolute;
 		margin-left: auto;
 		right: 0;
+		top:0;
 	}
 	header#top nav#nav a{
 		margin: 0 auto;
@@ -1593,6 +1594,10 @@ if themep == classic {
 		justify-content:center;
 		font-size: 1px;
 		color:var(--logo);
+	}
+	body:not([re621="true"]) nav .logo {
+		top:.35rem;
+		/*feels kinda magic number-ey again blehhhhh*/
 	}
 	nav .logo {
 		color: rgb(0,0,0,0);
@@ -1795,12 +1800,14 @@ if themep == classic {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position:relative;
 	}
 	#search-box h1 {
 		position: absolute;
 		font-size: 0rem!important;
 		width: 90%;
 		pointer-events: none;
+		z-index:9999;
 	}
 	#search-box h1 span {
 		position:relative;
@@ -2679,7 +2686,6 @@ if themep == classic {
 		color: var(--base-text)!important;
 		border: 2px solid var(--bg-400)!important;
 		right: .5rem;
-		left: auto;
 		top: .5rem;
 		position:absolute;
 		height: 20px;
@@ -4323,32 +4329,45 @@ if themep == classic {
 	div#page {
 		overflow: hidden;
 	}
-	body[re621="true"] #maintoggle {
-		display:none;
-	}
 	header#top nav#nav {
 		font-size: .76rem;
+		align-content: center;
 	}
-	header#top nav#nav.grid menu.main {
+	header#top nav#nav  a.logo {
+		left:auto;
+		right:auto;
+		width:fit-content;
+	}
+	header#top nav#nav menu.main {
 		flex-wrap: wrap;
 	}
-	header#top nav#nav.grid menu:last-child {
+	header#top nav#nav menu:last-child {
 		height: fit-content;
 	}
-	header#top nav#nav.grid menu.extra:not(.main) {
+	header#top nav#nav menu.extra:not(.main) {
 		background-color: var(--bg)!important;
 		border-radius: 0 0 0 8px;
 		border-bottom: 2px solid var(--bg-300);
 		border-left: 2px solid var(--bg-300);
-		margin-left: auto;
-		bottom: -1.55rem;
+		top:unset !important;
 		right: -8px;
+		bottom:-1.825rem;
+		/*Magic number woooooo, 1.83 has a 1 pixel gap, whereas this has 1 pixel overlap with the main nav, funnn */
 		border-right: none!important;
 		z-index: 9970;
 		display:flex;
 		align-items: center;
 		overflow:hidden;
+		& * {
+			font-size: 1rem;
+		}
 	}
+	a i#maintoggle-on#maintoggle-on {
+		display:block !important
+	}
+	a i#maintoggle-on#maintoggle-on[style="display: none;"] {
+		display:none !important;
+	} 
 	body.resp .comment-post-grid .author-info .avatar .post-thumbnail {
 		background-color: transparent;
 	}
@@ -4357,10 +4376,34 @@ if themep == classic {
 		aspect-ratio:1/1;
 		margin: 1rem;
 	}
+	div#c-posts div#a-index {
+		flex-direction:column-reverse !important;
+	}
 	body.resp div#page > div > div > aside#sidebar {
 		font-size: inherit;
 		order: inherit;
 	}
+	aside#sidebar > section#search-box {
+		display:none !important;
+	}
+	div.mobile-search {
+		display:flex !important;
+		flex-direction:column;
+	}
+	a.search-help.search-help {
+		width: auto !important;
+	}
+	div.mobile-search div.search-input input,
+	div.mobile-search div.search-button button i::before {
+		display:inline-block;
+		height: 2rem;
+	}
+	
+	body:not([re621="true"]) div#nav-links-top,
+	body:not([re621="true"]) div#nav-links-bottom {
+		border-radius: 8px !important;
+	}
+	
 	body aside#sidebar div#re621-search {
 		top: -25px!important;
 	}
@@ -4466,6 +4509,18 @@ if themep == classic {
 				}
 				a.wiki-link { grid-area: 1 / 1 / 2 / 2; }
 				a.search-tag { grid-area: 1 / 2 / 2 / 3; }
+					
+				.search-inc-tag {
+					position: absolute;
+					bottom: 0;
+					right: 2.5rem;
+				}
+				
+				.search-exl-tag {
+					position: absolute;
+					bottom: 0;
+					right: .5rem;
+				}
 			}
 	}
 	body[data-action="show"] div#c-posts #a-show, body[data-action="show-seq"] div#c-posts #a-show, div#c-posts div#a-index, div#c-posts div#a-show, div#c-favorites div#a-index {
@@ -4500,7 +4555,7 @@ if themep == classic {
 		}
 		#tag-list, #post-information, #post-options, #post-related-images {
 			width: fit-content;
-			margin-inline: auto;
+			font-size: 1.25rem;
 		}
 		#post-options, #post-history {
 			display: flex;
@@ -4518,8 +4573,9 @@ if themep == classic {
 		}
 		#tag-box > ul li, #tag-list > ul li {
 			width: fit-content;
+			font-size: 1.25rem;
 			div.tag-actions {
-				right: -2rem;
+				right: 0rem;
 			}
 		}
 
