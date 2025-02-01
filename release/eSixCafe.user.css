@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.2.1
+@version        2.2.2
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -4020,6 +4020,14 @@ if themep == classic {
 		border-radius: 8px;
 		border: 4px solid var(--bg-400);
 	}
+	div#c-sessions .session_info,
+	div#c-maintenance-user-login-reminders .session_info,
+	div#c-maintenance-user-password-resets .session_info,
+	div#c-users .session_info {
+		background-color: var(--bg) !important;
+		border-radius: 8px;
+		border: 4px solid var(--bg-400);
+	}
 	a#delete-account {
 		color: var(--remove-favorite)!important;
 	}
@@ -4245,6 +4253,7 @@ if themep == classic {
 
 		.dialog-header {
 			border-bottom: 1px solid var(--bg);
+			background-color: var(--bg-400) !important;
 		}
 	}
 	/* Cloudflare error page */
@@ -5077,17 +5086,51 @@ if themep == classic {
 		overflow: hidden;
 		background-image: var(--main-page-background)!important;
 		background-position:center;
-		background-size: cover;
+		background-size: cover !important;
 		background-color: var(--bg)!important;
+	}
+	body.c-static.a-home nav.navigation {
+		background: var(--bg);
+		border: 4px solid var(--bg-400);
+		border-top: 0px solid transparent;
+		border-radius: 0 0 8px 8px;
+		width: fit-content;
+		margin-inline:auto;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 	div#page {
 		background: none!important;
+		margin: 25rem auto 0 !important;
 	}
-
-	#change-mascot {
+	body.c-static.a-home .home-section,
+ 	body.c-static.a-home section[class^="home-footer"] {
+		border-radius: 0;
+		background-color: var(--bg);
+	}
+	.home-section, .home-footer-top {
+		border-bottom:2px solid var(--bg-400);
+	}
+	body.c-static.a-home :first-of-type(section.home-section) {
+		border-radius: 8px 8px 0 0 !important;
+	}
+	body.c-static.a-home .home-footer-bottom {
+		border-radius: 0 0 8px 8px !important;
+	}
+	body.c-static.a-home i {
+		color: var(--base-link) !important;
+	}
+	body.c-static.a-home a:hover i {
+		color: var(--base-link-hover) !important;
+	}
+	body.c-static.a-home .home-footer-counter img {
+		filter: grayscale(100) brightness(.5);
+		opacity:.7
+	}
+	#mascot-swap {
 		display:none;
 	}
-	#mascot_artist {
+	#mascot-artist {
 		display:flex;
 		align-items: center;
 		justify-content: center;
@@ -5096,13 +5139,13 @@ if themep == classic {
 		margin-inline: auto;
 		font-size: 0;
 	}
-	#news-excerpt-box {
-		border-radius: 0;
+	#home-section {
+		border-radius: 0 !important;
 		border-top: var(--bg-400) 2px solid;
 		border-bottom: var(--bg-400) 2px solid;
 		background-color: var(--bg-400) !important;
 	}
-	#searchbox3 {
+	.home-footer-top {
 		display:flex;
 		flex-direction: column;
 		align-items: center;
@@ -5113,7 +5156,7 @@ if themep == classic {
 			margin-top: 2rem;
 		}
 	}
-	#searchbox3::after {
+	.home-footer-top::after {
 		content: var(--artist-credit);
 		padding: .2rem;
 		border-radius: .25rem;
@@ -5121,7 +5164,7 @@ if themep == classic {
 		display:flex;
 		align-items: center;
 		justify-content: center;
-		font-size: .75rem;
+		font-size: 1rem;
 		width: fit-content;
 		position: absolute;
 	}
@@ -5139,12 +5182,14 @@ if themep == classic {
 		margin-inline: auto;
 		border: 2px solid var(--bg-400);
 		box-shadow: 0px 0px 40px #232323;
+		margin: auto;
 	}
 	#a-home * {
 		margin: 0;
 		margin-inline: auto;
 		box-shadow: none;
 		background-image: none!important;
+		backdrop-filter:none !important;
 	}
 	#searchbox {
 		border-radius: 0 0!important;
@@ -5157,9 +5202,6 @@ if themep == classic {
 	}
 	form[action="/posts"]:first-child {
 		margin-bottom: .5rem!important;
-	}
-	form[action="/posts"]:first-child input#tags {
-		margin: .5rem;
 	}
 	input:focus, select:focus, textarea:focus {
 		background-color: var(--bg-400);
