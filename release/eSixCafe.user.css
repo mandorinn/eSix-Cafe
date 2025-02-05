@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.2.2
+@version        2.2.3
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1405,14 +1405,18 @@ if themep == classic {
 		border-radius:0;
 		background-color: var(--bg)!important;
 	}
-	span.logo-container {
+	span.footer-logo {
 		a img {
 			opacity: 0;
 		}
 		a {
+			display:grid;
+			place-items:center;
+			position:relative;
 			&::before {
-				content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5em' height='5em' viewBox='1 0 41 41'%3E%3Cpath id='Ear Tops' fill='%2300000055' d='M 26.73,13.88 C 26.73,13.88 29.44,13.24 29.92,14.20 30.30,14.98 28.55,16.43 28.55,16.43 28.55,16.43 30.06,18.45 30.06,18.45 30.06,18.45 32.06,16.97 33.02,16.18 34.09,15.28 35.85,13.73 35.10,12.43 33.62,9.88 26.95,11.43 25.27,11.96 25.27,11.96 26.73,13.88 26.73,13.88 Z M 14.61,8.32 C 14.61,8.32 15.74,5.77 16.79,5.97 17.65,6.13 17.75,8.41 17.75,8.41 17.75,8.41 20.26,8.41 20.26,8.41 20.26,8.41 20.30,5.92 20.23,4.68 20.16,3.29 19.98,0.94 18.50,0.76 15.57,0.41 12.79,6.68 12.20,8.33 12.20,8.33 14.61,8.32 14.61,8.32 Z' /%3E%3Cpath id='Ear Bottoms' fill='%23ffffff33' d='M 14.61,8.32 C 14.61,8.32 15.74,5.77 16.79,5.97 17.65,6.13 17.75,8.41 17.75,8.41 17.75,8.41 20.26,8.41 20.26,8.41 20.26,8.41 20.30,7.43 20.27,6.17 19.54,4.37 16.52,3.18 15.03,3.00 14.27,3.83 12.79,6.68 12.20,8.33 12.20,8.33 14.61,8.32 14.61,8.32 Z M 26.73,13.88 C 26.73,13.88 29.44,13.24 29.92,14.20 30.30,14.98 28.55,16.43 28.55,16.43 28.55,16.43 30.06,18.45 30.06,18.45 30.06,18.45 31.41,17.50 32.36,16.70 31.56,16.69 32.70,13.48 30.75,11.02 29.57,10.99 26.95,11.43 25.27,11.96 25.27,11.96 26.73,13.88 26.73,13.88 Z' /%3E%3Cpath id='Head' fill='%2300000055' d='M 8.17,9.97 C 10.27,9.96 19.20,10.03 22.22,10.03 22.88,11.15 28.57,20.96 29.24,22.17 28.50,23.45 22.29,34.12 22.22,34.21 21.22,34.25 8.25,34.29 8.25,34.29 8.15,34.13 1.88,23.32 1.17,22.10 1.80,21.20 7.24,11.57 8.17,9.97 Z' /%3E%3Cpath id='e' fill='%23ffffff33' d='M 14.90,14.62 C 21.12,14.31 22.95,19.43 22.81,23.04 22.69,23.05 11.69,23.93 11.53,23.93 14.80,28.95 18.63,25.34 18.81,25.20 18.95,25.34 19.39,25.75 20.85,27.10 17.10,31.38 8.78,30.54 8.02,21.83 8.53,15.14 14.90,14.62 14.90,14.62 Z M 11.21,20.81 C 11.21,20.81 17.95,20.38 19.47,20.28 17.02,15.62 12.25,17.69 11.21,20.81 Z' /%3E%3C/svg%3E%0A");
+				content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6em' height='6em' viewBox='1 0 41 41'%3E%3Cpath id='Ear Tops' fill='%2300000055' d='M 26.73,13.88 C 26.73,13.88 29.44,13.24 29.92,14.20 30.30,14.98 28.55,16.43 28.55,16.43 28.55,16.43 30.06,18.45 30.06,18.45 30.06,18.45 32.06,16.97 33.02,16.18 34.09,15.28 35.85,13.73 35.10,12.43 33.62,9.88 26.95,11.43 25.27,11.96 25.27,11.96 26.73,13.88 26.73,13.88 Z M 14.61,8.32 C 14.61,8.32 15.74,5.77 16.79,5.97 17.65,6.13 17.75,8.41 17.75,8.41 17.75,8.41 20.26,8.41 20.26,8.41 20.26,8.41 20.30,5.92 20.23,4.68 20.16,3.29 19.98,0.94 18.50,0.76 15.57,0.41 12.79,6.68 12.20,8.33 12.20,8.33 14.61,8.32 14.61,8.32 Z' /%3E%3Cpath id='Ear Bottoms' fill='%23ffffff33' d='M 14.61,8.32 C 14.61,8.32 15.74,5.77 16.79,5.97 17.65,6.13 17.75,8.41 17.75,8.41 17.75,8.41 20.26,8.41 20.26,8.41 20.26,8.41 20.30,7.43 20.27,6.17 19.54,4.37 16.52,3.18 15.03,3.00 14.27,3.83 12.79,6.68 12.20,8.33 12.20,8.33 14.61,8.32 14.61,8.32 Z M 26.73,13.88 C 26.73,13.88 29.44,13.24 29.92,14.20 30.30,14.98 28.55,16.43 28.55,16.43 28.55,16.43 30.06,18.45 30.06,18.45 30.06,18.45 31.41,17.50 32.36,16.70 31.56,16.69 32.70,13.48 30.75,11.02 29.57,10.99 26.95,11.43 25.27,11.96 25.27,11.96 26.73,13.88 26.73,13.88 Z' /%3E%3Cpath id='Head' fill='%2300000055' d='M 8.17,9.97 C 10.27,9.96 19.20,10.03 22.22,10.03 22.88,11.15 28.57,20.96 29.24,22.17 28.50,23.45 22.29,34.12 22.22,34.21 21.22,34.25 8.25,34.29 8.25,34.29 8.15,34.13 1.88,23.32 1.17,22.10 1.80,21.20 7.24,11.57 8.17,9.97 Z' /%3E%3Cpath id='e' fill='%23ffffff33' d='M 14.90,14.62 C 21.12,14.31 22.95,19.43 22.81,23.04 22.69,23.05 11.69,23.93 11.53,23.93 14.80,28.95 18.63,25.34 18.81,25.20 18.95,25.34 19.39,25.75 20.85,27.10 17.10,31.38 8.78,30.54 8.02,21.83 8.53,15.14 14.90,14.62 14.90,14.62 Z M 11.21,20.81 C 11.21,20.81 17.95,20.38 19.47,20.28 17.02,15.62 12.25,17.69 11.21,20.81 Z' /%3E%3C/svg%3E%0A");
 				position:absolute;
+				top:.025rem;
 				margin-inline: auto;
 				width: 5em;
 				z-index: 2;
@@ -1761,7 +1765,8 @@ if themep == classic {
 		margin-top: .2rem;
 		margin-left: .05rem;
 	}
-	#sidebar > div[style="color:darkorange;margin-bottom:0.5rem;"] {
+	#sidebar > div[style="color:darkorange;margin-bottom:0.5rem;"],
+ 	.search > .post-search ~ div[style="color: darkorange;"] {
 		display:none;
 	}
 	.color-muted {
@@ -2171,6 +2176,14 @@ if themep == classic {
 	}
 
 /* Posts page stuff */
+
+	/* Commenting this suboptimal fix out because the issue that required this seems to not be happening anymore, might have been an e6 thing rather than a userstyle issueeee?
+ 	Anyway, will try again later and reenable it if the issue pops back up*/
+	/*New search results fix */
+	/*body:not([re621="true"]).post-index .content {
+		width:85vw;
+	}*/
+
 	search-content > post post-info{
 		background-color: var(--bg-400);
 	}
@@ -3765,6 +3778,7 @@ if themep == classic {
 	div.paginator {
 		max-width: 100vw;
 		overflow:hidden;
+		background-color: var(--bg-400);
 	}
 	div.paginator li a {
 		transition: 100ms;
@@ -3772,6 +3786,9 @@ if themep == classic {
 	div.paginator li a:hover {
 		background-color: var(--bg-400)!important;
 		border-radius: 4px;
+	}
+	div.paginator > span.current:hover {
+		background-color: var(--bg-300) !important;
 	}
 	table.striped thead tr, table.table thead tr {
 		background-color: transparent!important;
