@@ -1,0 +1,15 @@
+#c-stats {
+	table.striped {
+		box-shadow: 0 0 .25rem #000 !important;
+	}
+
+	table.striped tbody {
+		tr:nth-child(2n) td {
+			background-color: var(--bg-400);
+		}
+
+		tr:last-child {
+			border-bottom: none !important;
+		}
+	}
+}

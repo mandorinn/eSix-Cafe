@@ -1,0 +1,13 @@
+body[re621="true"] div#c-users div#a-show .bottom-section {
+	padding: 1rem;
+	max-width: 55vw;
+}
+
+body[re621="true"] div#c-users div#a-show div.box.user-favorites, body[re621="true"] div#c-users div#a-show div.box.user-uploads {
+	border-radius: .5rem;
+	overflow: hidden;
+}
+
+div.box.user-uploads div.vertical-section {
+	flex-direction: row !important;
+}

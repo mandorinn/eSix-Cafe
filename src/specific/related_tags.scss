@@ -1,0 +1,10 @@
+div.related-tags {
+	background-color: var(--bg-400) !important;
+	padding: .25rem !important;
+
+	.tag-active {
+		background: var(--bg-300) !important;
+		border-radius: 4px;
+		padding: 0 .5rem 0 .5rem;
+	}
+}

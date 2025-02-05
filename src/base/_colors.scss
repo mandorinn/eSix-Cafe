@@ -1,0 +1,45 @@
+$tag-categories: (
+	"0": "general",
+	"1": "artist",
+	"2": "contributor",
+	"3": "copyright",
+	"4": "character",
+	"5": "species",
+	"6": "invalid",
+	"7": "meta",
+	"8": "lore"
+);
+
+$tag-categories-short: (
+	"0": "gen",
+	"1": "art",
+	"2": "cont",
+	"3": "copy",
+	"4": "char",
+	"5": "spec",
+	"6": "inv",
+	"7": "meta",
+	"8": "lor"
+);
+
+$rank-listing: (
+	"moderator": "moderator",
+	"admin": "admin",
+	"privileged": "privileged",
+	"contributor": "contributor",
+	"former-staff": "former-staff",
+	"janitor": "janitor",
+	"banned": "banned",
+	"blocked": "banned"
+);
+
+$mode-menu-functions: (
+	"edit": "edit",
+	"open": "fullscreen",
+	"add-fav": "add-fav",
+	"remove-fav": "remove-fav",
+	"blacklist": "blacklist",
+	"download": "download",
+	"add-to-set": "edit",
+	"remove-from-set": "edit"
+);

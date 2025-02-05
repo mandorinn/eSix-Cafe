@@ -1,0 +1,53 @@
+div#notice {
+	background-color: var(--bg) !important;
+	/*height: 2rem;*/
+	/*width: 20% !important;*/
+	top: 3rem !important;
+	/*left: 40%;*/
+	margin-inline: auto;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: .5rem;
+	border: none;
+	border: .25rem solid var(--favorite-button) !important;
+	color: var(--base-text) !important;
+
+	span {
+		margin: .5rem 1rem;
+		font-size: 1.1rem;
+	}
+}
+
+a#close-notice-link {
+	width: 0;
+	height: 100%;
+	font-size: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: 1.25rem;
+}
+
+a#close-notice-link::before {
+	content: url("data:image/svg+xml,%3Csvg height='28.0' viewBox='0 0 18.0 18.0' width='28.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 11.87 L11.87 13 L9 10.13 L6.13 13 L5 11.87 L7.87 9 L5 6.13 L6.13 5 L9 7.87 L11.87 5 L13 6.13 L10.13 9 L13 11.87 Z M9 1 C4.58 1 1 4.58 1 9 C1 13.42 4.58 17 9 17 C13.42 17 17 13.42 17 9 C17 4.58 13.42 1 9 1 L9 1 Z' fill='%23ffffff' stroke-width='1.0'/%3E%3C/svg%3E");
+	opacity: .3;
+	height: 2rem;
+	width: 2rem;
+	font-size: 4em;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a#close-notice-link:hover::before {
+	opacity: .5;
+}
+
+div#page > div#april-fools.site-notice {
+	border: 0 !important;
+}

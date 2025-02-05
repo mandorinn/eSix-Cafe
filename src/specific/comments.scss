@@ -1,0 +1,312 @@
+div#c-comments {
+	div#a-index, div#a-show {
+		.comment-post {
+			background-color: var(--bg-400) !important;
+			border-left: .25rem solid var(--elements-highlight);
+			border-radius: 2px 8px 8px 2px;
+			overflow: hidden;
+			padding: .5rem;
+		}
+
+		.post-container {
+			align-items: center;
+			justify-content: center;
+			padding: .5rem;
+		}
+	}
+
+	div#a-index .post-container picture, div#a-show .post {
+		width: fit-content;
+		margin-inline: auto;
+		border-radius: 4px;
+		overflow: hidden;
+		border: 4px solid var(--bg-300);
+	}
+}
+
+div#c-comments {
+	div#a-index {
+		div.comments-for-post div.list-of-comments article.comment {
+			border: 2px solid var(--bg-300) !important;
+		}
+	}
+
+	div#a-show {
+		.post {
+			margin: .5rem auto 1rem auto;
+		}
+	}
+}
+
+.below-threshold {
+	transition: 200ms;
+
+	.dtext-container {
+		background-color: var(--bg-400);
+		width: fit-content;
+		padding: .5rem;
+		border-radius: 4px;
+	}
+
+	.dtext-container .styled-dtext {
+		opacity: 0;
+		user-select: none;
+		transition: 200ms;
+	}
+}
+
+.below-threshold {
+	.dtext-container:hover {
+		background-color: var(--bg);
+		transition: 200ms;
+	}
+
+	.dtext-container:hover .styled-dtext {
+		opacity: 1;
+		user-select: auto;
+	}
+}
+
+div.comments-for-post div.list-of-comments article.comment,
+div#c-blips article.blip,
+#p-index-by-comment div.comments article.comment {
+	border-radius: 8px;
+	overflow: hidden;
+
+	.author-info {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		border-right: 2px solid var(--bg-300) !important;
+		height: 100%;
+		width: 90%;
+
+		.name-rank {
+			width: 100%;
+			color: var(--base-text-faded);
+			font-size: .75rem;
+			text-align: center;
+			user-select: none;
+
+			h4 {
+				width: fit-content;
+				margin-inline: auto;
+				user-select: text;
+			}
+
+			a {
+				font-size: 1rem;
+				margin-inline: auto;
+				width: fit-content;
+			}
+		}
+	}
+
+	.avatar, .blacklisted {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: .5rem auto;
+		max-width: 90%;
+		position: relative;
+		aspect-ratio: 1/1;
+		border-radius: var(--avatar-border-radius);
+		overflow: hidden;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			border-radius: var(--avatar-border-radius);
+		}
+
+		.post-thumbnail {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 5px solid var(--elements-highlight);
+			aspect-ratio: 1/1;
+		}
+
+		.post-thumbnail, img {
+			border-radius: var(--avatar-border-radius);
+			object-fit: cover;
+			width: 100%;
+			margin-inline: auto;
+			aspect-ratio: 1/1;
+			user-select: none;
+		}
+
+		.post-thumbnail[data-status="deleted"] {
+			a {
+				height: 100%;
+				aspect-ratio: 1/1;
+				border-radius: var(--avatar-border-radius);
+				overflow: hidden;
+				position: relative;
+			}
+
+			a::before {
+				content: "Deleted";
+				background-color: var(--deleted-bg);
+				border: 5px solid var(--elements-highlight);
+				color: var(--deleted-text);
+				font-weight: bold;
+				position: absolute;
+				display: flex;
+				height: 100%;
+				aspect-ratio: 1/1;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				border-radius: var(--avatar-border-radius);
+			}
+		}
+	}
+
+	.blacklisted {
+		a::before {
+			content: "Blacklisted";
+			background-color: var(--blacklisted-bg);
+			color: var(--blacklisted-text);
+			font-weight: bold;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.25rem;
+		}
+	}
+
+	.post-time {
+		width: fit-content;
+		margin-left: auto;
+		margin-bottom: .5rem;
+		margin-top: auto;
+		bottom: 0;
+		font-size: .75rem;
+		user-select: none;
+
+		a {
+			color: var(--base-text-faded) !important;
+		}
+	}
+}
+
+/* Name rank colors */
+a[class^="user-"] {
+	color: var(--user-member) !important;
+
+	&:hover {
+		color: var(--user-member-hover) !important;
+	}
+}
+
+@each $rank-name, $rank-value in $rank-listing {
+	.user-#{$rank-name}.with-style {
+		color: var(--user-#{$rank-value}) !important;
+
+		&:hover {
+			color: var(--user-#{$rank-value}-hover) !important;
+		}
+	}
+}
+
+a.user-blocked, a.user-banned {
+	color: var(--user-banned) !important;
+
+	&:hover {
+		color: var(--user-banned-hover) !important;
+	}
+}
+
+@if $name-rank-border-colors {
+	:root {
+		--mobileRankOpacity: 0.2;
+	}
+
+	@each $rank-name, $rank-value in $rank-listing {
+		.author-info:has(.user-#{$rank-name}) .post-thumbnail {
+			border-color: var(--user-#{$rank-value}) !important;
+			background-color: var(--user-#{$rank-value}) !important;
+
+			&::after {
+				content: '';
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);
+				background-color: var(--user-#{$rank-value});
+			}
+
+			@media screen and (max-width: 800px) {
+				background-color: transparent !important;
+			}
+		}
+	}
+}
+
+.comments article {
+	position: relative;
+}
+
+/* fun lil thing for me - suggested by faucet lolll */
+article[data-creator-id="192568"] .author-info {
+	position: relative;
+
+	.name-rank {
+		font-size: 0 !important;
+
+		&::after {
+			content: "Café Dev";
+			font-size: .75rem;
+		}
+	}
+
+	&::after {
+		content: url("data:image/svg+xml,%3Csvg height='24.0' viewBox='0 0 24.0 24.0' width='24.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.58 11.4L17.3 4.01l-0.35 -0.6L7.04 3.41l-0.35 0.6 -4.27 7.39 -0.35 0.6 0.35 0.6 4.27 7.39 0.35 0.6h9.92l0.35 -0.6 4.28 -7.39 0.35 -0.6 -0.36 -0.6zM8.51 10.37L6.88 12l1.63 1.63v2.73L4.15 12l4.37 -4.37v2.74zM11.63 17.3l-2.04 -0.63 3.1 -9.98 2.04 0.64 -3.1 9.97zM15.49 16.37v-2.73L17.12 12l-1.63 -1.63L15.49 7.63L19.85 12l-4.36 4.37z' fill='%23ffffffff'/%3E%3C/svg%3E");
+		position: absolute;
+		display: inline-block;
+		top: .25rem;
+		right: .25rem;
+		mix-blend-mode: soft-light;
+		opacity: .6;
+	}
+}
+
+/*---- Uncomment this and pull request if you wanna consider yourself a dev faucet, dunno if you want to change your rank from "Priviliged"  to "Priviliged Café Dev" or not lolllll
+article[data-creator-id="601225"] .author-info {
+	position: relative;
+
+	.name-rank {
+		font-size: 0 !important;
+
+		&::after {
+			content: "Privileged Café Dev";
+			font-size: .75rem;
+		}
+	}
+}
+----*/
+
+/* Super Secret Helper badges */
+article[data-creator-id="601225"] .author-info,
+article[data-creator-id="884003"] .author-info {
+	position: relative;
+
+	&::after {
+		content: url("data:image/svg+xml,%3Csvg height='16' viewBox='0 0 31.27 29.53' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='M22.8 1 S34.8 9.19 30.24 20.69 S16.61 29 20 25.64 S16 20 11.27 15.64 L22.79 1' fill='%23ffffff7a'/%3E%3Cpath d='M22.07 12.26 C19.54 15.48 15.97 17.09 13.21 16.51 L3.58 28.78 A2 2 0 0 1 0.77 29.12 A2 2 0 0 1 0.42 26.3 L10 14.05 C8.73 11.51 9.43 7.62 12 4.37 C15.19 0.33 20 -1.18 22.79 1 S25.24 8.22 22.07 12.26 Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E");
+		position: absolute;
+		display: inline-block;
+		top: .25rem;
+		right: .25rem;
+		mix-blend-mode: soft-light;
+		opacity: .6;
+	}
+}

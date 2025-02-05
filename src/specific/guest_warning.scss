@@ -1,0 +1,15 @@
+.guest-warning {
+	background-color: var(--bg);
+
+	.guest-warning-dialog {
+		background-color: var(--bg-300);
+		border: 2px solid var(--bg-400);
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.dialog-header {
+		border-bottom: 1px solid var(--bg);
+		background-color: var(--bg-400) !important;
+	}
+}

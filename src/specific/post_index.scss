@@ -1,0 +1,17 @@
+#mode-box form {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+#mode-box form select, #set-id {
+	background-color: var(--bg-400);
+	border-radius: 8px !important;
+	padding: .25rem;
+	color: var(--base-text);
+	border: 2px solid var(--bg-300);
+	overflow: hidden;
+}
+
+#mode-box form select:focus {
+	border-radius: 8px 8px 0 0;
+}

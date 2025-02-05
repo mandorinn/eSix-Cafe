@@ -1,0 +1,518 @@
+div#c-posts {
+	.source-links, .source-link a {
+		color: var(--content-link) !important;
+		transition: 100ms;
+
+		&:hover {
+			color: var(--content-link-hover) !important;
+			background-color: var(--bg) !important;
+			padding: 0 .5rem;
+			border-radius: 4px;
+		}
+	}
+
+	div.notice {
+		ul {
+			margin-left: .25rem;
+		}
+
+		.notice-flagged, .notice-deleted {
+			background-color: var(--flagged) !important;
+			border-left: .25rem solid var(--elements-highlight) !important;
+			border-right: 0px solid pink !important;
+			border-top: 0px solid pink !important;
+			border-bottom: 0px solid pink !important;
+			overflow: hidden;
+			min-width: fit-content;
+		}
+
+		.notice-flagged a[href*="/post_replacements"] {
+			font-size: 0;
+			width: 275px;
+			position: relative;
+			margin-left: 135px;
+			pointer-events: none;
+			padding-top: .4rem;
+
+			&::before {
+				font-size: 1rem;
+				content: "View the pending replacements:";
+				pointer-events: none !important;
+				color: var(--base-text);
+				position: relative;
+				user-select: inherit;
+			}
+
+			&::after {
+				font-size: 1rem;
+				content: " here.";
+				position: relative;
+				pointer-events: auto;
+			}
+		}
+
+		.notice-flagged:nth-child(1) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.notice-pending ~ .notice-flagged {
+			font-size: 0.85rem;
+
+			a {
+				font-size: 0.85rem;
+				margin: 0;
+				pointer-events: auto;
+
+				&::before {
+					font-size: .85rem;
+					content: "" !important;
+					pointer-events: none !important;
+					color: var(--base-text);
+					position: relative;
+					user-select: inherit;
+				}
+
+				&::after {
+					font-size: .85rem;
+					content: "" !important;
+					position: relative;
+					pointer-events: auto;
+				}
+			}
+		}
+
+		.notice-flagged:nth-child(1) > p {
+			color: transparent !important;
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+
+		.notice-flagged:nth-child(1) > p::before {
+			content: "This post was flagged for review.";
+			color: var(--base-text);
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.notice-flagged p a[href="/wiki_pages?title=howto%3Aflag"] {
+			font-size: 0;
+		}
+
+		.notice-flagged p a[href="/wiki_pages?title=howto%3Aflag"]::before {
+			content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 24.0 24.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10 -4.48 10 -10S17.52 2 12 2zM13 19h-2v-2h2v2zM15.07 11.25l-0.9 0.92C13.45 12.9 13 13.5 13 15h-2v-0.5c0 -1.1 0.45 -2.1 1.17 -2.83l1.24 -1.26c0.37 -0.36 0.59 -0.86 0.59 -1.41 0 -1.1 -0.9 -2 -2 -2s-2 0.9 -2 2L8 9c0 -2.21 1.79 -4 4 -4s4 1.79 4 4c0 0.88 -0.36 1.68 -0.93 2.25z' fill='%23c3ccd4ff'/%3E%3C/svg%3E");
+			opacity: .6;
+		}
+
+		.notice-flagged p a[href="/wiki_pages?title=howto%3Aflag"]:hover::before {
+			opacity: 1;
+		}
+
+		.notice-pending {
+			min-width: fit-content;
+			min-height: fit-content;
+			border-right: none !important;
+			border-bottom: none !important;
+			border-top: none !important;
+		}
+
+		.notice-pending::before {
+			content: "This post is pending moderator approval";
+			font-size: 1.1rem;
+			margin-left: .5rem;
+		}
+
+		.notice-pending a {
+			display: flex;
+			height: 0;
+			width: auto;
+			place-items: center;
+		}
+
+		.notice-pending a::after {
+			content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 24.0 24.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10 -4.48 10 -10S17.52 2 12 2zM13 19h-2v-2h2v2zM15.07 11.25l-0.9 0.92C13.45 12.9 13 13.5 13 15h-2v-0.5c0 -1.1 0.45 -2.1 1.17 -2.83l1.24 -1.26c0.37 -0.36 0.59 -0.86 0.59 -1.41 0 -1.1 -0.9 -2 -2 -2s-2 0.9 -2 2L8 9c0 -2.21 1.79 -4 4 -4s4 1.79 4 4c0 0.88 -0.36 1.68 -0.93 2.25z' fill='%23ffffff'/%3E%3C/svg%3E");
+			opacity: .3;
+		}
+
+		.notice-pending a:hover::after {
+			opacity: .5;
+		}
+
+		.notice-pending {
+			background-color: var(--bg) !important;
+			border-left: .25rem solid var(--elements-highlight) !important;
+			font-size: 0;
+			height: 100%;
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			min-width: fit-content;
+			/* 0.25rem .25rem 0.25rem */
+
+			p {
+				margin-top: .5rem;
+				font-size: .75rem;
+				border-top: 1px solid var(--bg-400);
+			}
+		}
+
+		.notice-parent, .notice-child {
+			background-color: var(--bg-400) !important;
+			border: 2px solid var(--bg-300) !important;
+			border-radius: .50rem;
+		}
+	}
+
+	div.nav-notice {
+		background-color: var(--bg) !important;
+	}
+
+	div#a-index aside#sidebar, div#a-show aside#sidebar {
+		width: 14.5rem;
+	}
+
+	div#a-show {
+		#edit {
+			#post_rating_e:checked+label {
+				background-color: var(--remove-favorite) !important;
+			}
+
+			#post_rating_q:checked+label {
+				background-color: var(--warn-button) !important;
+			}
+
+			#post_rating_s:checked+label {
+				background-color: var(--favorite-button) !important;
+			}
+
+			.edit-submit {
+				background-color: var(--bg) !important;
+				border-radius: 0px 4px 0px 0px;
+				border-top: 2px solid var(--bg-300);
+				border-right: 2px solid var(--bg-300);
+
+				input {
+					&:hover {
+						background-color: var(--bg-300) !important;
+					}
+				}
+			}
+		}
+
+		.pool-nav, .search-seq-nav, .set-nav {
+			background-color: var(--bg) !important;
+			color: var(--base-text) !important;
+		}
+	}
+}
+
+div#avoid-posting-notice {
+	background-color: var(--bg);
+	border-color: var(--bg);
+	border-left: 0.25rem solid var(--flagged) !important;
+	margin: 0;
+	overflow: unset !important;
+
+	& * {
+		margin: 0;
+		min-width: unset;
+		font-size: 1rem;
+	}
+
+	& h3 {
+		color: var(--flagged);
+		font-size: 1.25rem;
+	}
+
+	& li * {
+		display: block ruby !important;
+	}
+
+	& .artist a {
+		color: var(--tag-cat-2) !important;
+
+		&:hover {
+			color: var(--tag-cat-2-hover) !important;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-direction: row;
+	}
+
+	li {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+div#image-and-nav {
+	min-width: 20%;
+
+	div#nav-links-top {
+		border-radius: 8px 8px 0 0 !important;
+		overflow: clip;
+	}
+
+	div#nav-links-bottom {
+		border-radius: 0 0 8px 8px !important;
+		margin-top: -3px;
+		overflow: clip;
+	}
+}
+
+.bottom-notices {
+	height: fit-content;
+	margin-right: auto;
+	margin-bottom: .5rem;
+	display: flex;
+	align-items: self-start;
+	width: 50ch;
+	border-radius: .25rem;
+}
+
+.bottom-notices * {
+	margin: 0 .25rem;
+}
+
+.bottom-notices:empty {
+	display: none !important;
+}
+
+div#a-show div#nav-links-left {
+	background-color: var(--bg-400) !important;
+	border: 2px solid var(--bg-300) !important;
+	border-radius: 8px;
+	overflow: clip;
+	width: calc(100% + .25rem);
+	position: relative;
+	margin-inline: auto;
+
+	& .nav-name {
+		width: fit-content !important;
+		max-width: 20ch;
+		white-space: wrap !important;
+		margin-top: .25rem;
+	}
+
+	& .active.post-nav {
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+
+		& .nav-left-down {
+			display: flex;
+			gap: 1rem;
+		}
+
+		& a.nav-link {
+			padding: 0;
+		}
+	}
+
+	& *, .nav-block.search-seq-nav {
+		background: none !important;
+		border: none !important;
+	}
+
+	& .nav-left-down {
+		margin-top: 0;
+	}
+}
+
+div#c-posts div.notice.notice-parent article.thumbnail .desc,
+div#c-posts div.notice.notice-child article.thumbnail .desc,
+.vertical-section article.thumbnail .desc {
+	background-color: var(--bg-300) !important;
+	border-radius: 0 0 .5rem .5rem;
+	display: flex;
+	flex-direction: row;
+}
+
+div#c-posts div.notice.notice-parent article.thumbnail .desc div,
+div#c-posts div.notice.notice-child article.thumbnail .desc div,
+.vertical-section article.thumbnail .desc div {
+	display: flex;
+	justify-content: space-around;
+}
+
+div#c-posts div.notice.notice-parent article.thumbnail .desc div *,
+div#c-posts div.notice.notice-child article.thumbnail .desc div *,
+.vertical-section article.thumbnail .desc div * {
+	margin: 0;
+}
+
+/* Posts page stuff */
+search-content > post post-info {
+	background-color: var(--bg-400);
+}
+
+search-content > post[sound="true"] span.post-sound {
+	bottom: 2.5rem;
+}
+
+.video-duration {
+	position: absolute;
+	bottom: 1.45rem !important;
+	left: 0;
+	height: fit-content;
+	background-color: #00000080 !important;
+	font-family: monospace !important;
+	padding: .1rem .2rem !important;
+	border-radius: 0 4px 4px 0 !important;
+	z-index: 2 !important;
+}
+
+search-content post[fav="true"] button.button.voteButton.fav {
+	color: var(--actions-fav-true);
+}
+
+search-content post[fav="true"]:not(:hover) button.button.voteButton.fav {
+	background-color: var(--bg-400) !important;
+}
+
+search-content > post post-info {
+	background-color: var(--bg-400) !important;
+}
+
+search-content post[fav="true"] button.button.voteButton.fav {
+	color: var(--actions-fav-true);
+}
+
+search-content post[fav="true"]:not(:hover) button.button.voteButton.fav {
+	background-color: var(--bg-400) !important;
+}
+
+search-content button.button.voteButton.fav {
+	display: flex;
+	justify-content: center;
+	width: 3.5ch;
+	max-height: 1.5rem;
+}
+
+search-content post[fav="true"] button.button.voteButton.fav::before {
+	content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 17.0 16.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1667 2.6672C10.104 2.6672 9.12 3.2252 8.5 4.0539C7.88 3.2252 6.896 2.6672 5.8333 2.6672C3.9953 2.6672 2.5 4.1626 2.5 6.0006C2.5 9.6612 7.916 13.0886 8.1473 13.2326C8.2553 13.2999 8.378 13.3339 8.5 13.3339C8.622 13.3339 8.7447 13.2999 8.8527 13.2326C9.084 13.0886 14.5 9.6612 14.5 6.0006C14.5 4.1626 13.0047 2.6672 11.1667 2.6672Z' fill='%23be7aa1'/%3E%3C/svg%3E");
+}
+
+search-content post[fav="true"] button.button.voteButton.fav:hover::before {
+	content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 17.0 16.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1667 2.6672C10.104 2.6672 9.12 3.2252 8.5 4.0539C7.88 3.2252 6.896 2.6672 5.8333 2.6672C3.9953 2.6672 2.5 4.1626 2.5 6.0006C2.5 9.6612 7.916 13.0886 8.1473 13.2326C8.2553 13.2999 8.378 13.3339 8.5 13.3339C8.622 13.3339 8.7447 13.2999 8.8527 13.2326C9.084 13.0886 14.5 9.6612 14.5 6.0006C14.5 4.1626 13.0047 2.6672 11.1667 2.6672Z' fill='%23ffa5d9'/%3E%3C/svg%3E");
+}
+
+search-content button.button.voteButton.fav::before {
+	content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 17.0 16.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1667 2.6672C10.104 2.6672 9.12 3.2252 8.5 4.0539C7.88 3.2252 6.896 2.6672 5.8333 2.6672C3.9953 2.6672 2.5 4.1626 2.5 6.0006C2.5 9.6612 7.916 13.0886 8.1473 13.2326C8.2553 13.2999 8.378 13.3339 8.5 13.3339C8.622 13.3339 8.7447 13.2999 8.8527 13.2326C9.084 13.0886 14.5 9.6612 14.5 6.0006C14.5 4.1626 13.0047 2.6672 11.1667 2.6672Z' fill='%23c3ccd4'/%3E%3C/svg%3E");
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+search-content button.button.voteButton.fav:hover::before {
+	content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 17.0 16.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1667 2.6672C10.104 2.6672 9.12 3.2252 8.5 4.0539C7.88 3.2252 6.896 2.6672 5.8333 2.6672C3.9953 2.6672 2.5 4.1626 2.5 6.0006C2.5 9.6612 7.916 13.0886 8.1473 13.2326C8.2553 13.2999 8.378 13.3339 8.5 13.3339C8.622 13.3339 8.7447 13.2999 8.8527 13.2326C9.084 13.0886 14.5 9.6612 14.5 6.0006C14.5 4.1626 13.0047 2.6672 11.1667 2.6672Z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+@each $mode-function, $mode-function-color in $mode-menu-functions {
+	#page[data-mode-menu="#{$mode-function}"] {
+		background-color: var(--mode-#{$mode-function-color}) !important;
+	}
+}
+
+#sidebar #disable-all-blacklists, #sidebar #re-enable-all-blacklists {
+	position: relative;
+	top: auto;
+	left: auto;
+}
+
+#disable-all-blacklists, #re-enable-all-blacklists {
+	position: absolute;
+	top: .2rem;
+	left: 17ch;
+}
+
+#disable-all-blacklists *, #sidebar #blacklist-box #disable-all-blacklists {
+	color: var(--remove-favorite) !important;
+}
+
+#re-enable-all-blacklists *, #sidebar #blacklist-box #re-enable-all-blacklists {
+	color: var(--favorite-button) !important;
+}
+
+.post-preview.post-status-deleted a {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	img {
+		opacity: 0;
+	}
+}
+
+.post-preview.post-status-deleted a::before {
+	content: "Deleted";
+	background-color: var(--deleted-bg);
+	color: var(--deleted-text);
+	font-weight: bold;
+	position: absolute;
+	display: flex;
+	align-items: center !important;
+	justify-content: center !important;
+	font-size: 1.3rem;
+	bottom: 0;
+	opacity: 1;
+	height: 100%;
+	width: 95%;
+	aspect-ratio: 1/1;
+}
+
+/* Link colors */
+#description a,
+#post-description-container .styled-dtext a,
+.about-section a,
+.comment-post-grid .styled-dtext .dtext-link,
+.dtext-formatter .dtext-link:not([href^="/user/show/"], #c-wiki-pages a) {
+	color: var(--content-link) !important;
+
+	&:hover {
+		color: var(--content-link-hover) !important;
+	}
+}
+
+#description a, .comment-post-grid .styled-dtext .dtext-link[href^="/user/show/"] {
+	color: var(--base-link) !important;
+
+	&:hover {
+		color: var(--base-link-hover) !important;
+	}
+}
+
+a[href^="/tickets/new?disp_id"] {
+	color: var(--user-banned) !important;
+}
+
+a[href^="/tickets/new?disp_id"]:hover {
+	color: var(--user-banned-hover) !important;
+}
+
+/* This puts a Discord logo in front of any link that contains "discord.com" in it. Not sure if it should be in the main theme.
+a[href*="discord.com"] {
+	&::before {
+		content: url("data:image/svg+xml,%3Csvg role='img' height='16.0'  viewBox='0 -1 25 21' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EDiscord%3C/title%3E%3Cpath d='M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z'/%3E%3C/svg%3E");
+		opacity: .8;
+		mix-blend-mode: soft-light;
+	}
+}
+
+a[href*="discord"]:hover {
+	&::before {
+		opacity: 1;
+		mix-blend-mode: soft-light;
+	}
+}
+*/

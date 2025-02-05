@@ -1,0 +1,23 @@
+div#c-user-feedbacks #a-index .striped > tbody > tr > td {
+	background: transparent !important;
+}
+
+div#c-moderator-dashboards .feedback-category-negative td, div#c-user-feedbacks .feedback-category-negative {
+	background: var(--flagged) !important;
+}
+
+div#c-moderator-dashboards .feedback-category-neutral td, div#c-user-feedbacks .feedback-category-neutral {
+	background: var(--bg-400) !important;
+}
+
+div#c-moderator-dashboards .feedback-category-positive td, div#c-user-feedbacks .feedback-category-positive {
+	background: var(--favorite-button) !important;
+}
+
+.feedback-category-negative .user-blocked, .feedback-category-negative .user-banned {
+	color: var(--base-link) !important;
+
+	&:hover {
+		color: var(--base-link-hover) !important;
+	}
+}

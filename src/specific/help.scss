@@ -1,0 +1,26 @@
+#c-help {
+	#sidebar {
+		position: sticky;
+		left: 0;
+		top: 4rem;
+		padding: .5rem .5rem;
+
+		h1 {
+			width: 75%;
+			text-align: center;
+			border-bottom: 1px solid var(--bg-400);
+			margin-inline: auto;
+			margin-bottom: .5rem;
+			padding-bottom: .25rem;
+		}
+
+		div[style="width:240px"] {
+			width: fit-content !important;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

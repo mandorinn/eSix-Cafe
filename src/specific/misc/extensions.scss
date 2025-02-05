@@ -1,0 +1,26 @@
+/* idem's Sourcing Suite */
+
+h1 {
+	background-color: var(--bg);
+	color: var(--content-link) !important;
+}
+
+.setting_section {
+	background-color: var(--bg) !important;
+}
+
+.setting_description, .setting_values {
+	color: var(--base-text);
+}
+
+.setting_values > * {
+	border-bottom: 1px solid var(--base-text-faded);
+}
+
+.setting_header, .settings_table_head {
+	color: var(--content-link) !important;
+}
+
+button, input {
+	border: 2px solid var(--bg-300);
+}

@@ -1,0 +1,13 @@
+div.paginator {
+	max-width: 100vw;
+	overflow: hidden;
+
+	li a {
+		transition: 100ms;
+	}
+
+	li a:hover {
+		background-color: var(--bg-400) !important;
+		border-radius: 4px;
+	}
+}

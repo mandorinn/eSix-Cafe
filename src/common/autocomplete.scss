@@ -1,0 +1,15 @@
+.ui-autocomplete {
+	.ui-state-active {
+		border: none;
+		background-color: var(--bg) !important;
+	}
+
+	.autocomplete-arrow {
+		color: var(--base-text-faded) !important;
+	}
+
+	li:hover * {
+		border: none;
+		background-color: var(--bg) !important;
+	}
+}

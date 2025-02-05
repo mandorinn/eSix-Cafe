@@ -1,0 +1,9 @@
+.sect_green, .approved-ticket {
+	color: var(--favorite-button) !important;
+	font-weight: 900;
+}
+
+.sect_red, .redtext, .denied-ticket {
+	color: var(--flagged) !important;
+	font-weight: 900;
+}

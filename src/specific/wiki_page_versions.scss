@@ -1,0 +1,21 @@
+div#c-wiki-page-versions {
+	@media screen and (max-width: 800px) {
+		#p-global-listing {
+			width: 90%;
+			margin-inline: auto;
+		}
+
+		th:nth-child(1) {
+			width: fit-content !important;
+		}
+
+		table.striped {
+			td {
+				word-wrap: break-word;
+				max-width: 10ch;
+				max-height: 1rem;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+}

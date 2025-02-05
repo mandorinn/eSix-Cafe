@@ -1,0 +1,9 @@
+a {
+	color: var(--base-link) !important;
+	background: none !important;
+
+	&:hover {
+		color: var(--base-link-hover) !important;
+		background: none !important;
+	}
+}

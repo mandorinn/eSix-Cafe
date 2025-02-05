@@ -1,0 +1,82 @@
+.color-muted {
+	color: var(--base-text) !important;
+	opacity: .5;
+}
+
+.button {
+	transition: 100ms;
+
+	.score-neutral {
+		background-color: var(--bg-400) !important;
+		color: var(--base-text) !important;
+	}
+
+	.score-neutral:hover {
+		background-color: var(--bg) !important;
+	}
+
+	.score-positive {
+		background-color: var(--favorite-button) !important;
+		color: var(--base-text) !important;
+	}
+
+	.score-positive:hover {
+		background-color: var(--favorite-button-hover) !important;
+		color: var(--button-text-hover-secondary) !important;
+	}
+
+	.score-negative {
+		background-color: var(--remove-favorite) !important;
+		color: var(--base-text) !important;
+	}
+
+	.score-negative:hover {
+		background-color: var(--remove-favorite-hover) !important;
+		color: var(--button-text-hover-secondary) !important;
+	}
+
+	.btn-success {
+		background-color: var(--favorite-button) !important;
+		color: var(--base-text) !important;
+	}
+
+	.btn-success:hover {
+		background-color: var(--favorite-button-hover) !important;
+		color: var(--button-text-hover-secondary) !important;
+	}
+
+	.btn-danger {
+		background-color: var(--remove-favorite) !important;
+		color: var(--base-text) !important;
+	}
+
+	.btn-danger:hover {
+		background-color: var(--remove-favorite-hover) !important;
+		color: var(--button-text-hover-secondary) !important;
+	}
+
+	.btn-warn {
+		background-color: var(--warn-button) !important;
+		color: var(--base-text) !important;
+	}
+
+	.btn-warn:hover {
+		background-color: var(--warn-button-hover) !important;
+		color: var(--button-text-hover-secondary) !important;
+	}
+
+	.btn-neutral {
+		background-color: var(--bg) !important;
+		color: var(--base-text) !important;
+		transition: var(--header-link-transition);
+	}
+
+	.btn-neutral:hover {
+		background-color: var(--bg-400) !important;
+		color: var(--base-text) !important;
+	}
+}
+
+.bg-foreground {
+	background-color: var(--bg) !important;
+}

@@ -1,0 +1,36 @@
+div#c-static {
+	div#a-site-map {
+		width: 80vw !important;
+		display: flex;
+		flex-direction: row !important;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin-inline: auto;
+		background-color: var(--bg) !important;
+		padding: 2rem;
+		border-radius: 8px;
+		gap: .5rem;
+
+		section {
+			width: calc(15% + 1rem) !important;
+			max-width: calc(15% + 1rem) !important;
+			background-color: var(--bg-400);
+			padding: 2rem;
+			border-radius: 8px;
+		}
+
+		h1 {
+			border-bottom: 1px solid var(--bg) !important;
+			margin-inline: auto;
+			text-align: center;
+			padding-bottom: .25rem;
+			font-size: 1.175rem !important;
+		}
+
+		ul li:nth-child(n + 2) {
+			margin-top: .3rem;
+			border-bottom: 1px solid var(--base-text-faded);
+			width: fit-content;
+		}
+	}
+}

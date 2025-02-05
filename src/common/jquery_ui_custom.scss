@@ -1,0 +1,17 @@
+.ui-widget-content {
+	background-color: var(--bg-400) !important;
+	margin-top: .2rem;
+	margin-left: .05rem;
+}
+
+.ui-state-highlight {
+	background-color: var(--bg) !important;
+	color: var(--base-text) !important;
+	border-top: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+	border-left: .25rem solid var(--elements-highlight) !important;
+	border-radius: 2px 8px 8px 2px;
+	font-size: .8rem !important;
+	width: fit-content;
+}

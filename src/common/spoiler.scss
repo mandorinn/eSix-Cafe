@@ -1,0 +1,27 @@
+.spoiler, .dtext-container .spoiler {
+	background: #1a1a1a !important;
+	color: transparent !important;
+	text-shadow: none !important;
+	border-radius: 4px;
+	transition: 100ms;
+	padding: 0 .25rem;
+	width: fit-content;
+
+	&:hover {
+		color: var(--base-text) !important;
+	}
+}
+
+.dtext-container .spoiler .dtext-link, .spoiler {
+	color: #1a1a1a !important;
+	text-shadow: none !important;
+	transition: 100ms;
+}
+
+.spoiler:hover .dtext-link {
+	color: var(--content-link) !important;
+}
+
+.spoiler:hover .dtext-link:hover {
+	color: var(--content-link-hover) !important;
+}

@@ -1,0 +1,45 @@
+article.thumbnail.captioned {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 154px;
+}
+
+article.thumbnail.captioned .desc {
+	width: 100%;
+	background-color: var(--bg) !important;
+}
+
+article.thumbnail img {
+	object-fit: cover;
+	width: 154px;
+}
+
+article.thumbnail .desc {
+	background-color: var(--bg-400) !important;
+}
+
+article.thumbnail .desc a::before {
+	display: none;
+}
+
+article.thumbnail[data-tags~="animated"] > a::before, article.thumbnail[data-file-ext~="webm"] > a::before {
+	background-color: var(--bg-300) !important;
+	color: var(--base-text) !important;
+	border: 2px solid var(--bg-400) !important;
+	right: .5rem;
+	top: .5rem;
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.has-cropped-true {
+	object-fit: cover;
+	width: 154px;
+}

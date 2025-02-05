@@ -1,0 +1,58 @@
+div#modal-container {
+	.ui-widget-content.ui-widget-content {
+		color: var(--base-text) !important;
+	}
+
+	.ui-widget.ui-widget-content {
+		border: 2px solid var(--bg-300) !important;
+		border-radius: 2px 8px 8px 8px;
+		overflow: hidden !important;
+		height: fit-content;
+		color: var(--base-text) !important;
+
+		.border-highlight {
+			border-color: var(--base-text) !important;
+		}
+	}
+
+	div.re621-ui-dialog.modal-reserve-height div.ui-dialog-content {
+		min-height: fit-content !important;
+		color: var(--base-text);
+
+		input {
+			background-color: var(--bg) !important;
+		}
+
+		h3 {
+			color: var(--base-text) !important;
+		}
+
+		button.btn-neutral[id^="conf-misc-"], .btn-neutral[id^="conf"] {
+			background-color: var(--bg-300) !important;
+
+			&:hover {
+				background-color: var(--bg) !important;
+			}
+		}
+	}
+
+	div.re621-ui-dialog {
+		background-image: none;
+		color: var(--base-text);
+
+		div.ui-dialog-titlebar {
+			span.ui-dialog-title {
+				color: var(--base-text) !important;
+			}
+		}
+	}
+
+	/* Displays custom theme name in the theme picker */
+	div.re621-ui-dialog:has(label[for^="theme-customizer"]) div.ui-dialog-titlebar span::after {
+		content: " - "var(--themeName);
+	}
+
+	.button.btn-neutral {
+		background-color: var(--bg-400) !important;
+	}
+}

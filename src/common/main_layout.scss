@@ -1,0 +1,157 @@
+div#page {
+	background-color: var(--bg-300) !important;
+	margin: 0 !important;
+	border-radius: 0 !important;
+	padding-top: 1.5rem;
+	padding-bottom: 4rem;
+
+	aside#sidebar {
+		#search-box {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+
+		#search-box h1 {
+			position: absolute;
+			font-size: 0rem !important;
+			width: 90%;
+			pointer-events: none;
+			z-index: 9999;
+		}
+
+		#search-box h1 span {
+			position: relative;
+			font-size: .75rem;
+			pointer-events: auto;
+			right: 1.5rem;
+			top: .25rem;
+			display: flex;
+		}
+
+		#search-box button {
+			display: none;
+		}
+
+		/* Sidebar searchbox */
+		/* re621 version -> src/specific/re621/modules/_structure-utilities.scss */
+		section#search-box form, section#mode-box form {
+			display: flex;
+			flex-direction: column;
+			height: fit-content;
+			width: 100%;
+		}
+
+		section#search-box form input[type="text"], section#mode-box form input[type="text"] {
+			height: 2rem;
+			width: 100%;
+			border-radius: 7.5px;
+			padding: .5rem 2rem .5rem .5rem;
+			color: var(--base-text);
+			background-color: var(--bg-400);
+			border: 2px solid var(--bg-300);
+			margin-top: 1rem;
+			margin-inline: auto;
+		}
+	}
+
+	div.site-notice {
+		background-color: var(--bg) !important;
+		border: 2px solid var(--bg-400) !important;
+		border-radius: 8px;
+		color: var(--base-text) !important;
+		margin-inline: auto;
+		margin-bottom: 1rem;
+	}
+
+	div.site-notice:not(open) {
+		overflow: hidden;
+	}
+}
+
+.search-help {
+	display: flex;
+	align-items: center;
+	width: 0;
+}
+
+.search-help a {
+	width: 0rem;
+	height: 100%;
+	overflow: hidden;
+	margin-top: 1rem;
+	margin-right: -1rem;
+}
+
+.search-help a::before {
+	content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 24.0 24.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10 -4.48 10 -10S17.52 2 12 2zM13 19h-2v-2h2v2zM15.07 11.25l-0.9 0.92C13.45 12.9 13 13.5 13 15h-2v-0.5c0 -1.1 0.45 -2.1 1.17 -2.83l1.24 -1.26c0.37 -0.36 0.59 -0.86 0.59 -1.41 0 -1.1 -0.9 -2 -2 -2s-2 0.9 -2 2L8 9c0 -2.21 1.79 -4 4 -4s4 1.79 4 4c0 0.88 -0.36 1.68 -0.93 2.25z' fill='%23ffffff'/%3E%3C/svg%3E");
+	height: 1rem;
+	width: 1rem;
+	position: absolute;
+	opacity: .3;
+}
+
+.search-help a:hover::before {
+	opacity: .5;
+	transition: 100ms;
+}
+
+.search-help::before:hover .search-help {
+	font-size: .75rem;
+}
+
+/* Fixes select box arrows being black */
+select, select:active, select:focus, select:hover, select.button.btn-neutral,
+select.button.btn-neutral:active, select.button.btn-neutral:focus, select.button.btn-neutral:hover {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='opacity:.3'%3E%3Cpath fill='%23fff' d='M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z'/%3E%3C/svg%3E") no-repeat;
+	background-position: 100% 50% !important;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+select#image-resize-selector {
+	padding-right: 20px;
+}
+
+#posts-container article.thumbnail .desc,
+#c-post-approvals article.thumbnail .desc,
+#c-post-flags article.thumbnail .desc,
+#c-post-replacements article.thumbnail .desc {
+	border-radius: 0 0 .5rem .5rem;
+	display: flex;
+	flex-direction: row;
+	background-color: var(--bg-400);
+}
+
+body {
+	--color-score-positive: var(--favorite-button);
+	--color-score-negative: var(--remove-favorite);
+	--color-rating-safe: var(--favorite-button);
+	--color-rating-questionable: var(--warn-button);
+	--color-rating-explicit: var(--remove-favorite);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--bg-300);
+}
+
+@if $theme-pack == "classic" {
+	::selection {
+		color: var(--bg);
+		background: var(--header-link);
+	}
+}
+
+@if $theme-pack == "muted" {
+	::selection {
+		color: var(--bg);
+		background: var(--elements-highlight);
+	}
+}

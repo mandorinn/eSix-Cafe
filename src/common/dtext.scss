@@ -1,0 +1,102 @@
+.dtext-container > .styled-dtext > blockquote > .striped > tbody {
+	tr {
+		background-color: var(--bg-300) !important;
+
+		td {
+			background-color: var(--bg-400) !important;
+		}
+	}
+}
+
+.styled-dtext {
+	@each $tag-category, $tag-category-name in $tag-categories {
+		.dtext-color-#{$tag-category-name} {
+			color: var(--tag-cat-#{$tag-category}) !important;
+		}
+	}
+
+	@each $tag-category, $tag-category-name in $tag-categories-short {
+		.dtext-color-#{$tag-category-name} {
+			color: var(--tag-cat-#{$tag-category}) !important;
+		}
+	}
+
+	.blacklisted {
+		margin: .5rem 0 !important;
+
+		a {
+			position: relative;
+			display: flex;
+			align-items: center !important;
+			justify-content: center !important;
+
+			&::before {
+				content: "Blacklisted";
+				background-color: var(--blacklisted-bg);
+				color: var(--blacklisted-text);
+				position: absolute;
+				display: flex;
+				align-items: center !important;
+				justify-content: center !important;
+				font-size: 1.3rem;
+				width: 100%;
+				aspect-ratio: 1/1;
+			}
+		}
+	}
+
+	blockquote {
+		border: none;
+		border-left: .25rem solid var(--color-danger);
+		border-left-color: var(--elements-highlight) !important;
+		background-color: rgba(255,255,255,.035) !important;
+
+		div.expandable {
+			background-color: var(--bg-300) !important;
+		}
+
+		table.striped thead th {
+			background-color: var(--bg-400) !important;
+		}
+
+		table.striped tbody tr td {
+			background-color: var(--bg) !important;
+		}
+	}
+
+	.inline-code {
+		background-color: var(--bg-400) !important;
+		text-decoration: underline;
+	}
+
+	details, div.expandable, pre {
+		background-color: var(--bg) !important;
+		border-left-color: var(--elements-highlight) !important;
+		color: var(--base-text);
+		border-right: none !important;
+		border-top: none !important;
+		border-bottom: none !important;
+
+		div.expandable, details {
+			border-right: none;
+			border-top: none;
+			border-bottom: none;
+			background-color: var(--bg-400) !important;
+		}
+	}
+
+	div.expandable > div.expandable-header {
+		display: flex;
+	}
+
+	div.expandable > div.expandable-header > .section-arrow {
+		margin-right: .3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		width: .75rem;
+		aspect-ratio: 1/1;
+		height: 100%;
+	}
+}

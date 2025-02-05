@@ -1,0 +1,31 @@
+@each $tag-category, $tag-category-name in $tag-categories {
+	.category-#{$tag-category} a, a.tag-type-#{$tag-category} {
+		color: var(--tag-cat-#{$tag-category}) !important;
+	}
+
+	.category-#{$tag-category} a:hover, a.tag-type-#{$tag-category}:hover {
+		color: var(--tag-cat-#{$tag-category}-hover) !important;
+	}
+}
+
+.ui-widget.ui-widget-content {
+	border: 2px solid var(--bg-300) !important;
+	border-radius: 2px 8px 8px 8px;
+	overflow: hidden;
+}
+
+.low-post-count {
+	color: var(--user-banned) !important;
+}
+
+#sidebar > div[style="color:darkorange;margin-bottom:0.5rem;"] {
+	display: none;
+}
+
+#sidebar .general-tag-list a {
+	color: var(--tag-cat-0) !important;
+}
+
+#sidebar .general-tag-list a:hover {
+	color: var(--tag-cat-0-hover) !important;
+}

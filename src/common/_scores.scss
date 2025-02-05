@@ -1,0 +1,7 @@
+.score-positive a, search-content post[vote="1"] button.button.voteButton.vote[action=up] {
+	color: var(--favorite-button) !important;
+}
+
+.score-negative a, search-content post[vote="-1"] button.button.voteButton.vote[action=down] {
+	color: var(--remove-favorite) !important;
+}

@@ -1,0 +1,31 @@
+/* Cloudflare error page */
+
+#cf-wrapper {
+	.code-label {
+		background-color: var(--remove-favorite);
+	}
+
+	span {
+		color: var(--base-text);
+	}
+
+	.my-8.bg-gradient-gray {
+		background-color: var(--bg) !important;
+
+		.w-240 {
+			margin: 0;
+			background-color: var(--bg);
+			width: 100%;
+			padding: 0 20%;
+		}
+	}
+
+	.cf-error-source::after {
+		box-shadow: none;
+		background-color: var(--bg-300);
+	}
+
+	.border-gray-300 {
+		border-color: var(--base-text-faded);
+	}
+}

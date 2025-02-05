@@ -1,0 +1,40 @@
+tabbed.config-tabs {
+	ul.ui-tabs-nav {
+		height: 100%;
+		position: relative;
+
+		li:last-child {
+			margin-bottom: auto;
+		}
+	}
+}
+
+div#modal-container div.re621-ui-dialog a.delete-link {
+	background-color: var(--mode-remove-fav) !important;
+}
+
+tabbed.config-tabs form-section.subscription-settings > form-section input[type="text"] {
+	margin-left: .5rem;
+	margin-right: .5rem;
+}
+
+a.subscribe-button-major {
+	background-color: var(--favorite-button) !important;
+	color: var(--base-text) !important;
+	box-shadow: none;
+}
+
+a.subscribe-button-major:hover {
+	background-color: var(--favorite-button-hover) !important;
+	color: var(--button-text-hover-secondary) !important;
+}
+
+a.subscribe-button-major[subscribed="true"] {
+	background-color: var(--remove-favorite) !important;
+	color: var(--base-text) !important;
+}
+
+a.subscribe-button-major[subscribed="true"]:hover {
+	background-color: var(--remove-favorite-hover) !important;
+	color: var(--button-text-hover-secondary !important);
+}

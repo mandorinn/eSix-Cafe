@@ -1,0 +1,54 @@
+div#c-uploads {
+	div#a-new {
+		.border-bottom {
+			border-bottom: 2px solid var(--bg-300);
+		}
+
+		.col2 .fileinput-wrapper .fileinput {
+			background: var(--bg-400);
+			border: 2px dashed var(--bg-400);
+		}
+
+		.col2 .linkinput-wrapper .linkinput {
+			background: var(--bg-300);
+		}
+
+		input[type="file"] {
+			background-color: var(--bg-400);
+			border-radius: 4px;
+		}
+
+		input[type="file"]button {
+			color: pink;
+		}
+
+		.active {
+			background-color: var(--bg-300) !important;
+		}
+
+		.rating-e.active {
+			background-color: var(--remove-favorite) !important;
+		}
+
+		.rating-q.active {
+			background-color: var(--warn-button) !important;
+		}
+
+		.rating-s.active {
+			background-color: var(--favorite-button) !important;
+		}
+
+		form.simple_form div.collection-radio-buttons input + label {
+			color: var(--base-text) !important;
+		}
+
+		.radio_buttons:not(:checked)+label {
+			background-color: var(--bg-300) !important;
+		}
+
+		.box-section {
+			background-color: var(--bg) !important;
+			border-radius: 8px;
+		}
+	}
+}

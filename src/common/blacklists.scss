@@ -1,0 +1,58 @@
+.blacklist-ui.blacklist-inline {
+	.blacklist-header::before {
+		border-color: transparent var(--base-text) var(--base-text) transparent !important;
+	}
+}
+
+#image-container.blacklisted, .styled-dtext div.post-thumbnail.blacklisted.dtext[data-status="active"] {
+	overflow: hidden;
+	border-radius: 4px !important;
+}
+
+.blacklisted {
+	.picture-container {
+		position: relative;
+		display: flex;
+		align-items: center !important;
+		justify-content: center !important;
+
+		&::before {
+			content: "Blacklisted";
+			font-weight: bold;
+			background-color: var(--blacklisted-bg);
+			color: var(--blacklisted-text);
+			position: absolute;
+			display: flex;
+			align-items: center !important;
+			justify-content: center !important;
+			font-size: 1.3rem;
+			width: 100%;
+			aspect-ratio: 1/1;
+		}
+	}
+}
+
+#image-container.blacklisted {
+	position: relative;
+
+	&::before {
+		content: "Blacklisted";
+		background-color: var(--blacklisted-bg);
+		color: var(--blacklisted-text);
+		font-weight: bold;
+		position: absolute;
+		display: flex;
+		align-items: center !important;
+		justify-content: center !important;
+		font-size: 1.3rem;
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 1/1;
+	}
+}
+
+#image-container.blacklisted .styled-dtext div.post-thumbnail.blacklisted.dtext {
+	border-radius: 0 !important;
+	width: 10rem !important;
+	margin-right: auto;
+}
