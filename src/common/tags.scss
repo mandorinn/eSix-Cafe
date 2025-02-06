@@ -18,7 +18,8 @@
 	color: var(--user-banned) !important;
 }
 
-#sidebar > div[style="color:darkorange;margin-bottom:0.5rem;"] {
+#sidebar > div[style="color:darkorange;margin-bottom:0.5rem;"],
+.search > .post-search ~ div[style="color: darkorange;"] {
 	display: none;
 }
 

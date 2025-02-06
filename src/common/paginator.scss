@@ -1,6 +1,7 @@
 div.paginator {
 	max-width: 100vw;
 	overflow: hidden;
+	background-color: var(--bg-400);
 
 	li a {
 		transition: 100ms;
@@ -10,4 +11,8 @@ div.paginator {
 		background-color: var(--bg-400) !important;
 		border-radius: 4px;
 	}
+}
+
+div.paginator > span.current:hover {
+	background-color: var(--bg-300) !important;
 }

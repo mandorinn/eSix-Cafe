@@ -350,6 +350,16 @@ div#c-posts div.notice.notice-child article.thumbnail .desc div *,
 }
 
 /* Posts page stuff */
+
+/* Commenting this suboptimal fix out because the issue that required this seems to not be happening anymore, might have been an e6 thing rather than a userstyle issueeee?
+Anyway, will try again later and reenable it if the issue pops back up*/
+/*New search results fix */
+/*
+body:not([re621="true"]).post-index .content {
+	width: 85vw;
+}
+*/
+
 search-content > post post-info {
 	background-color: var(--bg-400);
 }
