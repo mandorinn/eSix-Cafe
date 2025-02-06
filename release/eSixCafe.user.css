@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.2.3
+@version        2.2.4
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1835,61 +1835,60 @@ if themep == classic {
 		color: var(--user-banned) !important;
 	}
 	/* Sidebar searchbox */
-	div#page aside#sidebar section#search-box form, div#page aside#sidebar section#re621-insearch form, div#page aside#sidebar section#mode-box form {
+	div#page aside#sidebar section.post-search form, div#page aside#sidebar section#re621-insearch form, div#page aside#sidebar section#mode-box form {
 		display:flex;
-		flex-direction:column;
-		height: fit-content;
 		width: 100%;
 	}
-	#search-box {
+	.post-search {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position:relative;
+		border-radius:4px;
 	}
-	#search-box h1 {
+	.post-search h3 {
 		position: absolute;
 		font-size: 0rem!important;
 		width: 90%;
 		pointer-events: none;
 		z-index:9999;
 	}
-	#search-box h1 span {
-		position:relative;
+	.post-search span {
+		position:absolute;
 		font-size: .75rem;
 		pointer-events: auto;
-		right: 1.5rem;
-		top: .25rem;
+		right: 2rem;
+		top:.5rem;
 		display:flex;
 	}
-	.search-help a {
+	.post-search-help a {
 		width: 0rem;
 		height: 100%;
 		overflow:hidden;
-		margin-top: 1rem;
+		margin-top: .75rem;
 		margin-right: -1rem;
 	}
-	.search-help {
+	.post-search-help {
 		display: flex;
 		align-items: center;
 		width: 0;
 	}
-	.search-help a::before {
+	.post-search-help a::before {
 		content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 24.0 24.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10 -4.48 10 -10S17.52 2 12 2zM13 19h-2v-2h2v2zM15.07 11.25l-0.9 0.92C13.45 12.9 13 13.5 13 15h-2v-0.5c0 -1.1 0.45 -2.1 1.17 -2.83l1.24 -1.26c0.37 -0.36 0.59 -0.86 0.59 -1.41 0 -1.1 -0.9 -2 -2 -2s-2 0.9 -2 2L8 9c0 -2.21 1.79 -4 4 -4s4 1.79 4 4c0 0.88 -0.36 1.68 -0.93 2.25z' fill='%23ffffff'/%3E%3C/svg%3E");
 		height: 1rem;
 		width: 1rem;
 		position: absolute;
 		opacity: .3;
 	}
-	.search-help a:hover::before {
+	.post-search-help a:hover::before {
 		opacity: .5;
 		transition: 100ms;
 	}
-	.search-help::before:hover .search-help {
+	.post-search-help::before:hover .search-help {
 		font-size: .75rem;
 	}
-	div#page aside#sidebar section#search-box form input[type="text"], div#page aside#sidebar section#re621-insearch form input[type="text"], div#page aside#sidebar section#mode-box form input[type="text"] {
-		height: 2rem;
+	div#page section.post-search form textarea, div#page section#re621-insearch form textarea, div#page section#mode-box form textarea {
+		
 		width: 100%;
 		border-radius: 7.5px;
 		padding: .5rem 2rem .5rem .5rem;
@@ -1898,8 +1897,12 @@ if themep == classic {
 		border: 2px solid var(--bg-300);
 		margin-top: 1rem;
 		margin-inline: auto;
+		scrollbar-width:none !important;
 	}
-	#search-box button {
+	.post-search form.post-search-form textarea::placeholder {
+		color: transparent !important;
+	}
+	.post-search button {
 		display:none;
 	}
 	/* Fixes select box arrows being black */
@@ -2373,15 +2376,10 @@ if themep == classic {
 		top: auto;
 		left: auto;
 	}
-	#disable-all-blacklists, #re-enable-all-blacklists {
-		position: absolute;
-		top: .2rem;
-		left: 17ch;
-	}
-	#disable-all-blacklists *, #sidebar #blacklist-box #disable-all-blacklists {
+	#disable-all-blacklists *, #blacklist-box #disable-all-blacklists {
 		color: var(--remove-favorite)!important;
 	}
-	#re-enable-all-blacklists *, #sidebar #blacklist-box #re-enable-all-blacklists {
+	#re-enable-all-blacklists *, #blacklist-box #re-enable-all-blacklists {
 		color: var(--favorite-button)!important;
 	}
 	.styled-dtext div.blacklisted {
