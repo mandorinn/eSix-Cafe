@@ -4,15 +4,6 @@ div#c-uploads {
 			border-bottom: 2px solid var(--bg-300);
 		}
 
-		.col2 .fileinput-wrapper .fileinput {
-			background: var(--bg-400);
-			border: 2px dashed var(--bg-400);
-		}
-
-		.col2 .linkinput-wrapper .linkinput {
-			background: var(--bg-300);
-		}
-
 		input[type="file"] {
 			background-color: var(--bg-400);
 			border-radius: 4px;
@@ -51,4 +42,15 @@ div#c-uploads {
 			border-radius: 8px;
 		}
 	}
+}
+
+div#c-uploads div#a-new .col2 .fileinput-wrapper .fileinput,
+div#replacement-uploader .fileinput-wrapper .fileinput {
+	background: var(--bg-400);
+	border: 2px dashed var(--bg-400);
+}
+
+div#c-uploads div#a-new .col2 .linkinput-wrapper .linkinput,
+div#replacement-uploader .linkinput-wrapper .linkinput {
+	background: var(--bg-300);
 }
