@@ -438,17 +438,11 @@ search-content button.button.voteButton.fav:hover::before {
 	left: auto;
 }
 
-#disable-all-blacklists, #re-enable-all-blacklists {
-	position: absolute;
-	top: .2rem;
-	left: 17ch;
-}
-
-#disable-all-blacklists *, #sidebar #blacklist-box #disable-all-blacklists {
+#disable-all-blacklists *, #blacklist-box #disable-all-blacklists {
 	color: var(--remove-favorite) !important;
 }
 
-#re-enable-all-blacklists *, #sidebar #blacklist-box #re-enable-all-blacklists {
+#re-enable-all-blacklists *, #blacklist-box #re-enable-all-blacklists {
 	color: var(--favorite-button) !important;
 }
 

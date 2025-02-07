@@ -11,24 +11,3 @@ body {
 		}
 	}
 }
-
-div#page aside#sidebar {
-	section#re621-insearch form {
-		display: flex;
-		flex-direction: column;
-		height: fit-content;
-		width: 100%;
-	}
-
-	section#re621-insearch form input[type="text"] {
-		height: 2rem;
-		width: 100%;
-		border-radius: 7.5px;
-		padding: .5rem 2rem .5rem .5rem;
-		color: var(--base-text);
-		background-color: var(--bg-400);
-		border: 2px solid var(--bg-300);
-		margin-top: 1rem;
-		margin-inline: auto;
-	}
-}
