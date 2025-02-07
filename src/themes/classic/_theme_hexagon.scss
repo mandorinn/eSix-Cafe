@@ -1,34 +1,8 @@
 body {
 	--themeName: "Hexagon";
-
+	--thin-scrollbar: var(--true);
 	--main-page-background: url(https://static1.e621.net/data/d2/ca/d2cacf82e3e5c0f462da7d8753806ec6.jpg) !important;
 	--artist-credit: "Background by Coffeesoda";
-
-	/* Tag Categories */
-	--tag-cat-0: #b4c7d9;
-	--tag-cat-0-hover: #e9f2fa;
-	--tag-cat-1: #f2ac08;
-	--tag-cat-1-hover: #fbd67f;
-	--tag-cat-2: #c0c0c0;
-	--tag-cat-2-hover: #71706e;
-	--tag-cat-3: #d0d;
-	--tag-cat-3-hover: #ff5eff;
-	--tag-cat-4: #0a0;
-	--tag-cat-4-hover: #2bff2b;
-	--tag-cat-5: #ed5d1f;
-	--tag-cat-5-hover: #f6b295;
-	--tag-cat-6: #ff3d3d;
-	--tag-cat-6-hover: #ffbdbd;
-	--tag-cat-7: #fff;
-	--tag-cat-7-hover: #666;
-	--tag-cat-8: #228822;
-	--tag-cat-8-hover: #5fdb5f;
-
-
-
-
-
-	--thin-scrollbar: var(--true);
 	--main-font: Yu Gothic UI, Arial;
 	--bg-300: #152f56;
 	--bg-400: #0e203c;
@@ -70,6 +44,24 @@ body {
 	--mode-blacklist:#242424;
 	--mode-download: #4d0054;
 	--mode-fullscreen: #194f4d;
+	--tag-cat-0: #b4c7d9;
+	--tag-cat-0-hover: #e9f2fa;
+	--tag-cat-1: #f2ac08;
+	--tag-cat-1-hover: #fbd67f;
+	--tag-cat-2: #c0c0c0;
+	--tag-cat-2-hover: #71706e;
+	--tag-cat-3: #d0d;
+	--tag-cat-3-hover: #ff5eff;
+	--tag-cat-4: #0a0;
+	--tag-cat-4-hover: #2bff2b;
+	--tag-cat-5: #ed5d1f;
+	--tag-cat-5-hover: #f6b295;
+	--tag-cat-6: #ff3d3d;
+	--tag-cat-6-hover: #ffbdbd;
+	--tag-cat-7: #fff;
+	--tag-cat-7-hover: #666;
+	--tag-cat-8: #228822;
+	--tag-cat-8-hover: #5fdb5f;
 	--user-member: var(--base-text);
 	--user-member-hover: var(--base-text-hover);
 	--user-privileged: #4afc4a;
