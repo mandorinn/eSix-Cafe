@@ -225,7 +225,7 @@ a.user-blocked, a.user-banned {
 	}
 }
 
-@if $name-rank-border-colors {
+@if $name-rank-border-colors == 1 {
 	:root {
 		--mobileRankOpacity: 0.2;
 	}

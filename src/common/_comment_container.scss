@@ -26,7 +26,7 @@
 			margin-top: 1.5em !important;
 		}
 
-		@if $comment-buttons {
+		@if $comment-buttons == 1 {
 			.content-menu {
 				margin: .5rem 0;
 				margin-top: 1rem;
@@ -363,11 +363,11 @@
 	}
 }
 
-@if $profile-picture-circle {
+@if $profile-picture-circle == 1 {
 	:root {
 		--avatar-border-radius: 50%;
 	}
-} else {
+} @else {
 	:root {
 		--avatar-border-radius: 2.5%;
 	}
@@ -377,7 +377,7 @@
 	}
 }
 
-@if $name-rank-border-colors {
+@if $name-rank-border-colors == 1 {
 	body[data-th-main="hexagon"] {
 		.author-info:has(.user-member) .post-thumbnail {
 			border-color: var(--user-member) !important;

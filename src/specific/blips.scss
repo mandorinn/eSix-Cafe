@@ -1,6 +1,6 @@
 div#c-blips {
 	article.blip {
-		@if $comment-buttons {
+		@if $comment-buttons == 1 {
 			.content-menu menu {
 				gap: .25rem;
 			}
