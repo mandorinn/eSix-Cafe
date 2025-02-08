@@ -1,3 +1,4 @@
+@if $theme-pack == "classic" {
 body[data-th-main="serpent"] {
 	--themeName:"Serpent";
 	--bg: #f6eb86;
@@ -85,4 +86,5 @@ body[data-th-main="serpent"] {
 	--button-text: #000;
 	--button-text-hover: #222;
 	--button-text-hover-secondary: #222;
+}
 }

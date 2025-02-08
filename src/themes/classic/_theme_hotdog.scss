@@ -1,3 +1,4 @@
+@if $theme-pack == "classic" {
 body[data-th-main="hotdog"] {
 	--themeName:"Hotdog";
 	--bg: #f00;
@@ -85,4 +86,5 @@ body[data-th-main="hotdog"] {
 	--button-text: #000;
 	--button-text-hover: #222;
 	--button-text-hover-secondary: #222;
+}
 }

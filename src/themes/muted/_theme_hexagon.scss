@@ -1,3 +1,4 @@
+@if $theme-pack == "muted" {
 body {
 	--themeName: "Classic blue";
 	--thin-scrollbar: var(--true);
@@ -92,4 +93,5 @@ body {
 	--true: thin;
 	scrollbar-width: var(--thin-scrollbar);
 	scrollbar-color: #3c3c3c #222;
+}
 }

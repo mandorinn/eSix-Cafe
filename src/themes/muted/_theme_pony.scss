@@ -1,3 +1,4 @@
+@if $theme-pack == "muted" {
 body[data-th-main="pony"] {
 	--themeName: "Pony";
 	--bg-300: #604a67;
@@ -81,4 +82,5 @@ body[data-th-main="pony"] {
 	--button-text: #c3ccd4;
 	--button-text-hover: #c3ccd4;
 	--button-text-hover-secondary: #fff;
+}
 }

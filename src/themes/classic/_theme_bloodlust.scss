@@ -1,3 +1,4 @@
+@if $theme-pack == "classic" {
 body[data-th-main="bloodlust"] {
 	--themeName:"Bloodlust";
 	--bg-300: #333;
@@ -85,4 +86,5 @@ body[data-th-main="bloodlust"] {
 	--button-text: #fff;
 	--button-text-hover: #fff;
 	--button-text-hover-secondary: #fff;
+}
 }

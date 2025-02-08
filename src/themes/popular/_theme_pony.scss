@@ -1,3 +1,4 @@
+@if $theme-pack == "popular" {
 body[data-th-main="pony"] {
 	--themeName: "Rosé Pine";
 	--bg-300: #393552;
@@ -81,4 +82,5 @@ body[data-th-main="pony"] {
 	--button-text: #c3ccd4;
 	--button-text-hover: #c3ccd4;
 	--button-text-hover-secondary: #f5f4ff;
+}
 }

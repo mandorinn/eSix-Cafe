@@ -1,3 +1,4 @@
+@if $theme-pack == "popular" {
 body[data-th-main="hotdog"] {
 	--themeName: "Gruvbox";
 	--bg-300: #47403d;
@@ -81,4 +82,5 @@ body[data-th-main="hotdog"] {
 	--button-text: #d6bbae;
 	--button-text-hover: #d6bbae;
 	--button-text-hover-secondary: #fbf1c7;
+}
 }

@@ -1,3 +1,4 @@
+@if $theme-pack == "muted" {
 body[data-th-main="bloodlust"] {
 	--themeName: "Discord-esque";
 	--bg-300: #36393e;
@@ -81,4 +82,5 @@ body[data-th-main="bloodlust"] {
 	--button-text: #c3ccd4;
 	--button-text-hover: #c3ccd4;
 	--button-text-hover-secondary: #fff;
+}
 }

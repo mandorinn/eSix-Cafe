@@ -1,3 +1,4 @@
+@if $theme-pack == "muted" {
 body[data-th-main="serpent"] {
 	--themeName: "Forest";
 	--bg-300: #3e5341;
@@ -83,4 +84,5 @@ body[data-th-main="serpent"] {
 	--button-text-hover-secondary: #fff;
 	--true: thin;
 	scrollbar-width: var(--thin-scrollbar);
+}
 }

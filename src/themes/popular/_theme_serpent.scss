@@ -1,3 +1,4 @@
+@if $theme-pack == "popular" {
 body[data-th-main="serpent"] {
 	--themeName: "Everforest";
 	--bg-300: #3d484d;
@@ -83,4 +84,5 @@ body[data-th-main="serpent"] {
 	--button-text-hover-secondary: #eadec2;
 	--true: thin;
 	scrollbar-width: var(--thin-scrollbar);
+}
 }
