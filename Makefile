@@ -96,6 +96,8 @@ eSixCafeStylus:
 
 	sed -i 's^\/\*@-moz-document domain^@-moz-document domain^g' release/eSixCafe.user.css
 	sed -i 's^e926.net\") {\*\/^e926.net\") {^g' release/eSixCafe.user.css
+	sed -i 's^\/\*\|Stylus\|^^g' release/eSixCafe.user.css
+	sed -i 's^\|Stylus\|\*\/^^g' release/eSixCafe.user.css
 	echo "}" >>release/eSixCafe.user.css
 
 clean:
