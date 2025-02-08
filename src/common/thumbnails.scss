@@ -18,6 +18,11 @@ article.thumbnail img {
 
 article.thumbnail .desc {
 	background-color: var(--bg-400) !important;
+
+	@if $post-score-title == 1 {
+		display: block;
+		text-align: center;
+	}
 }
 
 article.thumbnail .desc a::before {
