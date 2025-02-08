@@ -1,4 +1,4 @@
-footer#page-footer {
+footer.footer-wrapper {
 	margin: 0rem 0 0 0;
 	border-radius: 0;
 	background-color: var(--bg) !important;
@@ -22,5 +22,9 @@ footer#page-footer {
 				z-index: 2;
 			}
 		}
+	}
+
+	.footer-left {
+		border-right: 1px solid var(--header-link);
 	}
 }
