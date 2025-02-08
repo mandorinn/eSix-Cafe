@@ -24,6 +24,26 @@ article.thumbnail .desc a::before {
 	display: none;
 }
 
+article.thumbnail .desc .score {
+	margin-left: 0.5em;
+}
+
+article.thumbnail .desc .favorites {
+	margin-left: 0.5em;
+}
+
+article.thumbnail .desc .comments {
+	margin-left: 0.5em;
+}
+
+article.thumbnail .desc .rating {
+	margin-left: 0.5em;
+}
+
+article.thumbnail .desc .extras {
+	margin-left: 0.5em;
+}
+
 article.thumbnail[data-tags~="animated"] > a::before, article.thumbnail[data-file-ext~="webm"] > a::before {
 	background-color: var(--bg-300) !important;
 	color: var(--base-text) !important;
