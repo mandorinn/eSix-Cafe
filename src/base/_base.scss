@@ -1,3 +1,27 @@
+/* ==UserStyle==
+@name		eSix Café
+@namespace	mandorinn
+@version	3.0.0
+@description	Muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
+@author		mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)], edshot99 [(https://git.groovyexpress.com/edshot99)]
+@preprocessor	stylus
+
+@var select themep "Theme Pack" {
+	"Muted": "muted",
+	"Classic": "classic",
+	"Popular": "pThemes"
+}
+@var select roundness "Profile picture shape" {
+	"Circle": "circle",
+	"Square": "square"
+}
+@var checkbox buttons "Comment Buttons" 1
+@var checkbox borderRank "Name Rank Border Colors" 1
+
+==/UserStyle== */
+
+/*@-moz-document domain("e621.net"), domain("e926.net") {*/
+
 body {
 	background-color: var(--bg-300) !important;
 	background-image: none !important;

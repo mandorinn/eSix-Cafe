@@ -5,6 +5,10 @@
 @import "base/themable";
 
 @import "common/comment_container";
+@import "common/comment_container_buttons";
+@import "common/comment_container_profile_picture_circle";
+@import "common/comment_container_profile_picture_square";
+@import "common/comment_container_rank_border";
 @import "common/footer";
 @import "common/helper_classes";
 @import "common/scores";
@@ -16,6 +20,8 @@
 @import "common/forms.scss";
 @import "common/jquery_ui_custom.scss";
 @import "common/main_layout.scss";
+@import "common/main_layout_theme_classic.scss";
+@import "common/main_layout_theme_muted.scss";
 @import "common/navigation.scss";
 @import "common/news.scss";
 @import "common/notices.scss";
@@ -28,7 +34,7 @@
 
 @import "specific/misc/challenge.scss";
 @import "specific/misc/cloudflare.scss";
-@import "specific/misc/extensions.scss";
+/*@import "specific/misc/extensions.scss";*/
 @import "specific/misc/maintenance.scss";
 
 @import "specific/re621/components/_modal.scss";
@@ -41,7 +47,9 @@
 
 @import "specific/admin_dashboards.scss";
 @import "specific/blips.scss";
+@import "specific/blips_buttons.scss";
 @import "specific/comments.scss";
+@import "specific/comments_rank_border.scss";
 @import "specific/error.scss";
 @import "specific/favorites.scss";
 @import "specific/forum.scss";

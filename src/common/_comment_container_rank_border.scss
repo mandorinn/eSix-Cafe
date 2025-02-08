@@ -1,0 +1,11 @@
+@if $name-rank-border-colors == 1 {
+	body[data-th-main="hexagon"] {
+		.author-info:has(.user-member) .post-thumbnail {
+			border-color: var(--user-member) !important;
+		}
+
+		.avatar .post-thumbnail {
+			background-color: var(--user-member);
+		}
+	}
+}

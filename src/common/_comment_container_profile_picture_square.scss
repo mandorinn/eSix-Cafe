@@ -1,0 +1,9 @@
+@if $profile-picture-circle == 0 {
+	:root {
+		--avatar-border-radius: 2.5%;
+	}
+
+	.avatar .post-thumbnail {
+		background-color: var(--elements-highlight);
+	}
+}

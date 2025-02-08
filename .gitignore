@@ -1,5 +1,6 @@
 node_modules/
 release/
+src/eSixCafe.user.scss
 package.json
 yarn.lock
 

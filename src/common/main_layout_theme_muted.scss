@@ -1,0 +1,6 @@
+@if $theme-pack == "muted" {
+	::selection {
+		color: var(--bg);
+		background: var(--elements-highlight);
+	}
+}

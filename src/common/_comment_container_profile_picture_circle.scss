@@ -1,0 +1,5 @@
+@if $profile-picture-circle == 1 {
+	:root {
+		--avatar-border-radius: 50%;
+	}
+}

@@ -1,0 +1,26 @@
+@if $name-rank-border-colors == 1 {
+	:root {
+		--mobileRankOpacity: 0.2;
+	}
+
+	@each $rank-name, $rank-value in $rank-listing {
+		.author-info:has(.user-#{$rank-name}) .post-thumbnail {
+			border-color: var(--user-#{$rank-value}) !important;
+			background-color: var(--user-#{$rank-value}) !important;
+
+			&::after {
+				content: '';
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				z-index: -1;
+				opacity: var(--mobileRankOpacity);
+				background-color: var(--user-#{$rank-value});
+			}
+
+			@media screen and (max-width: 800px) {
+				background-color: transparent !important;
+			}
+		}
+	}
+}

@@ -149,17 +149,3 @@ body {
 ::-webkit-scrollbar-thumb {
 	background: var(--bg-300);
 }
-
-@if $theme-pack == "classic" {
-	::selection {
-		color: var(--bg);
-		background: var(--header-link);
-	}
-}
-
-@if $theme-pack == "muted" {
-	::selection {
-		color: var(--bg);
-		background: var(--elements-highlight);
-	}
-}

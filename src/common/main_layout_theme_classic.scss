@@ -1,0 +1,6 @@
+@if $theme-pack == "classic" {
+	::selection {
+		color: var(--bg);
+		background: var(--header-link);
+	}
+}
