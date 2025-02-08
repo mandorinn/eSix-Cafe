@@ -209,6 +209,18 @@ div#c-posts {
 			color: var(--base-text) !important;
 		}
 	}
+
+	div#a-index {
+		.post-index {
+			.search, .sidebar, .content {
+				background-color: var(--bg-300);
+			}
+
+			.search .search-controls span {
+				color: var(--base-text);
+			}
+		}
+	}
 }
 
 div#avoid-posting-notice {
