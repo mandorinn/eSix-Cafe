@@ -44,7 +44,9 @@ article.thumbnail .desc .extras {
 	margin-left: 0.5em;
 }
 
-article.thumbnail[data-tags~="animated"] > a::before, article.thumbnail[data-file-ext~="webm"] > a::before {
+article.thumbnail[data-tags~="animated"] > a::before,
+article.thumbnail[data-file-ext~="webm"] > a::before,
+article.thumbnail[data-file-ext~="mp4"] > a::before {
 	background-color: var(--bg-300) !important;
 	color: var(--base-text) !important;
 	border: 2px solid var(--bg-400) !important;
