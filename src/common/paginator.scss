@@ -1,4 +1,4 @@
-div.paginator {
+nav.pagination {
 	max-width: 100vw;
 	overflow: hidden;
 	background-color: var(--bg-400);
@@ -13,6 +13,6 @@ div.paginator {
 	}
 }
 
-div.paginator > span.current:hover {
+nav.pagination > span.current:hover {
 	background-color: var(--bg-300) !important;
 }
