@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.2.4
+@version        2.2.5
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1389,21 +1389,87 @@ if themep == classic {
 		margin:0;
 		max-width: 100vw;
 	}
+	body[data-th-extra] div#page div[id*="c-"] {
+		isolation: isolate;
+	}
+	body[data-th-extra] div#page div[id*="c-"]::before {
+		content:'';
+		position:absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-repeat: repeat-x;
+		height: 10%;
+		background-position: top;
+		z-index: -1;
+	}
+	body[data-th-extra="spring"] div#page div[id*="c-"]::before {
+		background-image: url('packs/static/spring_top-264aa75af9d983fe396a.png'),
+		url("packs/static/spring_top_sky-5f08767e7576e85cd4d8.png");
+		background-repeat: no-repeat, repeat-x;
+		background-position: top right, top;
+	}
+	body[data-th-extra="winter"] div#page div[id*="c-"]::before {
+		background-image: url("packs/static/snow_top-993aff352a5f50cd1673.png");
+	}
+	body[data-th-extra="aurora"] div#page div[id*="c-"]::before {
+		background-image: url("packs/static/aurora-351b89e14fb8c01956d2.png");
+	}
+	body[data-th-extra="hexagons"] div#page div[id*="c-"]::before {
+		background-image: url("packs/static/hex-b4fc28b5d7c3eb96e7b0.png");
+	}
+	body[data-th-extra="space"] div#page div[id*="c-"]::before {
+		background-image: url("packs/static/space-6250f9c96a58586bf97c.png");
+	}
+	body[data-th-extra="stars"] div#page div[id*="c-"]::before {
+		background-image: url("packs/static/stars-d60a76a33afd5f7a498a.png");
+	}
+	body[data-th-extra] div#page div[id*="c-"]::after {
+		content:'';
+		position:absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-repeat: repeat-x;
+		height: 10%;
+		background-position: bottom;
+		z-index: -1;
+	}
+	body[data-th-extra="spring"] div#page div[id*="c-"]::after {
+		background-image: url("packs/static/spring_bottom-35c3afb217009911e2a9.png"),
+		url('packs/static/spring_bottom_fox-b885e26f5a2f59d4372f.png');
+		background-repeat: repeat-x,no-repeat;
+		background-position: bottom, right;
+	}
+	body[data-th-extra="autumn"] div#page div[id*="c-"]::after {
+		background-image: url("packs/static/leaves_bottom-937df1c91ac26693dab2.png");
+	}
+	body[data-th-extra="winter"] div#page div[id*="c-"]::after {
+		background-image: url("packs/static/snow_bottom-816f2a5c6b7d50f9e8f5.png");
+	}
 	div#page {
 		background-color: var(--bg-300)!important;
 		margin:0!important;
 		border-radius:0!important;
 		padding-top: 1.5rem;
 		padding-bottom: 4rem;
+		position:relative;
+	}
+	.post-index .content {
+		border-radius: 0 !important;
+		background: none !important;
 	}
 	#ad-leaderboard {
 		width:fit-content;
 		margin-inline:auto;
 	}
-	footer#page-footer {
+	footer.footer-wrapper {
 		margin: 0rem 0 0 0;
 		border-radius:0;
 		background-color: var(--bg)!important;
+	}
+	footer.footer-wrapper .footer-left {
+		border-right-color: var(--base-text)
 	}
 	span.footer-logo {
 		a img {
@@ -1649,17 +1715,35 @@ if themep == classic {
 	nav.navigation .nav-secondary {
 		background-color: var(--bg);
 	}
-	nav.navigation i, nav.navigation a:is([id*="nav"], [id*="blacklist"]) {
+	nav.navigation i, nav.navigation a svg, nav.navigation a:is([id*="nav"], [id*="blacklist"]) {
 		color: var(--header-link) !important;
 	}
-	nav.navigation i:hover, nav.navigation a:is([id*="nav"], [id*="blacklist"]):hover {
+	nav.navigation i:hover, nav.navigation a:hover svg nav.navigation a:is([id*="nav"], [id*="blacklist"]):hover {
 		color: var(--header-link-hover) !important;
 	}
 	nav.navigation menu.nav-tools {
 		background-color: var(--bg-400) !important;
-		border-radius: 0 0 4px 4px;
+		border-radius: 4px;
 		border: 2px solid var(--bg-300);
-		border-top: 0px solid transparent;
+	}
+	nav.navigation .nav-controls {
+		background: none !important;
+	}
+	nav.navigation .nav-controls a.simple-avatar .simple-avatar-button .simple-avatar-image {
+		background-color: transparent !important;
+		display:grid;
+		place-items: center;
+		border: 2px solid var(--bg-300);
+		border-radius: var(--avatar-border-radius);
+		transition: 200ms;
+		&:hover {
+			border-color: var(--base-text);
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			border-radius: var(--avatar-border-radius);
+		}
 	}
 	/* Re621 menus */
 	.ui-widget-content.ui-widget-content {
@@ -1724,6 +1808,10 @@ if themep == classic {
 	}
 
 	/* Sidebar */
+	.post-index .sidebar.sidebar {
+		background-color: transparent !important;
+		box-shadow: none !important;
+	}
 	div#c-posts div#a-index aside#sidebar, div#c-posts div#a-show aside#sidebar, div#c-favorites div#a-index aside#sidebar {
 		width: 14.5rem;
 	}
@@ -1835,6 +1923,10 @@ if themep == classic {
 		color: var(--user-banned) !important;
 	}
 	/* Sidebar searchbox */
+	.post-index .search {
+		background: none !important;
+		box-shadow: none !important;
+	}
 	div#page aside#sidebar section.post-search form, div#page aside#sidebar section#re621-insearch form, div#page aside#sidebar section#mode-box form {
 		display:flex;
 		width: 100%;
@@ -1903,7 +1995,7 @@ if themep == classic {
 		color: transparent !important;
 	}
 	.post-search button {
-		display:none;
+		display:none !important;
 	}
 	/* Fixes select box arrows being black */
 	select, select:active, select:focus, select:hover, select.button.btn-neutral, select.button.btn-neutral:active, select.button.btn-neutral:focus, select.button.btn-neutral:hover {
