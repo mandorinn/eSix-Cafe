@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.2.7
+@version        2.2.8
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1454,6 +1454,33 @@ if themep == classic {
 		padding-top: 1.5rem;
 		padding-bottom: 4rem;
 		position:relative;
+	}
+	div#page div#news {
+		z-index: 999 !important;
+		border-radius: 8px;
+		border: 3px solid var(--bg-300);
+		&.open #news-header {
+			background: var(--bg-400);
+			margin-bottom: .5rem;
+			
+		}
+		& #news-body p {
+			font-size: 1rem !important;
+		}
+		& #news-body p:has(a[href="https://www.defendonlineprivacy.com/az/action.php"]) {
+			font-size: 1.25rem !important;
+			font-style: italic;
+			font-weight: bold;
+		}
+		& a[href="https://www.defendonlineprivacy.com/az/action.php"] {
+			font-weight: bold;
+			font-style: italic;
+			color: var(--remove-favorite) !important;
+			font-size: 1.5rem !important;
+			&:hover {
+				color: var(--remove-favorite-hover) !important;
+			}
+		}
 	}
 	.post-index .content {
 		border-radius: 0 !important;
