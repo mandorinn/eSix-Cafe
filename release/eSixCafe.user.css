@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.2.8
+@version        2.2.9
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1399,7 +1399,7 @@ if themep == classic {
 		left: 0;
 		right: 0;
 		background-repeat: repeat-x;
-		height: 10%;
+		height: 250px;
 		background-position: top;
 		z-index: -1;
 	}
@@ -1431,7 +1431,7 @@ if themep == classic {
 		left: 0;
 		right: 0;
 		background-repeat: repeat-x;
-		height: 10%;
+		height: 250px;
 		background-position: bottom;
 		z-index: -1;
 	}
@@ -1439,7 +1439,7 @@ if themep == classic {
 		background-image: url("packs/static/spring_bottom-35c3afb217009911e2a9.png"),
 		url('packs/static/spring_bottom_fox-b885e26f5a2f59d4372f.png');
 		background-repeat: repeat-x,no-repeat;
-		background-position: bottom, right;
+		background-position: bottom, bottom right;
 	}
 	body[data-th-extra="autumn"] div#page div[id*="c-"]::after {
 		background-image: url("packs/static/leaves_bottom-937df1c91ac26693dab2.png");
@@ -1475,6 +1475,7 @@ if themep == classic {
 		& a[href="https://www.defendonlineprivacy.com/az/action.php"] {
 			font-weight: bold;
 			font-style: italic;
+			text-decoration:underline;
 			color: var(--remove-favorite) !important;
 			font-size: 1.5rem !important;
 			&:hover {
@@ -1756,7 +1757,7 @@ if themep == classic {
 	nav.navigation .nav-controls {
 		background: none !important;
 	}
-	nav.navigation .nav-controls a.simple-avatar .simple-avatar-button .simple-avatar-image {
+	nav.navigation .nav-controls a.simple-avatar .avatar-button .avatar-image {
 		background-color: transparent !important;
 		display:grid;
 		place-items: center;
@@ -2315,7 +2316,9 @@ if themep == classic {
 	/*body:not([re621="true"]).post-index .content {
 		width:85vw;
 	}*/
-
+	search-content[posts="0"]:not(:has(post))::before {
+		content: "Nobody here but us cats! 😺" !important;
+	}
 	search-content > post post-info{
 		background-color: var(--bg-400);
 	}
@@ -3902,19 +3905,26 @@ if themep == classic {
 			mix-blend-mode: luminosity;
 		}
 	}
-	div.paginator {
+	nav.pagination {
 		max-width: 100vw;
 		overflow:hidden;
 		background-color: var(--bg-400);
+		border: 3px solid var(--bg-400);
 	}
-	div.paginator li a {
+	nav.pagination li a {
 		transition: 100ms;
 	}
-	div.paginator li a:hover {
+	nav.pagination li a:hover {
 		background-color: var(--bg-400)!important;
 		border-radius: 4px;
 	}
-	div.paginator > span.current:hover {
+	nav.pagination span.current {
+		background-color: var(--bg) !important;
+	}
+	nav.pagination span.prev:hover {
+		background-color: initial;
+	}
+	nav.pagination a:not(.current, .prev):hover {
 		background-color: var(--bg-300) !important;
 	}
 	table.striped thead tr, table.table thead tr {
@@ -4159,10 +4169,31 @@ if themep == classic {
 		background-color: rgba(255,255,255,.035)!important;
 	}
 /* Settings Page */
-	.simple_form {
+	.simple_form{
 		background: var(--bg) !important;
 		border-radius: 8px;
 		border: 4px solid var(--bg-400);
+	}
+	tabs-menu * {
+		border-bottom: none !important;
+	}
+	tabs-content tab-group {
+		background-color: var(--bg-300);
+	}
+	tabs-content tab-entry {
+		background-color: var(--bg-400);
+	}
+	tab-submit, textarea[class], input[type] {
+		background-color: var(--bg) !important;
+	}
+	label.st-toggle {
+		background-color: var(--base-text);
+	}
+	label.st-toggle::after {
+		background-color: var(--remove-favorite);
+	}
+	input[type="checkbox"].st-toggle:checked + label.st-toggle::after {
+		background-color: var(--favorite-button);
 	}
 	div#c-sessions .session_info,
 	div#c-maintenance-user-login-reminders .session_info,
@@ -4398,6 +4429,10 @@ if themep == classic {
 		.dialog-header {
 			border-bottom: 1px solid var(--bg);
 			background-color: var(--bg-400) !important;
+		}
+		.guest-warning-dialog .dialog-content,
+ 		.guest-warning-dialog .dialog-footer {
+			background: var(--bg) !important;
 		}
 	}
 	/* Cloudflare error page */
