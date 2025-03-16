@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.2.9
+@version        2.3.0
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -40,6 +40,10 @@ if roundness == circle {
 	:root {
 		--avatar-border-radius: 50%;
 	}
+	 nav.navigation .simple-avatar .avatar-image {
+		 border-radius: 50% 0 0 50% !important;
+		 overflow:hidden;
+	 }
 }
 
 
@@ -1708,6 +1712,7 @@ if themep == classic {
 	}
 	nav .nav-logo {
 		color: rgb(0,0,0,0);
+		background-color: transparent !important;
 	}
 	nav .nav-logo::before {
 		pointer-events:none;
@@ -1731,7 +1736,7 @@ if themep == classic {
 	
 	/* New Header styling */
 	
-	nav.navigation, nav.navigation menu.nav-logo {
+	nav.navigation {
 		background-color: var(--bg);
 	}
 	nav menu.nav-primary, nav menu.nav-help  {
@@ -1757,21 +1762,55 @@ if themep == classic {
 	nav.navigation .nav-controls {
 		background: none !important;
 	}
-	nav.navigation .nav-controls a.simple-avatar .avatar-button .avatar-image {
-		background-color: transparent !important;
+	nav.navigation menu.nav-controls a.simple-avatar.nav-controls-profile span.avatar-image {
+		background-color: var(--bg-300) !important;
 		display:grid;
 		place-items: center;
-		border: 2px solid var(--bg-300);
-		border-radius: var(--avatar-border-radius);
 		transition: 200ms;
-		&:hover {
-			border-color: var(--base-text);
-		}
 		& img {
-			width: 100%;
-			height: 100%;
-			border-radius: var(--avatar-border-radius);
+			width:98%;
+			height: 98%;
+			border-radius: var(--avatar-border-radius) !important;
+			border: 2px solid var(--bg-300);
 		}
+	}
+	nav.navigation menu.nav-controls a:has(.avatar-image:hover, .avatar-more:hover) span.avatar-image img,
+  	nav.navigation menu.nav-controls:has(span[class="simple-avatar-menu"]) a span.avatar-image img{
+			border-color: var(--base-text) !important;
+	}
+	nav.navigation.navigation .simple-avatar .avatar-image::before {
+		color: var(--base-text) !important;
+	}
+	nav li:has([data-updates="1"]) * {
+		color:var(--flagged) !important;
+		
+		&:hover {
+			color: var(--remove-favorite-hover) !important;
+		}
+	}
+	nav li:has([data-loading="true"]) * {
+		color:var(--base-text-faded) !important;
+		
+		&:hover {
+			color: var(--base-text-faded) !important;
+		}
+	}
+	nav.navigation.navigation .avatar-more {
+		background-color: var(--bg-300) !important;
+		padding-left:.25rem;
+	}
+	nav.navigation .simple-avatar-menu.simple-avatar-menu {
+		background-color: var(--bg) !important;
+		box-shadow: none;
+		border: 2px solid var(--bg-400);
+		&[data-has-mail="true"] .simple-avatar-dmails::before {
+			box-shadow: none;
+			background:var(--flagged);
+		}
+		& hr {
+			color: var(--base-text-faded);
+		}
+		
 	}
 	/* Re621 menus */
 	.ui-widget-content.ui-widget-content {
@@ -5000,6 +5039,28 @@ if themep == classic {
 
 @-moz-document url-prefix("https://e621.net/users/"), url-prefix("https://e926.net/users/") {
 	/* Users page */
+	body.c-users.a-show .profile-user-info {
+		background-color: var(--bg-400) !important;
+	}
+	body.c-users.a-show .profile-user-info .profile-line {
+		border-color: var(--base-text-faded) !important;
+		& span {
+			color: var(--base-text) !important;
+		}
+	}
+	body.c-users.a-show .profile-joined.profile-joined {
+		border-radius: 2px !important;
+		padding: 0 .5rem;
+		width:fit-content;
+		background: var(--bg);
+		border: 2px solid var(--bg-400);
+		color: var(--base-text);
+	}
+	/*will have to come back and add proper colors to thissss */
+	body.c-users.a-show .profile-rank span.level-badge[class*="level"] {
+		background-color: var(--bg) !important;
+		color:var(--base-text);
+	}
 	div#c-users div#a-show .profile-stats {
 		background-color: var(--bg-400)!important;
 	}
@@ -5029,6 +5090,11 @@ if themep == classic {
 		justify-content: center;
 		width: fit-content;
 		margin-inline: auto;
+	}
+	.profile-avatar .avatar-image {
+		border-radius: var(--avatar-border-radius) !important;
+		background: var(--bg-400);
+		overflow:hidden;
 	}
 	.post-thumbnail a img {
 		object-fit: cover;
