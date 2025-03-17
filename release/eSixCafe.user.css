@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.3.0
+@version        2.3.1
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1781,7 +1781,7 @@ if themep == classic {
 	nav.navigation.navigation .simple-avatar .avatar-image::before {
 		color: var(--base-text) !important;
 	}
-	nav li:has([data-updates="1"]) * {
+	nav li:has([data-updates]:not([data-updates="0"])) * {
 		color:var(--flagged) !important;
 		
 		&:hover {
