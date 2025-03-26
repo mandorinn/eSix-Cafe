@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.3.1
+@version        2.3.2
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1408,25 +1408,25 @@ if themep == classic {
 		z-index: -1;
 	}
 	body[data-th-extra="spring"] div#page div[id*="c-"]::before {
-		background-image: url('packs/static/spring_top-264aa75af9d983fe396a.png'),
-		url("packs/static/spring_top_sky-5f08767e7576e85cd4d8.png");
+		background-image: url("https://e621.net/packs/static/spring_top-264aa75af9d983fe396a.png"),
+		url("https://e621.net/packs/static/spring_top_sky-5f08767e7576e85cd4d8.png");
 		background-repeat: no-repeat, repeat-x;
 		background-position: top right, top;
 	}
 	body[data-th-extra="winter"] div#page div[id*="c-"]::before {
-		background-image: url("packs/static/snow_top-993aff352a5f50cd1673.png");
+		background-image: url("https://e621.net/packs/static/snow_top-993aff352a5f50cd1673.png");
 	}
 	body[data-th-extra="aurora"] div#page div[id*="c-"]::before {
-		background-image: url("packs/static/aurora-351b89e14fb8c01956d2.png");
+		background-image: url("https://e621.net/packs/static/aurora-351b89e14fb8c01956d2.png");
 	}
 	body[data-th-extra="hexagons"] div#page div[id*="c-"]::before {
-		background-image: url("packs/static/hex-b4fc28b5d7c3eb96e7b0.png");
+		background-image: url("https://e621.net/packs/static/hex-b4fc28b5d7c3eb96e7b0.png");
 	}
 	body[data-th-extra="space"] div#page div[id*="c-"]::before {
-		background-image: url("packs/static/space-6250f9c96a58586bf97c.png");
+		background-image: url("https://e621.net/packs/static/space-6250f9c96a58586bf97c.png");
 	}
 	body[data-th-extra="stars"] div#page div[id*="c-"]::before {
-		background-image: url("packs/static/stars-d60a76a33afd5f7a498a.png");
+		background-image: url("https://e621.net/packs/static/stars-d60a76a33afd5f7a498a.png");
 	}
 	body[data-th-extra] div#page div[id*="c-"]::after {
 		content:'';
@@ -1440,16 +1440,16 @@ if themep == classic {
 		z-index: -1;
 	}
 	body[data-th-extra="spring"] div#page div[id*="c-"]::after {
-		background-image: url("packs/static/spring_bottom-35c3afb217009911e2a9.png"),
-		url('packs/static/spring_bottom_fox-b885e26f5a2f59d4372f.png');
+		background-image: url("https://e621.net/packs/static/spring_bottom-35c3afb217009911e2a9.png"),
+		url('https://e621.net/packs/static/spring_bottom_fox-b885e26f5a2f59d4372f.png');
 		background-repeat: repeat-x,no-repeat;
 		background-position: bottom, bottom right;
 	}
 	body[data-th-extra="autumn"] div#page div[id*="c-"]::after {
-		background-image: url("packs/static/leaves_bottom-937df1c91ac26693dab2.png");
+		background-image: url("https://e621.net/packs/static/leaves_bottom-937df1c91ac26693dab2.png");
 	}
 	body[data-th-extra="winter"] div#page div[id*="c-"]::after {
-		background-image: url("packs/static/snow_bottom-816f2a5c6b7d50f9e8f5.png");
+		background-image: url("https://e621.net/packs/static/snow_bottom-816f2a5c6b7d50f9e8f5.png");
 	}
 	div#page {
 		background-color: var(--bg-300)!important;
@@ -1928,53 +1928,61 @@ if themep == classic {
 		color: var(--base-text)!important;
 		opacity: .5;
 	}
-	#sidebar .general-tag-list a {
+	#sidebar .tag-general a {
 		color:var(--tag-cat-1)!important;
 	}
-	#sidebar .general-tag-list a:hover {
+	#sidebar .tag-general a:hover {
 		color:var(--tag-cat-1-hover)!important;
 	}
-	.category-1 a, a.tag-type-1, .dtext-color-art, .dtext-color-artist {
+	.tag-artist a, a.tag-type-1, .dtext-color-art, .dtext-color-artist {
 		color:var(--tag-cat-2)!important;
 	}
-	.category-1 a:hover, a.tag-type-1:hover {
+	.tag-artist a:hover, a.tag-type-1:hover {
 		color:var(--tag-cat-2-hover)!important;
 	}
-	.category-3 a, a.tag-type-3, .dtext-color-copy, .dtext-color-copyright {
+	.tag-copyright a, a.tag-type-3, .dtext-color-copy, .dtext-color-copyright {
 		color:var(--tag-cat-3)!important;
 	}
-	.category-3 a:hover, a.tag-type-3:hover {
+	.tag-copyright a:hover, a.tag-type-3:hover {
 		color:var(--tag-cat-3-hover)!important;
 	}
-	.category-4 a, a.tag-type-4, .dtext-color-char, .dtext-color-character {
+	.tag-character a, a.tag-type-4, .dtext-color-char, .dtext-color-character {
 		color:var(--tag-cat-4)!important;
 	}
-	.category-4 a:hover, a.tag-type-4:hover {
+	.tag-character a:hover, a.tag-type-4:hover {
 		color:var(--tag-cat-4-hover)!important;
 	}
-	.category-5 a, a.tag-type-5, .dtext-color-spec, .dtext-color-species {
+	.tag-species a, a.tag-type-5, .dtext-color-spec, .dtext-color-species {
 		color:var(--tag-cat-5)!important;
 	}
-	.category-5 a:hover, a.tag-type-5:hover {
+	.tag-species a:hover, a.tag-type-5:hover {
 		color:var(--tag-cat-5-hover)!important;
 	}
-	.category-6 a, a.tag-type-6, .dtext-color-inv, .dtext-color-invalid {
+	.tag-invalid a, a.tag-type-6, .dtext-color-inv, .dtext-color-invalid {
 		color:var(--tag-cat-6)!important;
 	}
-	.category-6 a:hover, a.tag-type-6:hover {
+	.tag-invalid a:hover, a.tag-type-6:hover {
 		color:var(--tag-cat-6-hover)!important;
 	}
-	.category-7 a, a.tag-type-7, .dtext-color-meta {
+	.tag-meta a, a.tag-type-7, .dtext-color-meta {
 		color:var(--tag-cat-7)!important;
 	}
-	.category-7 a:hover, a.tag-type-7:hover {
+	.tag-meta a:hover, a.tag-type-7:hover {
 		color:var(--tag-cat-7-hover)!important;
 	}
-	.category-8 a, a.tag-type-8, .dtext-color-lore {
+	.tag-lore a, a.tag-type-8, .dtext-color-lore {
 		color:var(--tag-cat-8)!important;
 	}
-	.category-8 a:hover, a.tag-type-8:hover {
+	.tag-lore a:hover, a.tag-type-8:hover {
 		color:var(--tag-cat-8-hover)!important;
+	}
+	ul.tag-list {
+		font-size: 1rem !important;
+	}
+	ul.tag-list .tag-list-count {
+		color: var(--base-text-faded)!important;
+		border-left-color: var(--bg-400)!important;
+		font-weight:300 !important;
 	}
 	.source-links .source-link a {
 		color: var(--content-link)!important;
