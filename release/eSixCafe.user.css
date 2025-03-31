@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.3.2
+@version        2.3.3
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -5043,6 +5043,37 @@ if themep == classic {
 	div#c-security div#a-index .settings-section {
 		background-color: var(--bg-400);
 	}
+	
+	/* April Fools ID check */
+	.fursona-check {
+		background-color: var(--bg-300);
+		background-image: url('https://e621.net/packs/static/hex-b4fc28b5d7c3eb96e7b0.png');
+		background-repeat: repeat-x;
+	}
+	.fursona-check .fursona-check-dialog div:is(.dialog-footer, .dialog-content) {
+		background: var(--bg-400);
+	}
+	.fursona-check .fursona-check-dialog .dialog-footer {
+		button#start-drawing,
+ 		button#submit-fursona,
+		button#download-fursona,
+ 		button#close-dialog{
+			background: var(--bg-300) !important;
+			&:hover {
+				background: var(--bg) !important;
+			}
+		}
+	}
+	.fursona-check .fursona-check-dialog .dialog-content #drawing-area .drawing-button:not([style^="background-color"]) {
+		background: var(--bg) !important;
+		& svg {
+			color: var(--base-text) !important
+		}
+	}
+	.fursona-check .fursona-check-dialog .dialog-content #drawing-area .drawing-button.selected {
+		border-color: var(--elements-highlight);
+	}
+
 	}
 
 @-moz-document url-prefix("https://e621.net/users/"), url-prefix("https://e926.net/users/") {
