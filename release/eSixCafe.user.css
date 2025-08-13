@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.3.3
+@version        2.3.4
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -2090,9 +2090,18 @@ if themep == classic {
     -webkit-appearance: none;
     appearance: none;
 	}
-	select#image-resize-selector {
+	select.st-button#image-resize-selector, 
+	select.st-button#image-resize-selector:focus,
+ 	select.st-button#image-resize-selector:hover{
 		padding-right: 20px;
+		box-shadow:none !important;
+		background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='opacity:.3'%3E%3Cpath fill='%23fff' d='M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z'/%3E%3C/svg%3E") no-repeat;
+		background-position: 100% 50% !important;
 	}
+	select.st-button#image-resize-selector:focus,
+		select.st-button#image-resize-selector:hover {
+			background-color: var(--bg-400) !important;
+		}
 	
 	/* Notices */
 
@@ -2383,45 +2392,58 @@ if themep == classic {
 		border-radius: 0 4px 4px 0!important;
 		z-index: 2!important;
 	}
-	.button {
+	.st-button {
 		transition: 100ms;
 	}
-	.button.score-neutral {
-		background-color: var(--bg-400)!important;
+	.st-button.st-button {
+		translate:none !important;
+	}
+	.st-button.kinetic {
+		box-shadow: none !important;
+	}
+	span.ptbr-score {
+		background-color: var(--bg) !important;
+		box-shadow:none !important;
+	}
+	.button.score-neutral, .st-button {
+		background-color: var(--bg)!important;
 		color: var(--base-text)!important;
 	}
-	.button.score-neutral:hover {
-		background-color: var(--bg)!important;
+	.button.score-neutral:hover, .st-button:hover {
+		background-color: var(--bg-400)!important;
 	}
-	.button.score-positive {
+	.ptbr-vote-button.anim.anim[processing="true"] {
+		background-color: var(--base-text-faded) !important;
+	}
+	div[data-vote="1"] .st-button[data-action="1"] {
 		background-color: var(--favorite-button)!important;
 		color: var(--base-text)!important;
 	}
-	.button.score-positive:hover {
+	div[data-vote="1"] .st-button[data-action="1"]:hover {
 		background-color: var(--favorite-button-hover)!important;
 		color: var(--button-text-hover-secondary)!important;
 	}
-	.button.score-negative {
+	div[data-vote="-1"] .st-button[data-action="-1"] {
 		background-color: var(--remove-favorite)!important;
 		color: var(--base-text)!important;
 	}
-	.button.score-negative:hover{
+	div[data-vote="-1"] .st-button[data-action="-1"]:hover{
 		background-color: var(--remove-favorite-hover)!important;
 		color: var(--button-text-hover-secondary)!important;
 	}
-	.button.btn-success {
+	.button.btn-success, .ptbr-favorite-button {
 		background-color: var(--favorite-button)!important;
 		color: var(--base-text)!important;
 	}
-	.button.btn-success:hover {
+	.button.btn-success:hover, .ptbr-favorite-button:hover {
 		background-color: var(--favorite-button-hover)!important;
 		color: var(--button-text-hover-secondary)!important;
 	}
-	.button.btn-danger {
+	.button.btn-danger, .ptbr-favorite-button[favorited="true"] {
 		background-color: var(--remove-favorite)!important;
 		color: var(--base-text)!important;
 	}
-	.button.btn-danger:hover {
+	.button.btn-danger:hover, .ptbr-favorite-button[favorited="true"]:hover {
 		background-color: var(--remove-favorite-hover)!important;
 		color: var(--button-text-hover-secondary)!important;
 	}
@@ -2442,11 +2464,11 @@ if themep == classic {
 		background-color: var(--remove-favorite-hover)!important;
 		color: var(--button-text-hover-secondary!important);
 	}
-	.button.btn-warn {
+	.button.btn-warn, a.ptbr-fullscreen-button {
 		background-color: var(--warn-button)!important;
 		color: var(--base-text)!important;
 	}
-	.button.btn-warn:hover {
+	.button.btn-warn:hover, a.ptbr-fullscreen-button:hover {
 		background-color: var(--warn-button-hover)!important;
 		color: var(--button-text-hover-secondary)!important;
 	}
@@ -3444,6 +3466,11 @@ if themep == classic {
 			}
 		}
 	}
+	
+	
+	
+	
+	
 	}
 
 	.post-thumbnail[data-status="deleted"] {
