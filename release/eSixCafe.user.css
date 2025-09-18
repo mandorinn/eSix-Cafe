@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.3.5
+@version        2.3.6
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1928,52 +1928,58 @@ if themep == classic {
 		color: var(--base-text)!important;
 		opacity: .5;
 	}
-	#sidebar .tag-general a {
+	#sidebar .tag-general a, .category-0 a {
 		color:var(--tag-cat-1)!important;
 	}
-	#sidebar .tag-general a:hover {
+	#sidebar .tag-general a:hover, .category-0 a:hover {
 		color:var(--tag-cat-1-hover)!important;
 	}
-	.tag-artist a, a.tag-type-1, .dtext-color-art, .dtext-color-artist {
+	.tag-artist a, a.tag-type-1, .dtext-color-art, .dtext-color-artist, .category-1 a {
 		color:var(--tag-cat-2)!important;
 	}
-	.tag-artist a:hover, a.tag-type-1:hover {
+	.tag-artist a:hover, a.tag-type-1:hover, .category-1 a:hover {
 		color:var(--tag-cat-2-hover)!important;
 	}
-	.tag-copyright a, a.tag-type-3, .dtext-color-copy, .dtext-color-copyright {
+	a.tag-type-2, .category-2 a {
+		color:var(--base-text)!important;
+	}
+	a.tag-type-2:hover, .category-2 a:hover {
+		color:var(--base-link-hover)!important;
+	}
+	.tag-copyright a, a.tag-type-3, .dtext-color-copy, .dtext-color-copyright, .category-3 a {
 		color:var(--tag-cat-3)!important;
 	}
-	.tag-copyright a:hover, a.tag-type-3:hover {
+	.tag-copyright a:hover, a.tag-type-3:hover, .category-3 a:hover {
 		color:var(--tag-cat-3-hover)!important;
 	}
-	.tag-character a, a.tag-type-4, .dtext-color-char, .dtext-color-character {
+	.tag-character a, a.tag-type-4, .dtext-color-char, .dtext-color-character, .category-4 a {
 		color:var(--tag-cat-4)!important;
 	}
-	.tag-character a:hover, a.tag-type-4:hover {
+	.tag-character a:hover, a.tag-type-4:hover, .category-4 a:hover {
 		color:var(--tag-cat-4-hover)!important;
 	}
-	.tag-species a, a.tag-type-5, .dtext-color-spec, .dtext-color-species {
+	.tag-species a, a.tag-type-5, .dtext-color-spec, .dtext-color-species, .category-5 a {
 		color:var(--tag-cat-5)!important;
 	}
-	.tag-species a:hover, a.tag-type-5:hover {
+	.tag-species a:hover, a.tag-type-5:hover, .category-5 a:hover {
 		color:var(--tag-cat-5-hover)!important;
 	}
-	.tag-invalid a, a.tag-type-6, .dtext-color-inv, .dtext-color-invalid {
+	.tag-invalid a, a.tag-type-6, .dtext-color-inv, .dtext-color-invalid, .category-6 a {
 		color:var(--tag-cat-6)!important;
 	}
-	.tag-invalid a:hover, a.tag-type-6:hover {
+	.tag-invalid a:hover, a.tag-type-6:hover, .category-6 a:hover {
 		color:var(--tag-cat-6-hover)!important;
 	}
-	.tag-meta a, a.tag-type-7, .dtext-color-meta {
+	.tag-meta a, a.tag-type-7, .dtext-color-meta, .category-7 a {
 		color:var(--tag-cat-7)!important;
 	}
-	.tag-meta a:hover, a.tag-type-7:hover {
+	.tag-meta a:hover, a.tag-type-7:hover, .category-7 a:hover {
 		color:var(--tag-cat-7-hover)!important;
 	}
-	.tag-lore a, a.tag-type-8, .dtext-color-lore {
+	.tag-lore a, a.tag-type-8, .dtext-color-lore, .category-8 a {
 		color:var(--tag-cat-8)!important;
 	}
-	.tag-lore a:hover, a.tag-type-8:hover {
+	.tag-lore a:hover, a.tag-type-8:hover, .category-8 a:hover {
 		color:var(--tag-cat-8-hover)!important;
 	}
 	ul.tag-list {
@@ -4455,6 +4461,20 @@ if themep == classic {
 	/* Wiki page */
 	button#wiki-page-copy-tag {
 		border: none;
+	}
+	#c-wiki-pages aside#sidebar {
+		background-color: var(--bg)!important;
+		color: var(--base-text)!important;
+		border-top: none!important;
+		border-right: none!important;
+		border-bottom: none!important;
+		border-left: .25rem solid var(--elements-highlight)!important;
+		border-radius: 2px 8px 8px 2px;
+		padding: .5rem;
+		margin-right: 1.5rem;
+		& li {
+			margin-top: .05rem;
+		}
 	}
 	.ui-state-highlight {
 		background-color: var(--bg)!important;
