@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.3.9
+@version        2.4.0
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1812,6 +1812,9 @@ if themep == classic {
 		}
 		
 	}
+	nav.navigation.navigation .simple-avatar span.avatar-name {
+		background: var(--bg) !important;
+	}
 	/* Re621 menus */
 	.ui-widget-content.ui-widget-content {
 		color: var(--base-text)!important;
@@ -3002,11 +3005,22 @@ if themep == classic {
 		flex-direction: row;
 		background-color: var(--bg-400);
 	}
-	div#c-posts div.notice.notice-parent article.thumbnail .desc, div#c-posts div.notice.notice-child article.thumbnail .desc, .vertical-section article.thumbnail .desc{
-		background-color: var(--bg-300)!important;
+	div#c-posts div.notice article.thumbnail[class*="has-"] .thm-desc {
 		border-radius: 0 0 .5rem .5rem;
-		display: flex;
-		flex-direction: row;
+		overflow:hidden;
+		& .thm-desc-a {
+			background-color: var(--bg-300) !important;
+		}
+		&.thm-rating-e .thm-desc-b{
+			background: var(--remove-favorite) !important;
+		}
+		&.thm-rating-s .thm-desc-b{
+			background: var(--favorite-button) !important;
+		}
+		&.thm-rating-q .thm-desc-b{
+			background: var(--warn-button) !important;
+		}
+		
 	}
 	div#c-posts div.notice.notice-parent article.thumbnail .desc div, div#c-posts div.notice.notice-child article.thumbnail .desc div, .vertical-section article.thumbnail .desc div {
 		display: flex;
