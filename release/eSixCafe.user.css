@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.4.1
+@version        2.4.2
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -2178,6 +2178,7 @@ if themep == classic {
 		border-color: var(--bg);
 		border-left: 0.25rem solid var(--flagged) !important;
 		margin:0;
+		margin-left:.25rem;
 		overflow: unset !important;
 		& * {
 			margin:0;
@@ -2305,8 +2306,10 @@ if themep == classic {
 		margin-bottom: .5rem;
 		display: flex;
 		align-items: self-start;
+		flex-direction:column;
 		width: 50ch;
 		border-radius: .25rem;
+		gap:.25rem;
 	}
 	.bottom-notices * {
 		margin: 0 .25rem;
@@ -2359,7 +2362,7 @@ if themep == classic {
 		background-color: var(--bg)!important;
 		border-left: .25rem solid var(--elements-highlight)!important;
 		font-size: 0;
-		height: 100%;
+		height: 2.5rem;
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
