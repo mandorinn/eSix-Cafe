@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           eSix Café
 @namespace      mandorinn
-@version        2.4.2
+@version        2.4.3
 @description    A muted and easy on the eyes style for e621. Big credits to Faucet for the bug reports so far, thank you!
 @author         mandorinn [(www.mandorinn.dev)], faucet [(https://e621.net/users/601225)]
 @preprocessor stylus
@@ -1487,7 +1487,7 @@ if themep == classic {
 			}
 		}
 	}
-	.post-index .content {
+	.post-display .content {
 		border-radius: 0 !important;
 		background: none !important;
 	}
@@ -1901,7 +1901,7 @@ if themep == classic {
 	}
 
 	/* Sidebar */
-	.post-index .sidebar.sidebar {
+	.post-display .sidebar.sidebar {
 		background-color: transparent !important;
 		box-shadow: none !important;
 	}
@@ -2035,7 +2035,7 @@ if themep == classic {
 		color: var(--user-banned) !important;
 	}
 	/* Sidebar searchbox */
-	.post-index .search {
+	.post-display .search {
 		background: none !important;
 		box-shadow: none !important;
 		isolation: isolate;
@@ -2060,7 +2060,7 @@ if themep == classic {
 			background: linear-gradient(180deg, var(--bg-300) 0%, rgba(0, 0, 0, 0) 100%);
 		}
 	}
-	.post-index .search:has(.children-moved){
+	.post-display .search:has(.children-moved){
 		&::before {
 			height: 95%;
 			
@@ -2096,17 +2096,21 @@ if themep == classic {
 		top:.5rem;
 		display:flex;
 	}
+	.post-search-title {
+		margin-bottom: -.75rem;
+	}
 	.post-search-help a {
 		width: 0rem;
 		height: 100%;
 		overflow:hidden;
-		margin-top: .75rem;
+		margin-top: 1.33rem;
 		margin-right: -1rem;
 	}
 	.post-search-help {
 		display: flex;
 		align-items: center;
 		width: 0;
+		position:relative;
 	}
 	.post-search-help a::before {
 		content: url("data:image/svg+xml,%3Csvg height='20.0' viewBox='0 0 24.0 24.0' width='20.0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10 -4.48 10 -10S17.52 2 12 2zM13 19h-2v-2h2v2zM15.07 11.25l-0.9 0.92C13.45 12.9 13 13.5 13 15h-2v-0.5c0 -1.1 0.45 -2.1 1.17 -2.83l1.24 -1.26c0.37 -0.36 0.59 -0.86 0.59 -1.41 0 -1.1 -0.9 -2 -2 -2s-2 0.9 -2 2L8 9c0 -2.21 1.79 -4 4 -4s4 1.79 4 4c0 0.88 -0.36 1.68 -0.93 2.25z' fill='%23ffffff'/%3E%3C/svg%3E");
